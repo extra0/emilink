@@ -1,3 +1,165 @@
 extends _layout
 block content
-	
+	.header__under-block
+		.video__block
+			.video__block-wrap
+			video.video__block-play(loop autoplay)
+				source(src="video/video.mp4" type="video/mp4")
+				source(src="video/video.webm" type="video/webm")
+				source(src="video/video.ogg" type="video/ogg")
+		.container-fluid
+			.phones__block
+				.phones__block-inner
+					p.phones__block-city Москва
+					a.phones__block-phone(href="tel:+78129981387") +7 (812) 998-13-87
+					a.phones__block-callback(href="#") Запрос обратного звонка
+				.phones__block-inner
+					p.phones__block-city Санкт-Петербург
+					a.phones__block-phone(href="tel:+78129811660") +7 (812) 981-16-60
+					a.phones__block-callback(href="#") Запрос обратного звонка
+			a.header__logo(href="/")
+				img(src="img/logo.png" alt="Site Logo")
+			.search__block
+				form.search__form(action="#" method="get")
+					input.search__input(type="search" required placeholder="Поиск на сайте")
+					button.search__submit(type="submit")
+			p.main__text Мы производим 
+				a.main__link(href="#") 
+					span.bottom-line волоконно-оптическую<br>
+				|  и 
+				a.main__link(href="#") 
+					span.bottom-line телекоммуникационную
+				|  продукцию, отвечающую<br>всем международным стандартам.
+			.banners__block
+				a.banners__link(href="#")
+					img.banners__img(src="img/content/banner_1.jpg", alt="")
+				a.banners__link(href="#")
+					img.banners__img(src="img/content/banner_2.jpg", alt="")
+				a.banners__link(href="#")
+					img.banners__img(src="img/content/banner_3.jpg", alt="")
+				a.banners__link(href="#")
+					img.banners__img(src="img/content/banner_4.jpg", alt="")
+	.catalog__section
+		.container-fluid
+			h1.title Каталог продукции
+			p.catalog__text Мы имеем большой складской запас всех ходовых позиций, это оптимизирует работу по небольшим штучным заказам.<br>Запас всех ходовых позиций, это оптимизирует работу по небольшим штучным заказам.
+			.catalog__cell-block
+				.catalog__cell
+					img.catalog__cell-bg(src="img/content/category_bg_1.jpg", alt="")
+					.catalog__cell-link-wrap
+						a.catalog__cell-link(href="#")
+							span.bottom-line Телекоммуникационные шкафы и стойки
+					.catalog__cell-inner
+						h2.catalog__cell-title кроссовое оборудование
+						a.catalog__cell-inner-link(href="#") Кросс Настенный FC/ST
+						a.catalog__cell-inner-link(href="#") Кросс Настенный SC/2LC
+						a.catalog__cell-inner-link(href="#") Кросс Стоечный 19" FC/ST
+						a.catalog__cell-inner-link(href="#") Кросс Стоечный 19" SC/2LC
+						a.catalog__cell-inner-link(href="#") Пигтейлы
+						a.catalog__cell-inner-link(href="#") Адаптеры
+						a.catalog__cell-inner-link(href="#") Гильзы КДЗС
+						a.catalog__cell-inner-link(href="#") Кроссы Укомплектованные
+				.catalog__cell
+					img.catalog__cell-bg(src="img/content/category_bg_2.jpg", alt="")
+					.catalog__cell-link-wrap
+						a.catalog__cell-link(href="#")
+							span.bottom-line Оптический кабель
+				.catalog__cell
+					img.catalog__cell-bg(src="img/content/category_bg_3.jpg", alt="")
+					.catalog__cell-link-wrap
+						a.catalog__cell-link(href="#")
+							span.bottom-line муфта оптическая
+					.catalog__cell-inner
+						h2.catalog__cell-title кроссовое оборудование
+						a.catalog__cell-inner-link(href="#") Кросс Настенный FC/ST
+						a.catalog__cell-inner-link(href="#") Кросс Настенный SC/2LC
+						a.catalog__cell-inner-link(href="#") Кросс Стоечный 19" FC/ST
+						a.catalog__cell-inner-link(href="#") Кросс Стоечный 19" SC/2LC
+						a.catalog__cell-inner-link(href="#") Пигтейлы
+						a.catalog__cell-inner-link(href="#") Адаптеры
+						a.catalog__cell-inner-link(href="#") Гильзы КДЗС
+						a.catalog__cell-inner-link(href="#") Кроссы Укомплектованные
+				.catalog__cell
+					img.catalog__cell-bg(src="img/content/category_bg_2.jpg", alt="")
+					.catalog__cell-link-wrap
+						a.catalog__cell-link(href="#")
+							span.bottom-line кроссовое оборудование
+					.catalog__cell-inner
+						h2.catalog__cell-title кроссовое оборудование
+						a.catalog__cell-inner-link(href="#") Кросс Настенный FC/ST
+						a.catalog__cell-inner-link(href="#") Кросс Настенный SC/2LC
+						a.catalog__cell-inner-link(href="#") Кросс Стоечный 19" FC/ST
+						a.catalog__cell-inner-link(href="#") Кросс Стоечный 19" SC/2LC
+						a.catalog__cell-inner-link(href="#") Пигтейлы
+						a.catalog__cell-inner-link(href="#") Адаптеры
+						a.catalog__cell-inner-link(href="#") Гильзы КДЗС
+						a.catalog__cell-inner-link(href="#") Кроссы Укомплектованные
+				.catalog__cell
+					img.catalog__cell-bg(src="img/content/category_bg_3.jpg", alt="")
+					.catalog__cell-link-wrap
+						a.catalog__cell-link(href="#") 
+							span.bottom-line оптические соединители
+				.catalog__cell
+					img.catalog__cell-bg(src="img/content/category_bg_3.jpg", alt="")
+					.catalog__cell-link-wrap
+						a.catalog__cell-link(href="#") 
+							span.bottom-line оптические шнуры
+				.catalog__cell
+					img.catalog__cell-bg(src="img/content/category_bg_1.jpg", alt="")
+					.catalog__cell-link-wrap
+						a.catalog__cell-link(href="#") 
+							span.bottom-line Иструменты, Сплайс, КДЗС
+				.catalog__cell
+					img.catalog__cell-bg(src="img/content/category_bg_2.jpg", alt="")
+					.catalog__cell-link-wrap
+						a.catalog__cell-link(href="#")
+							span.bottom-line кабельные сборки
+				.catalog__cell
+					img.catalog__cell-bg(src="img/content/category_bg_3.jpg", alt="")
+					.catalog__cell-link-wrap
+						a.catalog__cell-link(href="#") 
+							span.bottom-line Решение GPON
+				.catalog__cell
+					img.catalog__cell-bg(src="img/content/category_bg_2.jpg", alt="")
+					.catalog__cell-link-wrap
+						a.catalog__cell-link(href="#") 
+							span.bottom-line Оптические разветвители
+	.preview-news__section
+		.container-fluid
+			h2.preview-news__main-title 
+				a.preview-news__title-link(href="#") новости
+			.preview-news__block
+				.preview-news__block-inner
+					span.preview-news__date 12.08.2015
+					span.preview-news__category._company Новости компании
+					h3.preview-news__title "Ростелеком" подытожил стройку второго квартала
+					p.preview-news__text "Ростелеком" подвел итоги второго квартала по строительству оптических сетей связи в Ямало – Ненецком автономном округе.
+				.preview-news__block-inner
+					span.preview-news__date 10.08.2015
+					span.preview-news__category._industry Новости индустрии
+					h3.preview-news__title О частичном переносе склада из Московской области 
+					p.preview-news__text Компания «ЭМИЛИНК» сообщает о частичном переносе склада из города Котельники  Московской области в город Кострома (Костромская область ).
+				.preview-news__block-inner
+					span.preview-news__date 12 августа 2015
+					span.preview-news__category._company Новости компании
+					h3.preview-news__title Началась прокладка ПВОЛС "Магадан - Сахалин – Камчатка"
+					p.preview-news__text "Ростелеком" приступил к очередному этапу строительства волоконно-оптической сети связи в городе Новый Уренгой Ямало-Ненецкого автономного округа.
+	.diller__section
+		.container-fluid
+			.diller__certificate-block
+				a.diller__certificate.fancybox(href="img/content/certificat.jpg" rel="img")
+					img.diller__certificate-img(src="img/content/certificat.jpg", alt="")
+				a.diller__certificate.fancybox(href="img/content/certificat.jpg" rel="img")
+					img.diller__certificate-img(src="img/content/certificat.jpg", alt="")
+				a.diller__certificate.fancybox(href="img/content/certificat.jpg" rel="img")
+					img.diller__certificate-img(src="img/content/certificat.jpg", alt="")
+				a.diller__certificate.fancybox(href="img/content/certificat.jpg" rel="img")
+					img.diller__certificate-img(src="img/content/certificat.jpg", alt="")
+				br
+				a.diller__button(href="#") Все сертификаты
+			.diller__text-block
+				h3.diller__title Расширяем диллерскую сеть
+				.diller__text-block-inner
+					p.diller__text Мы имеем большой складской запас всех ходовых позиций, это оптимизирует работу по небольшим штучным заказам. 
+					p.diller__text Запас всех ходовых позиций, это оптимизирует работу по небольшим штучным заказам.
+				a.diller__button(href="#") Контактная информация
