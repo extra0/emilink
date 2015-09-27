@@ -203,6 +203,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		left: 0;
+		z-index: 10;
 		width: 100%;
 		padding: 0 30px;
 		box-sizing: border-box;
@@ -215,6 +216,8 @@
 		flex-basis: 33%;
 		margin: 0 0px 30px 0;
 		max-width: 360px;
+		background-position: center;
+		background-repeat: no-repeat;
 		&:nth-child(1),
 		&:nth-child(7),
 		&:nth-child(11),
@@ -226,23 +229,15 @@
 			flex-basis: 66.33%;
 		}
 		&:hover {
-			.catalog__cell-inner {
-				display: block;
-				opacity: 1;
-				visibility: visible;
-				z-index: 2;
+			.catalog__cell-inner-block {
+				z-index: 12;
+				height: auto;
+				opacity: 11;
 			}
-			.bottom-line {
-				border-bottom: 1px solid transparent;
+			.catalog__cell-link-wrap {
+				z-index: 14;
 			}
 		}
-	}
-	&__cell-bg {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
 	}
 	&__cell-link {
 		color: #fff;
@@ -259,18 +254,15 @@
 			}
 		}
 	}
-	&__cell-inner {
+	&__cell-inner-block {
 		z-index: 2;
-		padding: 40px 60px;
-		width: 467px;
-		box-sizing: border-box;
 		position: relative;
 		margin: 0 auto;
 		opacity: 0;
-		visibility: hidden;
-		z-index: -1;
-		top: -20px;
-		left: -20px;
+		height: 0;
+		padding-top: 160px;
+		padding-bottom: 30px;
+		overflow: hidden;
 		-webkit-transition: all 0.4s ease;
 		-moz-transition: all 0.4s ease;
 		-ms-transition: all 0.4s ease;
@@ -279,6 +271,30 @@
 		text-align: center;
 		background-size: cover!important;
 		background-repeat: no-repeat;
+		.catalog__cell-inner-bg {
+			z-index: -1;
+			width: 110%;
+			height: 110%;
+			position: absolute;
+			top: -30px;
+			left: -30px;
+			background-repeat: no-repeat;
+			background-position: center;
+			filter: blur(4px) brightness(.5);
+			-webkit-filter: blur(4px) brightness(.5);
+			-moz-filter: blur(4px) brightness(.5);
+			-o-filter: blur(4px) brightness(.5);
+			-ms-filter: blur(4px) brightness(.5);
+		}
+	}
+	&__cell-bg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 0;
 	}
 	&__cell-title {
 		font-size: 30px;
@@ -292,7 +308,7 @@
 		color: #fff;
 		font-size: 18px;
 		font-family: @regularg3;
-		margin-bottom: 15px;
+		margin-bottom: 16px;
 		&:hover {
 			text-decoration: none;
 		}
