@@ -179,8 +179,7 @@
 //   каталог продукции на главной
 .catalog {
 	&__section {
-		background: url(../img/main_catalog_bg.png) 0 0 no-repeat;
-		background-size: cover;
+		background: #f9f9f9 url(../img/main_catalog_bg.png);
 		padding: 67px 0 30px 0;
 		.title {
 			margin-bottom: 43px;
@@ -205,7 +204,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		left: 0;
-		z-index: 10;
+		z-index: 100;
 		width: 100%;
 		padding: 0 30px;
 		box-sizing: border-box;
@@ -219,6 +218,11 @@
 		margin: 0 0px 30px 0;
 		max-width: 360px;
 		background-repeat: no-repeat;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
 		&:nth-child(1),
 		&:nth-child(7),
 		&:nth-child(11),
@@ -230,6 +234,12 @@
 			flex-basis: 66.33%;
 		}
 		&:hover {
+			-moz-transform: scale(1.15);
+			-webkit-transform: scale(1.15);
+			-o-transform: scale(1.15);
+			-ms-transform: scale(1.15);
+			transform: scale(1.15);
+			z-index: 20;
 			.catalog__cell-inner-block {
 				z-index: 12;
 				height: auto;
