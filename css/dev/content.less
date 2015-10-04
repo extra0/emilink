@@ -6,6 +6,12 @@
 	text-transform: uppercase;
 	text-align: center;
 }
+.subtitle {
+	font-family: @boldg1;
+	font-size: 36px;
+	margin: 0;
+	text-transform: uppercase;
+}
 
 // видео блок на главной
 .video {
@@ -44,12 +50,12 @@
 		width: 26.67%;
 	}
 	&__input {
-		border: 1px solid #fff;
+		color: #a5a5a5;
 		border-radius: @radius;
 		background: transparent;
 		height: 32px;
 		box-sizing: border-box;
-		color: #fff;
+		border: 1px solid #a5a5a5;
 		padding: 0 30px 3px 10px;
 		font-family: @regularg3;
 		width: 100%;
@@ -58,12 +64,23 @@
 		-ms-transition: all 0.4s ease;
 		-o-transition: all 0.4s ease;
 		transition: all 0.4s ease;
-		&::-webkit-input-placeholder {color:#fff;}
-		&::-moz-placeholder          {color:#fff;}
-		&:-moz-placeholder           {color:#fff;}
-		&:-ms-input-placeholder      {color:#fff;}
+		&::-webkit-input-placeholder {color:#a5a5a5;}
+		&::-moz-placeholder          {color:#a5a5a5;}
+		&:-moz-placeholder           {color:#a5a5a5;}
+		&:-ms-input-placeholder      {color:#a5a5a5;}
 		&:focus {
-			box-shadow: 0 0 10px #fff;
+			box-shadow: 0 0 10px #a5a5a5;
+		}
+		&._main {
+			color: #fff;
+			border: 1px solid #fff;
+			&::-webkit-input-placeholder {color:#fff;}
+			&::-moz-placeholder          {color:#fff;}
+			&:-moz-placeholder           {color:#fff;}
+			&:-ms-input-placeholder      {color:#fff;}
+			&:focus {
+				box-shadow: 0 0 10px #fff;
+			}
 		}
 	}
 	&__submit {
@@ -74,6 +91,9 @@
 		height: 16px;
 		top: 7px;
 	    right: 10px;
+	    &._main {
+	    	background: url(../img/magnifier_main.png) 0 0 no-repeat;
+	    }
 	}
 }
 // блок с телефонами
@@ -88,26 +108,31 @@
 		vertical-align: top;
 	}
 	&__block-city {
-		color: #fff;
+		color: #4c4c4c;
 		font-family: @regularg1;
 		font-size: 13px;
 		margin: 0 0 4px 0;
+		&._main {
+			color: #fff;
+		}
 	}
 	&__block-phone {
 		display: block;
-		color: #fff;
+		color: #4c4c4c;
 		letter-spacing: 0.6px;
 		text-decoration: none;
 		font-size: 18px;
 		font-family: @semibold;
 		margin: 0 0 7px 0;
+		&._main {
+			color: #fff;
+		}
 	}
 	&__block-callback {
-		color: #fff;
+		color: #a5a5a5;
 		font-size: 13px;
 		display: inline-block;
 		text-decoration: none;
-		opacity: 0.7;
 		font-family: @regularg3;
 		line-height: 16px;
 		border-bottom: 1px dotted;
@@ -117,7 +142,6 @@
 		-o-transition: all 0.4s ease;
 		transition: all 0.4s ease;
 		&:hover {
-			opacity: 1;
 			border-bottom: 1px dotted transparent;
 		}
 	}
@@ -145,6 +169,15 @@
 				border-bottom: 1px solid transparent;
 			}
 		}
+	}
+	&__content {
+		margin-left: @sidebar-width+95px;
+		.subtitle {
+			margin-bottom: 31px;
+		}
+	}
+	&__section {
+		margin-top: 43px;
 	}
 }
 // блок с баннерами
@@ -482,5 +515,270 @@
 		font-family: @light;
 		margin: 0 0 10px;
 		line-height: 26px;
+	}
+}
+// блок описания по каждой категории
+.description {
+	&__section {
+		background: #e6ecf0;
+		padding: 53px 0;
+		.subtitle {
+			margin-bottom: 38px;
+		}
+	}
+	&__block {
+		padding-left: @sidebar-width+95px;
+	}
+	&__text {
+		font-size: 16px;
+		font-family: @light;
+		line-height: 30px;
+		margin-bottom: 29px;
+	}
+}
+// хлебные крошки
+.breadcrumbs {
+	&__block {
+		margin-bottom: 17px;
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+	}
+	&__item {
+		position: relative;
+		display: inline-block;
+		padding-right: 20px;
+		&:before {
+			content: '';
+			position: absolute;
+			background: url(../img/breadcrumbs_arrow.png) 0 0 no-repeat;
+			width: 9px;
+			height: 7px;
+			top: 5px;
+			right: 4px;
+		}
+		&:last-child {
+			&:before {
+				display: none;
+			}
+		}
+	}
+	&__link {
+		text-decoration: none;
+		color: #868686;
+		font-family: @light;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__current {
+		color: #868686;
+		font-family: @light;
+	}
+}
+// сайтбар каталога 
+.catalog-sidebar {
+	&__block {
+		width: @sidebar-width;
+		box-sizing: border-box;
+		float: left;
+		padding: 24px 21px;
+		background: #e0e1e2;
+		position: relative;
+		z-index: 2;
+	}
+	&__list {
+		padding: 0;
+		margin: 0;
+	}
+	&__item {
+		margin-bottom: 25px;
+		&.active {
+			padding: 26px 21px 14px 21px;
+			background: #16a96e;
+			margin: -3px -21px 23px -21px;
+		}
+	}
+	&__link {
+		font-family: @boldg1;
+		color: #000;
+		font-size: 66%;
+		text-decoration: none;
+		.bottom-line {
+			border-bottom: 1px solid #9c9d9e;
+			&:hover {
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+	&__link-current {
+		color: #fff;
+		font-family: @boldg1;
+		font-size: 18px;
+		display: block;
+		margin-bottom: 24px;
+	}
+	&__sub-list {
+		padding: 0 0 0 19px;
+		margin: 0;
+	}
+	&__sub-item {
+		position: relative;
+		margin-bottom: 17px;
+		z-index: 2;
+		&.active {
+			padding: 10px 0px;
+			.catalog-sidebar__sub-link {
+				.bottom-line {
+					border-bottom: 1px solid transparent;
+				}
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: -40px;
+				background: url(../img/green_treangle.png) 0 0 no-repeat;
+				width: 21px;
+				height: 100%;
+				background-size: 100% 100%;
+			}
+			&:before {
+				content: '';
+				z-index: 1;
+				position: absolute;
+				width: 124%;
+				height: 100%;
+				background: #149762;
+				top: 0;
+				left: -40px;
+			}
+		}
+	}
+	&__sub-link {
+		font-family: @regular;
+		color: #fff;
+		font-size: 60%;
+		position: relative;
+		z-index: 2;
+		text-decoration: none;
+		.bottom-line {
+			border-bottom: 1px solid #5cc39a;
+			&:hover {
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+}
+// блок каталога продуктов
+.product {
+	&__section {
+		margin-bottom: 23px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: flex-start; // если нужно что бы блоки были одной высоты поставить stretch
+	}
+	&__block {
+		border: 3px solid #d6d6d6;
+		padding: 17px 5px;
+		box-sizing: border-box;
+		display: inline-block;
+		width: 48%;
+		vertical-align: top;
+		margin: 0 0px 30px 0;
+	}
+	&__article {
+		font-family: @regular;
+		color: #868686;
+		margin: 0 0 13px;
+	}
+	&__image {
+		max-height: 243px;
+		display: block;
+		margin: 0 auto 19px auto;
+	}
+	&__block-footer,
+	&__block-body {
+		padding: 0 10px 0 16px;
+	}
+	&__block-body {
+		margin-bottom: 29px;
+	}
+	&__link {
+		color: #000;
+		line-height: 29px;
+		font-family: @boldg1;
+		font-size: 60%;
+		text-decoration: none;
+		.bottom-line {
+			border-bottom: 1px solid #a3a3a3;
+			&:hover {
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+	&__buy-btn {
+		color: #fff;
+		padding: 16px 14px 17px 44px;
+		margin: -33px 0 0 0;
+		text-decoration: none;
+		display: block;
+		float: right;
+		font-size: 18px;
+		box-sizing: border-box;
+		font-family: 'San Francisco Bold G1';
+		background: #16a96e;
+		position: relative;
+		z-index: 3;
+		&:after {
+			content: '';
+			position: absolute;
+			background: url(../img/cart.png) 0 0 no-repeat;
+			width: 16px;
+			height: 16px;
+			top: 18px;
+			left: 16px;
+			-webkit-transition: left 0.4s ease;
+			-moz-transition: left 0.4s ease;
+			-ms-transition: left 0.4s ease;
+			-o-transition: left 0.4s ease;
+			transition: left 0.4s ease;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			z-index: -1;
+			background: #107c51;
+			-webkit-transition: height 0.4s ease;
+			-moz-transition: height 0.4s ease;
+			-ms-transition: height 0.4s ease;
+			-o-transition: height 0.4s ease;
+			transition: height 0.4s ease;
+		}
+		&:hover {
+			&:before {
+				height: 100%;				
+			}
+			&:after {
+				left: 13px;
+			}
+		}
+	}
+	&__price-block {
+		color: #ff9c0f;
+		font-family: @bold;
+		font-size: 28px;
+		position: relative;
+		top: 10px;
+	}
+	&__price {
+		display: inline-block;
+		margin: 0 7px;
 	}
 }
