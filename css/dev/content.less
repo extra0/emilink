@@ -781,4 +781,44 @@
 		display: inline-block;
 		margin: 0 7px;
 	}
+	// блок категории
+	&__category-item {
+		border: 3px solid #d6d6d6;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 10px 24px;
+		min-height: 185px;
+		margin-bottom: 29px;
+		position: relative;
+		display: flex;
+	    align-items: center;
+	    align-content: center;
+	}
+	&__category-item-img-wrap {
+		max-width: 180px;
+	}
+	&__category-item-img {
+		float: left;
+		max-height: 150px;
+	}
+	&__category-item-link {
+		color: #000;
+		line-height: 34px;
+		text-decoration: none;
+		.product__category-item-title {
+			font-size: 110%;
+			margin: 1.6em 0 1.6em 213px;
+			font-family: @boldg1;
+			.bottom-line {
+				border-bottom: 2px solid #a3a3a3;
+			}
+		}
+		&:hover {
+			.product__category-item-title {
+				.bottom-line {
+					border-bottom: 2px solid transparent;
+				}
+			}
+		}
+	}
 }

@@ -12,9 +12,9 @@ $(function(){
 	function numberWithCommas(x) {
         return x.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g,"\$1 ");
     }
-	
 	$('._replace').each(function(i, j){
 		$(this).html(numberWithCommas($(this).html()));
 	});
 
+	
 });
