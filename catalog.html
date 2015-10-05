@@ -11,10 +11,27 @@
     <title></title>
   </head>
   <body>
+    <div id="enter" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Вход</span><span class="modal__header-text">или </span><a href="#registration" class="modal__header-link fancybox">Регистрация</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#" class="modal__remember-link">Напомнить пароль</a>
+      </form>
+    </div>
+    <div id="registration" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Регистрация</span><span class="modal__header-text">или</span><a href="#enter" class="modal__header-link fancybox">Вход</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Зарегистрироваться</button>
+      </form>
+    </div>
     <div class="main-wrapper">
       <header class="header">
         <div class="container-fluid">
-          <div class="header__user-block"><a href="#" class="header__user-link _enter">войти на сайт</a><a href="#" class="header__user-link _cart">корзина</a></div>
+          <div class="header__user-block"><a href="#enter" class="header__user-link _enter fancybox">войти на сайт</a><a href="#" class="header__user-link _cart">корзина</a></div>
           <div class="header__menu">
             <ul class="header__menu-list">
               <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
@@ -85,7 +102,7 @@
                   <p class="product__article">Артикул: КРН-4-FC/ST</p><a href="#" class="product__link"><span class="bottom-line">Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом</span></a>
                 </div>
                 <div class="product__block-footer">
-                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">8390</span><span class="rubl">a</span></div><a href="#" class="product__buy-btn">Купить</a>
+                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">8390</span><span class="rubl">a</span></div><a href="#" class="btn _catalog-btn">Купить</a>
                 </div>
               </div>
               <div class="product__block"><a href="#"><img src="img/content/product.jpg" alt="" class="product__image"></a>
@@ -93,7 +110,7 @@
                   <p class="product__article">Артикул: КРН-4-FC/ST</p><a href="#" class="product__link"><span class="bottom-line">Кросс оптический </span></a>
                 </div>
                 <div class="product__block-footer">
-                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">2390</span><span class="rubl">a</span></div><a href="#" class="product__buy-btn">Купить</a>
+                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">2390</span><span class="rubl">a</span></div><a href="#" class="btn _catalog-btn">Купить</a>
                 </div>
               </div>
               <div class="product__block"><a href="#"><img src="img/content/product.jpg" alt="" class="product__image"></a>
@@ -101,7 +118,7 @@
                   <p class="product__article">Артикул: КРН-4-FC/ST</p><a href="#" class="product__link"><span class="bottom-line">Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом</span></a>
                 </div>
                 <div class="product__block-footer">
-                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">390</span><span class="rubl">a</span></div><a href="#" class="product__buy-btn">Купить</a>
+                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">390</span><span class="rubl">a</span></div><a href="#" class="btn _catalog-btn">Купить</a>
                 </div>
               </div>
               <div class="product__block"><a href="#"><img src="img/content/product.jpg" alt="" class="product__image"></a>
@@ -109,7 +126,7 @@
                   <p class="product__article">Артикул: КРН-4-FC/ST</p><a href="#" class="product__link"><span class="bottom-line">Кросс оптический </span></a>
                 </div>
                 <div class="product__block-footer">
-                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">2390</span><span class="rubl">a</span></div><a href="#" class="product__buy-btn">Купить</a>
+                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">2390</span><span class="rubl">a</span></div><a href="#" class="btn _catalog-btn">Купить</a>
                 </div>
               </div>
               <div class="product__block"><a href="#"><img src="img/content/product.jpg" alt="" class="product__image"></a>
@@ -117,7 +134,7 @@
                   <p class="product__article">Артикул: КРН-4-FC/ST</p><a href="#" class="product__link"><span class="bottom-line">Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом</span></a>
                 </div>
                 <div class="product__block-footer">
-                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">390</span><span class="rubl">a</span></div><a href="#" class="product__buy-btn">Купить</a>
+                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">390</span><span class="rubl">a</span></div><a href="#" class="btn _catalog-btn">Купить</a>
                 </div>
               </div>
               <div class="product__block"><a href="#"><img src="img/content/product.jpg" alt="" class="product__image"></a>
@@ -125,7 +142,7 @@
                   <p class="product__article">Артикул: КРН-4-FC/ST</p><a href="#" class="product__link"><span class="bottom-line">Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом</span></a>
                 </div>
                 <div class="product__block-footer">
-                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">390</span><span class="rubl">a</span></div><a href="#" class="product__buy-btn">Купить</a>
+                  <div class="product__price-block"><span class="product__price-text">от</span><span class="product__price _replace">390</span><span class="rubl">a</span></div><a href="#" class="btn _catalog-btn">Купить</a>
                 </div>
               </div>
             </div>

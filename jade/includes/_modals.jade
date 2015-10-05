@@ -1,0 +1,20 @@
+.modal__window#enter
+	.modal__header-block
+		span.modal__header-title Вход
+		span.modal__header-text или 
+		a.modal__header-link.fancybox(href="#registration") Регистрация
+	form.modal__form(action="#" method="post")
+		input.modal__input(type="text" placeholder="Телефон /или Электронная почта" required)
+		input.modal__input(type="text" placeholder="Пароль" required)
+		button.modal__submit.btn._modal-btn(type="submit") Войти
+		a.modal__remember-link(href="#") Напомнить пароль
+.modal__window#registration
+	.modal__header-block
+		span.modal__header-title Регистрация
+		span.modal__header-text или
+		a.modal__header-link.fancybox(href="#enter") Вход
+	form.modal__form(action="#" method="post")
+		input.modal__input(type="text" placeholder="Ваше имя" required)
+		input.modal__input(type="text" placeholder="Телефон /или Электронная почта" required)
+		input.modal__input(type="text" placeholder="Пароль" required)
+		button.modal__submit.btn._modal-btn(type="submit") Зарегистрироваться
