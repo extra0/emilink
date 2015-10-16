@@ -134,4 +134,19 @@ $(function(){
 			$(this).parents('tr').remove();
 			cart();
 		});
+
+		// делаем расчет суммы по ручному вводу количества в инпут
+		$('.order__table-quantity-input').keyup(function(){
+			var input = $(this).parents('tr').find('input'),
+				totalLine = $(this).parents('tr').find('.order__table-price');
+
+			// проверка на мин значение
+			if (input.val() < input.attr('data-min-val')) {
+				input.val('1');
+			}
+
+			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-val')));
+
+			cart();
+		});
 });
