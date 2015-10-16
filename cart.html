@@ -109,12 +109,12 @@
                         <p class="order__table-product-article">Артикул: КРН-4-FC/ST</p>
                       </td>
                       <td class="order__table-item">
-                        <button type="button" class="order__table-quantity-changer">-</button>
-                        <input type="text" value="1" class="order__table-quantity-input">
-                        <button type="button" class="order__table-quantity-changer _bottom">+</button><span class="order__table-quantity-val">шт.</span>
+                        <button type="button" data-val="-1" class="order__table-quantity-changer">-</button>
+                        <input type="text" value="1" data-min-val="1" data-max-val="4" class="order__table-quantity-input">
+                        <button type="button" data-val="1" class="order__table-quantity-changer _bottom">+</button><span class="order__table-quantity-val">шт.</span>
                       </td>
                       <td class="order__table-item">
-                        <p class="order__table-price">595.88<span class="rubl">a</span></p>
+                        <p data-total="1100.22" data-val="1100.22" class="order__table-price replace">1100.22<span class="rubl">a</span></p>
                       </td>
                       <td class="order__table-item">
                         <p class="order__table-delete"></p>
@@ -129,12 +129,12 @@
                         <p class="order__table-product-article">Артикул: КРН-4-FC/ST</p>
                       </td>
                       <td class="order__table-item">
-                        <button type="button" class="order__table-quantity-changer">-</button>
-                        <input type="text" value="1" class="order__table-quantity-input">
-                        <button type="button" class="order__table-quantity-changer _bottom">+</button><span class="order__table-quantity-val">шт.</span>
+                        <button type="button" data-val="-1" class="order__table-quantity-changer">-</button>
+                        <input type="text" value="1" data-min-val="1" data-max-val="6" class="order__table-quantity-input">
+                        <button type="button" data-val="1" class="order__table-quantity-changer _bottom">+</button><span class="order__table-quantity-val">шт.</span>
                       </td>
                       <td class="order__table-item">
-                        <p class="order__table-price">595.88<span class="rubl">a</span></p>
+                        <p data-total="595.88" data-val="595.88" class="order__table-price replace">595.88<span class="rubl">a</span></p>
                       </td>
                       <td class="order__table-item">
                         <p class="order__table-delete"></p>
@@ -148,7 +148,7 @@
                         <p class="order__table-foot-text">Итого:</p>
                       </td>
                       <td colspan="2" class="order__table-item">
-                        <p class="order__table-price _total-price">595.88<span class="rubl">a</span></p>
+                        <p class="order__table-total-price"></p><span class="rubl">a</span>
                       </td>
                     </tr>
                   </tfoot>

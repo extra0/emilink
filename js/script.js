@@ -1,5 +1,10 @@
 $(function(){
 
+	// ф-я разбивки на разряды
+	function numberWithCommas(x) {
+		return x.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1 ");
+	}
+
 	// маска на телефон
 	$('.mask').mask('+7 999 999 99 99');
 
@@ -75,5 +80,58 @@ $(function(){
 			this.value = this.value.replace(/[^0-9]/g, '');
 		}
 	});
-	
+
+	// разделяем на разряды цены
+	$('.replace').each(function(){
+		$(this).html(numberWithCommas($(this).html()));
+	});
+
+
+	// -- КОРЗИНА
+		function cart() {
+			var totalSum = $('.order__table-total-price'),
+				sum = 0;
+
+			// просчет общей суммы
+			$('.order__table-price').each(function() {
+				sum += parseFloat($(this).attr('data-total'));
+			});
+
+			// вывод суммы в "итого"
+			totalSum.html(sum.toFixed(2));
+			totalSum.html(numberWithCommas(totalSum.html()));
+
+		}
+
+		cart();
+
+		// изменяем количество товара
+		$('.order__table-quantity-changer').click(function(){
+			var input = $(this).parents('tr').find('input'),
+				totalLine = $(this).parents('tr').find('.order__table-price');
+
+			// изменяем значение в инпуте
+			input.val(parseFloat(input.val()) + parseFloat($(this).attr('data-val')));
+
+			// проверка на мин значение
+			if (input.val() < input.attr('data-min-val')) {
+				input.val('1');
+			}
+
+			// проверка на макс значение
+			if (input.val() > input.attr('data-max-val')) {
+				input.val(input.attr('data-max-val'));
+			}
+
+			// изменяем значение общее по товару
+			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-val')));
+
+			cart();
+		});
+
+		// удаляем значение
+		$('.order__table-delete').click(function() {
+			$(this).parents('tr').remove();
+			cart();
+		});
 });

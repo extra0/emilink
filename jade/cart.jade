@@ -40,12 +40,12 @@ block content
 											p.order__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
 										p.order__table-product-article Артикул: КРН-4-FC/ST
 									td.order__table-item
-										button.order__table-quantity-changer(type="button") -
-										input.order__table-quantity-input(type="text" value="1")
-										button.order__table-quantity-changer._bottom(type="button") +
+										button.order__table-quantity-changer(type="button" data-val="-1") -
+										input.order__table-quantity-input(type="text" value="1" data-min-val="1" data-max-val="4")
+										button.order__table-quantity-changer._bottom(type="button" data-val="1") +
 										span.order__table-quantity-val шт.
 									td.order__table-item
-										p.order__table-price 595.88
+										p.order__table-price.replace(data-total="1100.22" data-val="1100.22") 1100.22
 											span.rubl a
 									td.order__table-item
 										p.order__table-delete
@@ -59,12 +59,12 @@ block content
 											p.order__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
 										p.order__table-product-article Артикул: КРН-4-FC/ST
 									td.order__table-item
-										button.order__table-quantity-changer(type="button") -
-										input.order__table-quantity-input(type="text" value="1")
-										button.order__table-quantity-changer._bottom(type="button") +
+										button.order__table-quantity-changer(type="button" data-val="-1") -
+										input.order__table-quantity-input(type="text" value="1" data-min-val="1" data-max-val="6")
+										button.order__table-quantity-changer._bottom(type="button" data-val="1") +
 										span.order__table-quantity-val шт.
 									td.order__table-item
-										p.order__table-price 595.88
+										p.order__table-price.replace(data-total="595.88" data-val="595.88") 595.88
 											span.rubl a
 									td.order__table-item
 										p.order__table-delete
@@ -75,8 +75,8 @@ block content
 									td.order__table-item
 										p.order__table-foot-text Итого:
 									td.order__table-item(colspan="2")
-										p.order__table-price._total-price 595.88
-											span.rubl a
+										p.order__table-total-price
+										span.rubl a
 						h2.subtitle._sizeM Оформление заказа
 						.order__formalization-section
 							.order__formalization-block
