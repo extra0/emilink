@@ -1347,3 +1347,116 @@
 	}
 
 }
+// блок-таблица с заказом
+.cart {
+	&__table-block {
+		margin: -16px 0 100px 8%;
+	}
+	&__table {
+		width: 100%;
+		margin-bottom: 20px;
+		tbody {
+			.cart__table-item {
+				&:first-child {
+					width: 11%;
+					padding-right: 14px;
+				}
+				&:nth-child(2) {
+					width: 50%;
+				}
+				&:last-child {
+					text-align: right;
+					vertical-align: top;
+					padding-top: 13px;
+				}
+			}
+		}
+		tfoot {
+			.cart__table-line {
+				border: none!important;
+			}
+			.cart__table-item {
+				text-align: right;
+			}
+		}
+	}
+	&__table-item {
+		vertical-align: top;
+		padding: 10px 0;
+	}
+	&__table-line {
+		border-top: 3px solid #f2f3f3;
+		&:last-child {
+			border-bottom: 3px solid #f2f3f3;
+		}
+	}
+	&__table-img-wrap {
+		width: 55px;
+		height: 45px;
+		border: 3px solid #d6d6d6;
+		display: -webkit-box; 
+		display: -moz-box;   
+		display: -ms-flexbox; 
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	&__table-img {
+		display: block;
+		margin: auto;
+	}
+	&__table-product-title-link {
+		text-decoration: none;
+	}
+	&__table-product-title {
+		color: #000;
+		font-size: 11px;
+		font-family: @boldg1;
+		margin: 5px 0px 7px 0;
+		text-transform: uppercase;
+		-webkit-transition: color 0.4s ease;
+		-moz-transition: color 0.4s ease;
+		-ms-transition: color 0.4s ease;
+		-o-transition: color 0.4s ease;
+		transition: color 0.4s ease;
+		&:hover {
+			color: #16a96e;
+		}
+	}
+	&__table-product-article {
+		margin: 0;
+		font-size: 12px;
+		color: #868686;
+		font-family: @regularg3;
+	}
+	&__table-product-price {
+		display: inline-block;
+		margin: 0;
+		color: #8a8a8a;
+		font-family: @medium;
+		font-size: 18px;
+	}
+	&__table-product-quantity {
+		display: inline-block;
+		margin: 0;
+		font-family: @light;
+		font-size: 16px;
+		color: #8a8a8a;
+		padding-right: 10px;
+		margin-right: 10px;
+		border-right: 2px solid #cecece;
+	}
+	&__table-total-text {
+		color: #000;
+		font-family: @regular;
+		font-size: 16px;
+		margin: 0 0 11px;
+	}
+	&__table-total-price {
+		color: #ff9c0f;
+		font-size: 28px;
+		margin: 0;
+		font-family: @boldg1;
+	}
+}
