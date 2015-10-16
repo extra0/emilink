@@ -1,3 +1,4 @@
+// окно входа в ЛК
 .modal__window#enter
 	.modal__header-block
 		span.modal__header-title Вход
@@ -7,7 +8,8 @@
 		input.modal__input(type="text" placeholder="Телефон /или Электронная почта" required)
 		input.modal__input(type="text" placeholder="Пароль" required)
 		button.modal__submit.btn._modal-btn(type="submit") Войти
-		a.modal__remember-link(href="#") Напомнить пароль
+		a.modal__remember-link.c.fancybox(href="#restore") Напомнить пароль
+// окно регистрации
 .modal__window#registration
 	.modal__header-block
 		span.modal__header-title Регистрация
@@ -18,3 +20,20 @@
 		input.modal__input(type="text" placeholder="Телефон /или Электронная почта" required)
 		input.modal__input(type="text" placeholder="Пароль" required)
 		button.modal__submit.btn._modal-btn(type="submit") Зарегистрироваться
+// окно обратного звонка
+.modal__window#callback
+	.modal__header-block
+		span.modal__header-title Заказ звонка
+		p.modal__header-city Москва
+	form.modal__form(action="#" method="post")
+		input.modal__input(type="text" placeholder="Ваше имя" required)
+		input.modal__input.mask(type="text" placeholder="Телефон" required)
+		input(type="hidden" name="city")
+		button.modal__submit.btn._modal-btn(type="submit") Перезвонить
+// окно восстановления пароль
+.modal__window#restore
+	.modal__header-block
+		span.modal__header-title Восстановление
+	form.modal__form(action="#" method="post")
+		input.modal__input(type="email" placeholder="Электронная почта" required)
+		button.modal__submit.btn._modal-btn(type="submit") Восстановить

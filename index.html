@@ -11,14 +11,16 @@
     <title></title>
   </head>
   <body>
+    <!-- окно входа в ЛК-->
     <div id="enter" class="modal__window">
       <div class="modal__header-block"><span class="modal__header-title">Вход</span><span class="modal__header-text">или </span><a href="#registration" class="modal__header-link fancybox">Регистрация</a></div>
       <form action="#" method="post" class="modal__form">
         <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
         <input type="text" placeholder="Пароль" required class="modal__input">
-        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#" class="modal__remember-link">Напомнить пароль</a>
+        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#restore" class="modal__remember-link c fancybox">Напомнить пароль</a>
       </form>
     </div>
+    <!-- окно регистрации-->
     <div id="registration" class="modal__window">
       <div class="modal__header-block"><span class="modal__header-title">Регистрация</span><span class="modal__header-text">или</span><a href="#enter" class="modal__header-link fancybox">Вход</a></div>
       <form action="#" method="post" class="modal__form">
@@ -26,6 +28,26 @@
         <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
         <input type="text" placeholder="Пароль" required class="modal__input">
         <button type="submit" class="modal__submit btn _modal-btn">Зарегистрироваться</button>
+      </form>
+    </div>
+    <!-- окно обратного звонка-->
+    <div id="callback" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Заказ звонка</span>
+        <p class="modal__header-city">Москва</p>
+      </div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон" required class="modal__input mask">
+        <input type="hidden" name="city">
+        <button type="submit" class="modal__submit btn _modal-btn">Перезвонить</button>
+      </form>
+    </div>
+    <!-- окно восстановления пароль-->
+    <div id="restore" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Восстановление</span></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="email" placeholder="Электронная почта" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Восстановить</button>
       </form>
     </div>
     <div class="main-wrapper">
@@ -56,10 +78,10 @@
         <div class="container-fluid">
           <div class="phones__block">
             <div class="phones__block-inner">
-              <p class="phones__block-city _main">Москва</p><a href="tel:+78129981387" class="phones__block-phone _main">+7 (812) 998-13-87</a><a href="#" class="phones__block-callback">Запрос обратного звонка</a>
+              <p class="phones__block-city _main">Москва</p><a href="tel:+78129981387" class="phones__block-phone _main">+7 (812) 998-13-87</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
             </div>
             <div class="phones__block-inner">
-              <p class="phones__block-city _main">Санкт-Петербург</p><a href="tel:+78129811660" class="phones__block-phone _main">+7 (812) 981-16-60</a><a href="#" class="phones__block-callback">Запрос обратного звонка</a>
+              <p class="phones__block-city _main">Санкт-Петербург</p><a href="tel:+78129811660" class="phones__block-phone _main">+7 (812) 981-16-60</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
             </div>
           </div><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
           <div class="search__block">
