@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <!-- окно входа в ЛК-->
+    <div id="enter" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Вход</span><span class="modal__header-text">или </span><a href="#registration" class="modal__header-link fancybox">Регистрация</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#restore" class="modal__remember-link c fancybox">Напомнить пароль</a>
+      </form>
+    </div>
+    <!-- окно регистрации-->
+    <div id="registration" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Регистрация</span><span class="modal__header-text">или</span><a href="#enter" class="modal__header-link fancybox">Вход</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Зарегистрироваться</button>
+      </form>
+    </div>
+    <!-- окно обратного звонка-->
+    <div id="callback" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Заказ звонка</span>
+        <p class="modal__header-city">Москва</p>
+      </div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон" class="modal__input mask">
+        <input type="hidden" name="city">
+        <button type="submit" class="modal__submit btn _modal-btn">Перезвонить</button>
+      </form>
+    </div>
+    <!-- окно восстановления пароль-->
+    <div id="restore" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Восстановление</span></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="email" placeholder="Электронная почта" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Восстановить</button>
+      </form>
+    </div>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__user-block"><a href="#enter" class="header__user-link _enter fancybox">войти на сайт</a><a href="#" class="header__user-link _cart">корзина</a></div>
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Продукция</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Производство</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">новости</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">доставка</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="header__under-block">
+        <div class="container-fluid">
+          <div class="phones__block">
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Москва</p><a href="tel:+78129981387" class="phones__block-phone">+7 (812) 998-13-87</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Санкт-Петербург</p><a href="tel:+78129811660" class="phones__block-phone">+7 (812) 981-16-60</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+          </div><a href="/" class="header__logo"><img src="img/logo_sub_page.png" alt="Site Logo"></a>
+          <div class="search__block">
+            <form action="#" method="get" class="search__form">
+              <input type="text" required placeholder="Поиск на сайте" class="search__input">
+              <button type="submit" class="search__submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main__section">
+        <div class="container-fluid">
+          <div class="main__content _no-sidebar">
+            <h2 class="subtitle _sizeM">У вас в корзине</h2>
+            <div class="order__block">
+              <form action="#" method="post" class="order__form">
+                <table class="order__table">
+                  <thead>
+                    <tr class="order__table-line">
+                      <th colspan="2" class="order__table-title">Товар:</th>
+                      <th class="order__table-title">Количество:</th>
+                      <th colspan="2" class="order__table-title">Стоимость:</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="order__table-line">
+                      <td class="order__table-item">
+                        <div class="order__table-img-wrap"><a href="#"><img src="img/content/product.jpg" alt="" class="order__table-img"></a></div>
+                      </td>
+                      <td class="order__table-item"><a href="#" class="order__table-product-title-link">
+                          <p class="order__table-product-title">Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом</p></a>
+                        <p class="order__table-product-article">Артикул: КРН-4-FC/ST</p>
+                      </td>
+                      <td class="order__table-item">
+                        <button type="button" class="order__table-quantity-changer">-</button>
+                        <input type="text" value="1" class="order__table-quantity-input">
+                        <button type="button" class="order__table-quantity-changer _bottom">+</button><span class="order__table-quantity-val">шт.</span>
+                      </td>
+                      <td class="order__table-item">
+                        <p class="order__table-price">595.88<span class="rubl">a</span></p>
+                      </td>
+                      <td class="order__table-item">
+                        <p class="order__table-delete"></p>
+                      </td>
+                    </tr>
+                    <tr class="order__table-line">
+                      <td class="order__table-item">
+                        <div class="order__table-img-wrap"><a href="#"><img src="img/content/product.jpg" alt="" class="order__table-img"></a></div>
+                      </td>
+                      <td class="order__table-item"><a href="#" class="order__table-product-title-link">
+                          <p class="order__table-product-title">Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом</p></a>
+                        <p class="order__table-product-article">Артикул: КРН-4-FC/ST</p>
+                      </td>
+                      <td class="order__table-item">
+                        <button type="button" class="order__table-quantity-changer">-</button>
+                        <input type="text" value="1" class="order__table-quantity-input">
+                        <button type="button" class="order__table-quantity-changer _bottom">+</button><span class="order__table-quantity-val">шт.</span>
+                      </td>
+                      <td class="order__table-item">
+                        <p class="order__table-price">595.88<span class="rubl">a</span></p>
+                      </td>
+                      <td class="order__table-item">
+                        <p class="order__table-delete"></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2" class="order__table-item"><a href="#" class="order__table-back-link">Возврат в каталог</a></td>
+                      <td class="order__table-item">
+                        <p class="order__table-foot-text">Итого:</p>
+                      </td>
+                      <td colspan="2" class="order__table-item">
+                        <p class="order__table-price _total-price">595.88<span class="rubl">a</span></p>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <h2 class="subtitle _sizeM">Оформление заказа</h2>
+                <div class="order__formalization-section">
+                  <div class="order__formalization-block"><img src="img/delivery_img.png" alt="" class="order__formalization-block-title-img">
+                    <p class="order__formalization-block-title">Способ доставки:</p>
+                    <div class="order__formalization-form-control">								
+                      <input id="delivery_one" type="radio" name="delivery" checked class="order__formalization-block-radio">
+                      <label for="delivery_one" class="order__formalization-block-label">Курьерская доставка </label>
+                    </div>
+                    <div class="order__formalization-form-control">								
+                      <input id="delivery_second" type="radio" name="delivery" class="order__formalization-block-radio">
+                      <label for="delivery_second" class="order__formalization-block-label">Отправка транспортной компанией </label>
+                    </div>
+                    <div class="order__formalization-form-control">								
+                      <input id="delivery_third" type="radio" name="delivery" class="order__formalization-block-radio">
+                      <label id="self" for="delivery_third" class="order__formalization-block-label">Самовывоз</label>
+                      <div class="order__formalization-address">
+                        <p class="order__formalization-text">Адреса складов:</p>
+                        <div class="order__formalization-address-control">
+                          <input id="address_one" type="radio" name="address" class="order__formalization-block-radio">
+                          <label for="address_one" class="order__formalization-block-label _sizeM">156019, Кострома, ул. Деминская д.4, корпус ЛИТЕР А, кв. И И1.</label><a href="#addres_1" class="order__formalization-map-link fancybox">Показать карту</a>
+                          <!-- карта с адресом №1-->
+                          <script>
+                            $(function(){
+                            	ymaps.ready(init);
+                            	function init () {
+                            	    var myMap = new ymaps.Map("map_1", {
+                            	            center: [55.76, 37.64],
+                            	            zoom: 10,
+                            	            controls: ['zoomControl']
+                            	        }, {
+                            	            searchControlProvider: 'yandex#search'
+                            	        });
+                            
+                            	    myMap.geoObjects
+                            	        .add(new ymaps.Placemark([55.684758, 37.738521], {
+                            	            balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+                            	        }, {
+                            	            preset: 'islands#icon',
+                            	            iconColor: 'green'
+                            	        }));
+                            	}
+                            });
+                          </script>
+                          <div id="addres_1" class="modal__map">
+                            <div id="map_1" class="ya_map"></div>
+                          </div>
+                        </div>
+                        <div class="order__formalization-address-control">
+                          <input id="address_second" type="radio" name="address" class="order__formalization-block-radio">
+                          <label for="address_second" class="order__formalization-block-label _sizeM">194356, Санкт-Петербург, Выборгское шоссе, дом 34</label><a href="#address_2" class="order__formalization-map-link fancybox">Показать карту</a>
+                          <!-- карта с адресом №2-->
+                          <script>
+                            $(function(){
+                            	ymaps.ready(init);
+                            	function init () {
+                            	    var myMap = new ymaps.Map("map_2", {
+                            	            center: [55.76, 37.64],
+                            	            zoom: 10,
+                            	            controls: ['zoomControl']
+                            	        }, {
+                            	            searchControlProvider: 'yandex#search'
+                            	        });
+                            
+                            	    myMap.geoObjects
+                            	        .add(new ymaps.Placemark([55.684758, 37.738521], {
+                            	            balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+                            	        }, {
+                            	            preset: 'islands#icon',
+                            	            iconColor: '#red'
+                            	        }));
+                            	}
+                            });
+                          </script>
+                          <div id="address_2" class="modal__map">
+                            <div id="map_2" class="ya_map"></div>
+                          </div>
+                        </div>
+                        <div class="order__formalization-address-control">
+                          <input id="address_third" type="radio" name="address" class="order__formalization-block-radio">
+                          <label for="address_third" class="order__formalization-block-label _sizeM">Московская Область, 140054, Котельники, мкрн Ковровый, д.37</label><a href="#address_3" class="order__formalization-map-link fancybox">Показать карту</a>
+                          <!-- карта с адресом №3-->
+                          <script>
+                            $(function(){
+                            	ymaps.ready(init);
+                            	function init () {
+                            	    var myMap = new ymaps.Map("map_3", {
+                            	            center: [55.76, 37.64],
+                            	            zoom: 10,
+                            	            controls: ['zoomControl']
+                            	        }, {
+                            	            searchControlProvider: 'yandex#search'
+                            	        });
+                            
+                            	    myMap.geoObjects
+                            	        .add(new ymaps.Placemark([55.684758, 37.738521], {
+                            	            balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+                            	        }, {
+                            	            preset: 'islands#icon',
+                            	            iconColor: '#0095b6'
+                            	        }));
+                            	}
+                            });
+                          </script>
+                          <div id="address_3" class="modal__map">
+                            <div id="map_3" class="ya_map"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order__formalization-block"><img src="img/pay_img.png" alt="" class="order__formalization-block-title-img">
+                    <p class="order__formalization-block-title">Способ оплаты:</p>
+                    <div class="order__formalization-form-control">								
+                      <input id="cash" type="radio" name="pay" checked class="order__formalization-block-radio">
+                      <label for="cash" class="order__formalization-block-label">Оплата через банк (Безналичный, онлайн) </label>
+                    </div>
+                    <div class="order__formalization-form-control">									
+                      <input id="cashless" type="radio" name="pay" class="order__formalization-block-radio">
+                      <label for="cashless" class="order__formalization-block-label">Выставить счёт (Безналичный)</label>
+                    </div>
+                  </div>
+                  <div class="order__formalization-block"><img src="img/comment_img.png" alt="" class="order__formalization-block-title-img">
+                    <p class="order__formalization-block-title">Комментарий к заказу:</p>
+                    <textarea placeholder="Напишите, если у вас есть какие-либо пожелания и мы их учтем" class="order__formalization-block-textarea"></textarea>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn _user-btn">Отправить заказ</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="social__block"><a href="#" class="social__link"><img src="img/fb.png" alt=""></a><a href="#" class="social__link"><img src="img/vk.png" alt=""></a><a href="#" class="social__link"><img src="img/tw.png" alt=""></a></div>
+        <div class="footer__link-block">
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Главная</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Новости</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">О компании</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Доставка</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Продукция</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Контакты</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Производство</span></a></li>
+          </ul>
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">КДЗС</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Патчкорд оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кросс</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Пигтейл оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кабель</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Телекоммуникационный шкаф</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический сплиттер</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom-block">
+          <p class="footer__development">Разработка - студия «Максимус»</p>
+          <p class="footer__copyright">© 2007-2015, ООО «Эмилинк»</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+extends _layout
+block content
+	.header__under-block
+		.container-fluid
+			.phones__block
+				.phones__block-inner
+					p.phones__block-city Москва
+					a.phones__block-phone(href="tel:+78129981387") +7 (812) 998-13-87
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+				.phones__block-inner
+					p.phones__block-city Санкт-Петербург
+					a.phones__block-phone(href="tel:+78129811660") +7 (812) 981-16-60
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+			a.header__logo(href="/")
+				img(src="img/logo_sub_page.png" alt="Site Logo")
+			.search__block
+				form.search__form(action="#" method="get")
+					input.search__input(type="text" required placeholder="Поиск на сайте")
+					button.search__submit(type="submit")
+	.main__section
+		.container-fluid
+			.main__content._no-sidebar
+				h2.subtitle._sizeM У вас в корзине
+				.order__block
+					form.order__form(action="#" method="post")
+						table.order__table
+							thead
+								tr.order__table-line
+									th.order__table-title(colspan="2") Товар:
+									th.order__table-title Количество:
+									th.order__table-title(colspan="2") Стоимость:
+							tbody
+								tr.order__table-line
+									td.order__table-item
+										.order__table-img-wrap
+											a(href="#")
+												img.order__table-img(src="img/content/product.jpg", alt="")
+									td.order__table-item
+										a.order__table-product-title-link(href="#")
+											p.order__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+										p.order__table-product-article Артикул: КРН-4-FC/ST
+									td.order__table-item
+										button.order__table-quantity-changer(type="button") -
+										input.order__table-quantity-input(type="text" value="1")
+										button.order__table-quantity-changer._bottom(type="button") +
+										span.order__table-quantity-val шт.
+									td.order__table-item
+										p.order__table-price 595.88
+											span.rubl a
+									td.order__table-item
+										p.order__table-delete
+								tr.order__table-line
+									td.order__table-item
+										.order__table-img-wrap
+											a(href="#")
+												img.order__table-img(src="img/content/product.jpg", alt="")
+									td.order__table-item
+										a.order__table-product-title-link(href="#")
+											p.order__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+										p.order__table-product-article Артикул: КРН-4-FC/ST
+									td.order__table-item
+										button.order__table-quantity-changer(type="button") -
+										input.order__table-quantity-input(type="text" value="1")
+										button.order__table-quantity-changer._bottom(type="button") +
+										span.order__table-quantity-val шт.
+									td.order__table-item
+										p.order__table-price 595.88
+											span.rubl a
+									td.order__table-item
+										p.order__table-delete
+							tfoot
+								tr
+									td.order__table-item(colspan="2")
+										a.order__table-back-link(href="#") Возврат в каталог
+									td.order__table-item
+										p.order__table-foot-text Итого:
+									td.order__table-item(colspan="2")
+										p.order__table-price._total-price 595.88
+											span.rubl a
+						h2.subtitle._sizeM Оформление заказа
+						.order__formalization-section
+							.order__formalization-block
+								img.order__formalization-block-title-img(src="img/delivery_img.png", alt="")
+								p.order__formalization-block-title Способ доставки:
+								.order__formalization-form-control								
+									input.order__formalization-block-radio#delivery_one(type="radio" name="delivery" checked)
+									label.order__formalization-block-label(for="delivery_one") Курьерская доставка 
+								.order__formalization-form-control								
+									input.order__formalization-block-radio#delivery_second(type="radio" name="delivery")
+									label.order__formalization-block-label(for="delivery_second") Отправка транспортной компанией 
+								.order__formalization-form-control								
+									input.order__formalization-block-radio#delivery_third(type="radio" name="delivery")
+									label.order__formalization-block-label#self(for="delivery_third") Самовывоз
+									.order__formalization-address
+										p.order__formalization-text Адреса складов:
+										.order__formalization-address-control
+											input.order__formalization-block-radio#address_one(type="radio" name="address")
+											label.order__formalization-block-label._sizeM(for="address_one") 156019, Кострома, ул. Деминская д.4, корпус ЛИТЕР А, кв. И И1.
+											a.order__formalization-map-link.fancybox(href="#addres_1") Показать карту
+											// карта с адресом №1
+											script.
+												$(function(){
+													ymaps.ready(init);
+													function init () {
+													    var myMap = new ymaps.Map("map_1", {
+													            center: [55.76, 37.64],
+													            zoom: 10,
+													            controls: ['zoomControl']
+													        }, {
+													            searchControlProvider: 'yandex#search'
+													        });
+
+													    myMap.geoObjects
+													        .add(new ymaps.Placemark([55.684758, 37.738521], {
+													            balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+													        }, {
+													            preset: 'islands#icon',
+													            iconColor: 'green'
+													        }));
+													}
+												});
+											.modal__map#addres_1
+												.ya_map#map_1
+										.order__formalization-address-control
+											input.order__formalization-block-radio#address_second(type="radio" name="address")
+											label.order__formalization-block-label._sizeM(for="address_second") 194356, Санкт-Петербург, Выборгское шоссе, дом 34
+											a.order__formalization-map-link.fancybox(href="#address_2") Показать карту
+											// карта с адресом №2
+											script.
+												$(function(){
+													ymaps.ready(init);
+													function init () {
+													    var myMap = new ymaps.Map("map_2", {
+													            center: [55.76, 37.64],
+													            zoom: 10,
+													            controls: ['zoomControl']
+													        }, {
+													            searchControlProvider: 'yandex#search'
+													        });
+
+													    myMap.geoObjects
+													        .add(new ymaps.Placemark([55.684758, 37.738521], {
+													            balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+													        }, {
+													            preset: 'islands#icon',
+													            iconColor: '#red'
+													        }));
+													}
+												});
+											.modal__map#address_2
+												.ya_map#map_2
+										.order__formalization-address-control
+											input.order__formalization-block-radio#address_third(type="radio" name="address")
+											label.order__formalization-block-label._sizeM(for="address_third") Московская Область, 140054, Котельники, мкрн Ковровый, д.37
+											a.order__formalization-map-link.fancybox(href="#address_3") Показать карту
+											// карта с адресом №3
+											script.
+												$(function(){
+													ymaps.ready(init);
+													function init () {
+													    var myMap = new ymaps.Map("map_3", {
+													            center: [55.76, 37.64],
+													            zoom: 10,
+													            controls: ['zoomControl']
+													        }, {
+													            searchControlProvider: 'yandex#search'
+													        });
+
+													    myMap.geoObjects
+													        .add(new ymaps.Placemark([55.684758, 37.738521], {
+													            balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+													        }, {
+													            preset: 'islands#icon',
+													            iconColor: '#0095b6'
+													        }));
+													}
+												});
+											.modal__map#address_3
+												.ya_map#map_3
+							.order__formalization-block
+								img.order__formalization-block-title-img(src="img/pay_img.png", alt="")
+								p.order__formalization-block-title Способ оплаты:
+								.order__formalization-form-control								
+									input.order__formalization-block-radio#cash(type="radio" name="pay" checked)
+									label.order__formalization-block-label(for="cash") Оплата через банк (Безналичный, онлайн) 
+								.order__formalization-form-control									
+									input.order__formalization-block-radio#cashless(type="radio" name="pay")
+									label.order__formalization-block-label(for="cashless") Выставить счёт (Безналичный)
+							.order__formalization-block
+								img.order__formalization-block-title-img(src="img/comment_img.png", alt="")
+								p.order__formalization-block-title Комментарий к заказу:
+								textarea.order__formalization-block-textarea(placeholder="Напишите, если у вас есть какие-либо пожелания и мы их учтем")
+						.text-center
+							button.btn._user-btn(type="submit") Отправить заказ
