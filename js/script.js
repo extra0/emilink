@@ -55,4 +55,19 @@ $(function(){
 		$(this).parents('.product__specification-block').find('.product__tab-block[data-tab-index="' + $(this).attr('data-tab-index')+'"]').addClass('active');
 		return false;
 	});
+
+	// раскрываем список заказа в истории линого кабинета
+	$('.cart__table-show-btn').click(function(){
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$(this).html('Смотреть товары');
+			$(this).parents('.cart__table').find('tbody').fadeOut(500);
+		} else {
+			$(this).addClass('active');
+			$(this).html('Свернуть');
+			$(this).parents('.cart__table').find('tbody').fadeIn(500);
+		}
+	});
+
+
 });

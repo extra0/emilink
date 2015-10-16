@@ -1355,6 +1355,13 @@
 	&__table {
 		width: 100%;
 		margin-bottom: 20px;
+		thead {
+			.cart__table-item {
+				&:last-child {
+					width: 40%;
+				}
+			}
+		}
 		tbody {
 			.cart__table-item {
 				&:first-child {
@@ -1374,9 +1381,6 @@
 		tfoot {
 			.cart__table-line {
 				border: none!important;
-			}
-			.cart__table-item {
-				text-align: right;
 			}
 		}
 	}
@@ -1458,5 +1462,47 @@
 		font-size: 28px;
 		margin: 0;
 		font-family: @boldg1;
+	}
+	&__table-wrap {
+		border: 3px solid #d6d6d6;
+		padding: 10px 7%;
+		margin-bottom: 25px;
+		tbody {
+			display: none;
+		}
+	}
+	&__table-order-number {
+		color: #000;
+		font-family: @boldg1;
+		font-size: 32px;
+		margin: 0;
+	}
+	&__table-order-bill {
+		font-family: @regular;
+		margin: 0;
+		font-size: 20px;
+	}
+	&__table-order-date {
+		margin-left: 5px;
+		display: inline-block;
+	}
+	&__table-show-btn {
+		color: #16a96e;
+		font-size: 20px;
+		display: inline-block;
+		line-height: 22px;
+		border-bottom: 1px dotted #16a96e;
+		font-family: @regularg3;
+		text-decoration: none;
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}
+		&.active {
+			color: #dddddd;
+			border-bottom: 1px dotted #dddddd;
+			&:hover {
+				border-bottom: 1px solid transparent;
+			}
+		}
 	}
 }

@@ -1,0 +1,213 @@
+extends _layout
+block content
+	.header__under-block
+		.container-fluid
+			.phones__block
+				.phones__block-inner
+					p.phones__block-city Москва
+					a.phones__block-phone(href="tel:+78129981387") +7 (812) 998-13-87
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+				.phones__block-inner
+					p.phones__block-city Санкт-Петербург
+					a.phones__block-phone(href="tel:+78129811660") +7 (812) 981-16-60
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+			a.header__logo(href="/")
+				img(src="img/logo_sub_page.png" alt="Site Logo")
+			.search__block
+				form.search__form(action="#" method="get")
+					input.search__input(type="text" required placeholder="Поиск на сайте")
+					button.search__submit(type="submit")
+	.main__section
+		.container-fluid
+			.catalog-sidebar__block
+				ul.catalog-sidebar__list
+					li.catalog-sidebar__item
+						a.catalog-sidebar__link(href="#")
+							span.bottom-line Корзина
+					li.catalog-sidebar__item
+						a.catalog-sidebar__link(href="#")
+							span.bottom-line Ваши данные
+					li.catalog-sidebar__item.active
+						a.catalog-sidebar__link(href="#")
+							span.bottom-line История заказов
+					li.catalog-sidebar__item
+						a.catalog-sidebar__link(href="#")
+							span.bottom-line Выйти
+			.main__content
+				.breadcrumbs__block
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Главная
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Личный кабинет
+						li.breadcrumbs__item
+							span.breadcrumbs__current История заказов
+				h1.subtitle._sizeM История заказов
+				.cart__table-wrap
+					table.cart__table
+						thead
+							tr
+								td.cart__table-item(colspan="2")
+									p.cart__table-order-number Заказ № 206585
+									p.cart__table-order-bill Счёт № 464564 от
+										span.cart__table-order-date 15.05.2013
+								td.cart__table-item.text-right
+									p.cart__table-total-text Сумма заказа:
+									p.cart__table-total-price 589.55
+										span.rubl a
+						tbody
+							tr.cart__table-line
+								td.cart__table-item
+									.cart__table-img-wrap
+										a(href="#")
+											img.cart__table-img(src="img/content/product.jpg", alt="")
+								td.cart__table-item
+									a.cart__table-product-title-link(href="#")
+										p.cart__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+									p.cart__table-product-article Артикул: КРН-4-FC/ST
+								td.cart__table-item
+									p.cart__table-product-quantity 1 шт.
+									p.cart__table-product-price 589.55
+										span.rubl a
+							tr.cart__table-line
+								td.cart__table-item
+									.cart__table-img-wrap
+										a(href="#")
+											img.cart__table-img(src="img/content/product.jpg", alt="")
+								td.cart__table-item
+									a.cart__table-product-title-link(href="#")
+										p.cart__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+									p.cart__table-product-article Артикул: КРН-4-FC/ST
+								td.cart__table-item
+									p.cart__table-product-quantity 1 шт.
+									p.cart__table-product-price 589.55
+										span.rubl a
+							tr.cart__table-line
+								td.cart__table-item
+									.cart__table-img-wrap
+										a(href="#")
+											img.cart__table-img(src="img/content/product.jpg", alt="")
+								td.cart__table-item
+									a.cart__table-product-title-link(href="#")
+										p.cart__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+									p.cart__table-product-article Артикул: КРН-4-FC/ST
+								td.cart__table-item
+									p.cart__table-product-quantity 1 шт.
+									p.cart__table-product-price 589.55
+										span.rubl a
+						tfoot
+							tr.cart__table-line
+								td.cart__table-item(colspan="3")
+									a.cart__table-show-btn(href="javascript:void(0);") Смотреть товары
+				.cart__table-wrap
+					table.cart__table
+						thead
+							tr
+								td.cart__table-item(colspan="2")
+									p.cart__table-order-number Заказ № 206585
+									p.cart__table-order-bill Счёт № 464564 от
+										span.cart__table-order-date 15.05.2013
+								td.cart__table-item.text-right
+									p.cart__table-total-text Сумма заказа:
+									p.cart__table-total-price 589.55
+										span.rubl a
+						tbody
+							tr.cart__table-line
+								td.cart__table-item
+									.cart__table-img-wrap
+										a(href="#")
+											img.cart__table-img(src="img/content/product.jpg", alt="")
+								td.cart__table-item
+									a.cart__table-product-title-link(href="#")
+										p.cart__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+									p.cart__table-product-article Артикул: КРН-4-FC/ST
+								td.cart__table-item
+									p.cart__table-product-quantity 1 шт.
+									p.cart__table-product-price 589.55
+										span.rubl a
+							tr.cart__table-line
+								td.cart__table-item
+									.cart__table-img-wrap
+										a(href="#")
+											img.cart__table-img(src="img/content/product.jpg", alt="")
+								td.cart__table-item
+									a.cart__table-product-title-link(href="#")
+										p.cart__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+									p.cart__table-product-article Артикул: КРН-4-FC/ST
+								td.cart__table-item
+									p.cart__table-product-quantity 1 шт.
+									p.cart__table-product-price 589.55
+										span.rubl a
+							tr.cart__table-line
+								td.cart__table-item
+									.cart__table-img-wrap
+										a(href="#")
+											img.cart__table-img(src="img/content/product.jpg", alt="")
+								td.cart__table-item
+									a.cart__table-product-title-link(href="#")
+										p.cart__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+									p.cart__table-product-article Артикул: КРН-4-FC/ST
+								td.cart__table-item
+									p.cart__table-product-quantity 1 шт.
+									p.cart__table-product-price 589.55
+										span.rubl a
+						tfoot
+							tr.cart__table-line
+								td.cart__table-item(colspan="3")
+									a.cart__table-show-btn(href="javascript:void(0);") Смотреть товары
+				.cart__table-wrap
+					table.cart__table
+						thead
+							tr
+								td.cart__table-item(colspan="2")
+									p.cart__table-order-number Заказ № 206585
+									p.cart__table-order-bill Счёт № 464564 от
+										span.cart__table-order-date 15.05.2013
+								td.cart__table-item.text-right
+									p.cart__table-total-text Сумма заказа:
+									p.cart__table-total-price 11 589.55
+										span.rubl a
+						tbody
+							tr.cart__table-line
+								td.cart__table-item
+									.cart__table-img-wrap
+										a(href="#")
+											img.cart__table-img(src="img/content/product.jpg", alt="")
+								td.cart__table-item
+									a.cart__table-product-title-link(href="#")
+										p.cart__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+									p.cart__table-product-article Артикул: КРН-4-FC/ST
+								td.cart__table-item
+									p.cart__table-product-quantity 1 шт.
+									p.cart__table-product-price 589.55
+										span.rubl a
+							tr.cart__table-line
+								td.cart__table-item
+									.cart__table-img-wrap
+										a(href="#")
+											img.cart__table-img(src="img/content/product.jpg", alt="")
+								td.cart__table-item
+									a.cart__table-product-title-link(href="#")
+										p.cart__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+									p.cart__table-product-article Артикул: КРН-4-FC/ST
+								td.cart__table-item
+									p.cart__table-product-quantity 1 шт.
+									p.cart__table-product-price 589.55
+										span.rubl a
+							tr.cart__table-line
+								td.cart__table-item
+									.cart__table-img-wrap
+										a(href="#")
+											img.cart__table-img(src="img/content/product.jpg", alt="")
+								td.cart__table-item
+									a.cart__table-product-title-link(href="#")
+										p.cart__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+									p.cart__table-product-article Артикул: КРН-4-FC/ST
+								td.cart__table-item
+									p.cart__table-product-quantity 1 шт.
+									p.cart__table-product-price 589.55
+										span.rubl a
+						tfoot
+							tr.cart__table-line
+								td.cart__table-item(colspan="3")
+									a.cart__table-show-btn(href="javascript:void(0);") Смотреть товары
