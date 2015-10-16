@@ -1,12 +1,13 @@
 $(function(){
 
 	// маска на телефон
-	$('.mask').mask('+7 (999) 999-99-99');
+	$('.mask').mask('+7 999 999 99 99');
 
 	// присваиваем название города в тайтл модального заказа звонка и скрытый инпут
 	$('.phones__block-callback').click(function(){
-		$('.modal__header-city').html(($(this).parent().find('.phones__block-city').html()));
-		$('input[name="city"]').val(($(this).parent().find('.phones__block-city').html()));
+		var cityName = $(this).parent().find('.phones__block-city').html();
+		$('.modal__header-city').html(cityName);
+		$('input[name="city"]').val(cityName);
 	});
 
 	// вызов фенсибокса

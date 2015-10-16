@@ -11,6 +11,9 @@
 	font-size: 36px;
 	margin: 0;
 	text-transform: uppercase;
+	&._sizeM {
+		font-size: 30px;
+	}
 }
 // кнопки
 .btn {
@@ -106,6 +109,20 @@
     // кнопка в модальных
     &._modal-btn {
     	margin-top: 10px;
+    }
+    // кнопка в личном кабинете
+    &._user-btn {
+    	font-size: 25px;
+    	margin-top: 11px;
+    	padding: 23px 45px;
+    	&:before {
+    		height: 3px;
+    	}
+    	&:hover {
+    		&:before {
+    			height: 100%;
+    		}
+    	}
     }
 }
 
@@ -674,11 +691,13 @@
 		}
 	}
 	&__link {
-		text-decoration: none;
 		color: #868686;
+		text-decoration: none;
 		font-family: @light;
+		display: inline-block;
+		border-bottom: 1px solid #eaeaea;
 		&:hover {
-			text-decoration: underline;
+			border-bottom: 1px solid transparent;
 		}
 	}
 	&__current {
@@ -707,6 +726,27 @@
 			padding: 26px 21px 14px 21px;
 			background: #16a96e;
 			margin: -3px -21px 23px -21px;
+			& > .catalog-sidebar__link {
+				cursor: default;
+				display: block;
+				margin: -15px 0 -5px 0;
+				height: 21px;
+				color: #fff;
+				position: relative;
+				&:after {
+					content: '';
+					position: absolute;
+					top: -11px;
+					right: -40px;
+					background: url(../img/light_green_treangle.png) 0 0 no-repeat;
+					width: 21px;
+					height: 41px;
+					background-size: 100% 100%;
+				}
+				.bottom-line {
+					border-bottom: none;
+				}
+			}
 		}
 	}
 	&__link {
@@ -739,6 +779,7 @@
 		&.active {
 			padding: 10px 0px;
 			.catalog-sidebar__sub-link {
+				cursor: default;
 				.bottom-line {
 					border-bottom: 1px solid transparent;
 				}
@@ -1240,6 +1281,7 @@
 		width: 100%;
 		font-size: 13px;
 		height: 46px;
+		line-height: 46px;
 		background: transparent;
 		margin-bottom: 8px;
 		padding: 0 17px;
@@ -1259,6 +1301,14 @@
 			box-shadow: 0px 0px 5px #16a96e;
 			border: 3px solid #16a96e;
 		}
+		&._sizeL {
+			font-size: 16px;
+			margin-bottom: 15px;
+			&::-webkit-input-placeholder {color:#bdbdbd;}
+			&::-moz-placeholder          {color:#bdbdbd;}
+			&:-moz-placeholder           {color:#bdbdbd;}
+			&:-ms-input-placeholder      {color:#bdbdbd;}
+		}
 	}
 	&__remember-link {
 		color: #16a96e;
@@ -1277,4 +1327,23 @@
 		margin: 5px 0 -5px 0;
 		font-family: @regularg1;
 	}
+}
+// блок форм в личных данных кабинета
+.form {
+	&__block {
+		width: 47%;
+		vertical-align: top;
+		padding-right: 5%;
+		display: inline-block;
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+	&__label {
+		font-size: 16px;
+		font-family: @light;
+		display: block;
+		margin: -3px 0 11px 0;
+	}
+
 }

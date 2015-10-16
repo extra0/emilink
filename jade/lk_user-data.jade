@@ -24,7 +24,7 @@ block content
 					li.catalog-sidebar__item
 						a.catalog-sidebar__link(href="#")
 							span.bottom-line Корзина
-					li.catalog-sidebar__item
+					li.catalog-sidebar__item.active
 						a.catalog-sidebar__link(href="#")
 							span.bottom-line Ваши данные
 					li.catalog-sidebar__item
@@ -42,3 +42,29 @@ block content
 							a.breadcrumbs__link(href="#") Личный кабинет
 						li.breadcrumbs__item
 							span.breadcrumbs__current Ваши данные
+				.form__block
+					h2.subtitle._sizeM Данные профиля
+					form(action="#" method="post")
+						label.form__label Ваше имя:
+						input.modal__input._sizeL(type="text" placeholder="Сергей")
+						label.form__label Телефон:
+						input.modal__input._sizeL.mask(type="text" placeholder="+7 812 999 88 77")
+						label.form__label Электронная почта:
+						input.modal__input._sizeL(type="email" placeholder="serge.egorov@prominvest.com")
+						label.form__label Название компании:
+						input.modal__input._sizeL(type="text" placeholder="Проинвест")
+						label.form__label Место нахождения:
+						input.modal__input._sizeL(type="text" placeholder="Пенза, Пензенская обл., Россия")
+						.text-center
+							button.btn._user-btn(type="submit") Сохранить
+				.form__block
+					h2.subtitle._sizeM Смена пароля
+					form(action="#" method="post")
+						label.form__label Текущий пароль:
+						input.modal__input._sizeL(type="password")
+						label.form__label Новый пароль
+						input.modal__input._sizeL(type="password")
+						label.form__label Еще раз новый пароль
+						input.modal__input._sizeL(type="password")
+						.text-center
+							button.btn._user-btn(type="submit") Изменить
