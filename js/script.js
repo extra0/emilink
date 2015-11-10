@@ -119,9 +119,9 @@ $(function(){
 			}
 
 			// проверка на макс значение
-			if (input.val() > input.attr('data-max-val')) {
-				input.val(input.attr('data-max-val'));
-			}
+			// if (input.val() > input.attr('data-max-val')) {
+			// 	input.val(input.attr('data-max-val'));
+			// }
 
 			// изменяем значение общее по товару
 			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-val')));
