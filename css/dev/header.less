@@ -96,18 +96,18 @@
 		display: none;
 		&._index {
 			.header__drop-menu {
-				background: rgba(255, 255, 255, 0.85);
+				background: rgba(0, 0, 0, 0.85);
 			}
 			.header__drop-item {
-				border-bottom: 1px solid #000;
+				border-bottom: 1px solid #fff;
 				&:last-child {
 					border-bottom: none;
 				}
 			}
 			.header__drop-link {
-				color: #000;
+				color: #fff;
 				&:hover {
-					opacity: 0.8;
+					color: darken(#fff, 10%);
 				}
 			}
 		}
@@ -115,12 +115,12 @@
 	&__drop-menu {
 		left: 0;
 		width: 100%;
-		background: rgba(0, 0, 0, 0.85);
+		background: rgba(255, 255, 255, 0.85);
 		padding: 10px;
 		margin: 0;
 	}
 	&__drop-item {
-		border-bottom: 1px solid #fff;
+		border-bottom: 1px solid #000;
 		padding: 9px 6px ;
 		&:last-child {
 			border-bottom: none;
@@ -128,7 +128,7 @@
 	}
 	&__drop-link {
 		text-transform: uppercase;
-	    color: #fff;
+	    color: #000;
 	    font-size: 15px;
 	    text-decoration: none;
 	    -webkit-transition: all .4s ease;
@@ -140,7 +140,7 @@
 	    font-family: @boldg3;
 	    &.active,
 	    &:hover {
-	    	color: darken(#fff, 10%);
+	    	opacity: 0.8;
 	    }
 	}
 }
