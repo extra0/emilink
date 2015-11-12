@@ -52,8 +52,16 @@
 	&__menu-item {
 		display: inline-block;
 		margin-right: 2.2%;
+		position: relative;
+		z-index: 10;
 		&:last-child {
 			margin-right: 0;
+		}
+		&:hover {
+			.header__drop-menu-wrap {
+				display: block;
+				z-index: -1;
+			}
 		}
 	}
 	&__menu-link {
@@ -77,5 +85,62 @@
 		position: relative;
 		margin: -58px 0 0 0;
 		padding: 76px 0 27px 0;
+	}
+	// выпадающее меню
+	&__drop-menu-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-top: 30px;
+		width: 200px;
+		display: none;
+		&._index {
+			.header__drop-menu {
+				background: rgba(255, 255, 255, 0.85);
+			}
+			.header__drop-item {
+				border-bottom: 1px solid #000;
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+			.header__drop-link {
+				color: #000;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+	&__drop-menu {
+		left: 0;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.85);
+		padding: 10px;
+		margin: 0;
+	}
+	&__drop-item {
+		border-bottom: 1px solid #fff;
+		padding: 9px 6px ;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	&__drop-link {
+		text-transform: uppercase;
+	    color: #fff;
+	    font-size: 15px;
+	    text-decoration: none;
+	    -webkit-transition: all .4s ease;
+	    -moz-transition: all .4s ease;
+	    -ms-transition: all .4s ease;
+	    -o-transition: all .4s ease;
+	    transition: all .4s ease;
+	    display: inline-block;
+	    font-family: @boldg3;
+	    &.active,
+	    &:hover {
+	    	color: darken(#fff, 10%);
+	    }
 	}
 }
