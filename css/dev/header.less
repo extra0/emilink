@@ -47,17 +47,24 @@
 	// главное меню
 	&__menu-list {
 		padding: 0;
-		margin: 0;
+		margin: 0 0 0 -12px;
 	}
 	&__menu-item {
 		display: inline-block;
-		margin-right: 2.2%;
-		position: relative;
-		z-index: 10;
+	    padding: 20px 12px;
+	    position: relative;
+	    z-index: 10;
+	    margin: -20px 0;
+	    -webkit-transition: all 0.4s ease;
+	    -moz-transition: all 0.4s ease;
+	    -ms-transition: all 0.4s ease;
+	    -o-transition: all 0.4s ease;
+	    transition: all 0.4s ease;
 		&:last-child {
 			margin-right: 0;
 		}
 		&:hover {
+			background: rgba(0,0,0,0.6);
 			.header__drop-menu-wrap {
 				display: block;
 				z-index: -1;
@@ -91,7 +98,7 @@
 		position: absolute;
 		top: 0;
 		left: -15px;
-		padding-top: 30px;
+		padding-top: 58px;
 		width: 200px;
 		display: none;
 		&._index {
@@ -130,6 +137,9 @@
 		background: rgba(255, 255, 255, 0.85);
 		padding: 10px;
 		margin: 0;
+		border-left: 1px solid #000;
+		border-right: 1px solid #000;
+		border-bottom: 1px solid #000;
 	}
 	&__drop-item {
 		padding: 16px 6px ;
