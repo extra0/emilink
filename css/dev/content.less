@@ -50,9 +50,8 @@
     }
     // кнопка в каталоге товаров
     &._catalog-btn {
-    	float: right;
     	padding: 16px 14px 17px 44px;
-    	margin: -33px 0 0 0;
+    	margin: 30px 0 0 0;
     	&:after {
     		content: '';
     		position: absolute;
@@ -873,7 +872,7 @@
 		padding: 0 10px 0 16px;
 	}
 	&__block-body {
-		margin-bottom: 29px;
+		margin-bottom: 10px;
 	}
 	&__link {
 		color: #000;
@@ -945,6 +944,7 @@
 		font-size: 28px;
 		position: relative;
 		top: 10px;
+		text-align: center;
 	}
 	&__price {
 		display: inline-block;
@@ -1186,6 +1186,13 @@
 		&.active {
 			display: block;
 		}
+		table {
+			width: 100%;
+			td {
+				padding: 8px;
+				border: 1px solid #16a96e;
+			}
+		}
 	}
 	&__manual-block {
 		margin: 70px 0 0 50px;
@@ -1196,14 +1203,38 @@
 		color: #1f2534;
 		font-size: 70%;
 		text-decoration: none;
-		&:before {
-			content: '';
-			position: absolute;
-			background: url(../img/pdf.png) 0 0 no-repeat;
-			width: 40px;
-			height: 55px;
-			top: -16px;
-			left: -60px;
+		&._pdf {
+			&:before {
+				content: '';
+				position: absolute;
+				background: url(../img/pdf.png) 0 0 no-repeat;
+				width: 55px;
+				height: 55px;
+				top: -16px;
+				left: -60px;
+			}
+		}
+		&._rar {
+			&:before {
+				content: '';
+				position: absolute;
+				background: url(../img/rar.png) 0 0 no-repeat;
+				width: 55px;
+				height: 55px;
+				top: -16px;
+				left: -66px;
+			}
+		}
+		&._zip {
+			&:before {
+				content: '';
+				position: absolute;
+				background: url(../img/zip.png) 0 0 no-repeat;
+				width: 55px;
+				height: 55px;
+				top: -16px;
+				left: -66px;
+			}
 		}
 		&:hover {
 			.bottom-line {
