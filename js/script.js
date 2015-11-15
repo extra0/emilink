@@ -82,7 +82,6 @@ $(function(){
 		}
 	});
 
-
 	// разделяем на разряды цены
 	$('.replace').each(function(){
 		$(this).html(numberWithCommas($(this).html()));
@@ -93,9 +92,9 @@ $(function(){
 		function cart() {
 
 			var totalSum = $('.order__table-total-price'),
-				weight = $('[data-weight]'),
+				sum = 0,
 				totalWeight = 0,
-				sum = 0;
+				totalVolume = 0;
 
 			// просчет общей суммы
 			$('.order__table-item-price').each(function() {
@@ -107,11 +106,17 @@ $(function(){
 
 			$('._replace').each(function(){$(this).html(numberWithCommas($(this).html()));});
 
-			// общий вес
-			weight.each(function(){
-				totalWeight += parseFloat($(this).html());
+			// рассчитываем общий вес при загрузке страницы
+			$('.order__table-product-text[data-total-weight]').each(function(){
+				totalWeight += parseFloat($(this).attr('data-total-weight'));
 			});
-			$('.order__table-total-weight').html(totalWeight); // заносим общий вес в графу Итого - Вес
+			$('.order__table-total-weight').html(totalWeight.toFixed(5)); //заносим общий вес по всем товарам в Итого - ВЕС
+
+			// рассчитываем общий объем при загрузке страницы
+			$('.order__table-product-text[data-total-volume]').each(function(){
+				totalVolume += parseFloat($(this).attr('data-total-volume'));
+			});
+			$('.order__table-total-volume').html(totalVolume.toFixed(5)); //заносим общий объем по всем товарам в Итого - объем
 
 		}
 
@@ -121,7 +126,11 @@ $(function(){
 		$('.order__table-quantity-changer').click(function(){
 			var input = $(this).parents('tr').find('input'),
 				totalLine = $(this).parents('tr').find('.order__table-item-price'),
-				totalLineHtml = $(this).parents('tr').find('.order__table-line-price');
+				totalLineHtml = $(this).parents('tr').find('.order__table-line-price'),
+				weight = $(this).parents('tr').find('.order__table-product-text[data-weight]'),
+				volume = $(this).parents('tr').find('.order__table-product-text[data-volume]'),
+				totalWeight = 0;
+				totalVolume = 0;
 
 			// изменяем значение в инпуте
 			input.val(parseFloat(input.val()) + parseFloat($(this).attr('data-val')));
@@ -135,6 +144,20 @@ $(function(){
 			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-val')));
 			totalLineHtml.html(totalLine.attr('data-total')); // заносим общую сумму по товару в Столбец "стоимость"
 
+			//  рассчет веса
+			weight.attr('data-total-weight', (parseFloat(input.val())) * (parseFloat(weight.html()))); //рассчитываем вес по каждому товару
+			$('.order__table-product-text[data-total-weight]').each(function(){
+				totalWeight += parseFloat($(this).attr('data-total-weight'));
+			});
+			$('.order__table-total-weight').html(totalWeight.toFixed(5)); //заносим общий вес по всем товарам в Итого - ВЕС
+
+			//  рассчет объема
+			volume.attr('data-total-volume', (parseFloat(input.val())) * (parseFloat(volume.html()))); //рассчитываем объем по каждому товару
+			$('.order__table-product-text[data-total-volume]').each(function(){
+				totalVolume += parseFloat($(this).attr('data-total-volume'));
+			});
+			$('.order__table-total-volume').html(totalVolume.toFixed(5)); //заносим общий объем по всем товарам в Итого - объем
+
 			cart();
 		});
 
@@ -144,11 +167,16 @@ $(function(){
 			cart();
 		});
 
+
 		// делаем расчет суммы по ручному вводу количества в инпут
 		$('.order__table-quantity-input').keyup(function(){
 			var input = $(this).parents('tr').find('input'),
 				totalLine = $(this).parents('tr').find('.order__table-item-price');
 				totalLineHtml = $(this).parents('tr').find('.order__table-line-price');
+				weight = $(this).parents('tr').find('.order__table-product-text[data-weight]'),
+				volume = $(this).parents('tr').find('.order__table-product-text[data-volume]'),
+				totalWeight = 0,
+				totalVolume = 0;
 
 			// проверка на мин значение
 			if (input.val() < input.attr('data-min-val')) {
@@ -158,6 +186,20 @@ $(function(){
 			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-val')));
 			totalLineHtml.html(totalLine.attr('data-total'));  // заносим общую сумму по товару в Столбец "стоимость"
 
+			//  рассчет веса
+			weight.attr('data-total-weight', (parseFloat(input.val())) * (parseFloat(weight.html()))); //рассчитываем вес по каждому товару
+			$('.order__table-product-text[data-total-weight]').each(function(){
+				totalWeight += parseFloat($(this).attr('data-total-weight'));
+			});
+			$('.order__table-total-weight').html(totalWeight.toFixed(5)); //заносим общий вес по всем товарам в Итого - ВЕС
+
+
+			//  рассчет объема
+			volume.attr('data-total-volume', (parseFloat(input.val())) * (parseFloat(volume.html()))); //рассчитываем объем по каждому товару
+			$('.order__table-product-text[data-total-volume]').each(function(){
+				totalVolume += parseFloat($(this).attr('data-total-volume'));
+			});
+			$('.order__table-total-volume').html(totalVolume.toFixed(5)); //заносим общий объем по всем товарам в Итого - объем
 
 			cart();
 		});
