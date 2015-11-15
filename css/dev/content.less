@@ -1560,7 +1560,7 @@
 			background: #f9f9f9;
 			width: 1000%;
 			height: 100%;
-			top: 46px;
+			top: 59px;
 			left: -200%;
 			z-index: -1;
 		}
@@ -1576,40 +1576,50 @@
 		tbody {
 			.order__table-item {
 				&:first-child {
-					width: 11%;
-					padding-right: 32px;
-				}
-				&:nth-child(2) {
-					width: 40%;
-					padding-right: 10%;
-				}
-				&:nth-child(3) {
-					width: 21%;
+					width: 7%;
 					padding-right: 15px;
+				}
+				&._item {
+					width: 20%;
+					padding-right: 2%;
+				}
+				&._quantity {
+					width: 12%;
+					padding-left: 44px;
 					vertical-align: middle;
 				}
-				&:nth-child(4) {
+				&._price {
 					width: 21%;
 					vertical-align: middle;
+					text-align: center;
 				}
-				&:last-child {
+				&._delete {
 					vertical-align: middle;
+				}
+				&._weight,
+				&._base-price,
+				&._volume,
+				&._category-price,
+				&._measure {
+					width: 8%;
+					text-align: center;
 				}
 			}
 		}
 		tfoot {
 			td {
-				vertical-align: middle!important;
-				padding-top: 32px;
+				&.order__table-item {
+					vertical-align: middle;
+					padding: 0;
+				}
 			}
 		}
 	}
 	&__table-title {
 		font-weight: normal;
 		font-family: @regularg3;
-		padding: 10px 0 17px 0;
-		font-size: 16px;
-		text-align: left;
+		padding: 10px 5px 17px 5px;
+		font-size: 14px;
 	}
 	&__table-line {
 		border-top: 3px solid #e7e7e8;
@@ -1618,13 +1628,12 @@
 		}
 	}
 	&__table-item {
-		vertical-align: top;
+		// vertical-align: top;
 		padding: 22px 0;
 	}
 	&__table-img-wrap {
-		width: 110px;
+		// width: 65px;
 		background: #fff;
-		height: 96px;
 		box-sizing: border-box;
 		border: 3px solid #d6d6d6;
 		display: -webkit-box; 
@@ -1651,12 +1660,16 @@
 			color: #16a96e;
 		}
 	}
+	&__table-item-price,
+	&__table-product-text {
+		font-size: 12px;
+	}
 	&__table-product-title {
-		font-size: 18px;
-		text-transform: uppercase;
-		font-family: @boldg1;
-		margin: 0 0 13px 0;
-		line-height: 22px;
+		font-size: 12px;
+	    text-transform: uppercase;
+	    font-family: @boldg1;
+	    margin: 0 0 0px 0;
+	    line-height: 18px;
 	}
 	&__table-product-article {
 		margin: 0;
@@ -1666,7 +1679,7 @@
 	}
 	&__table-quantity-changer {
 		color: #15a96e;
-		font-size: 35px;
+		font-size: 28px;
 		background: none;
 		border: none;
 		&:first-child {
@@ -1678,13 +1691,13 @@
 		}
 	}
 	&__table-quantity-input {
-		width: 73px;
-		height: 52px;
-		line-height: 52px;
+		width: 45px;
+		height: 32px;
+		line-height: 32px;
 		text-align: center;
 		color: #000;
-		font-size: 30px;
-		padding: 0 10px;
+		font-size: 18px;
+		padding: 0 3px;
 		box-sizing: border-box;
 		background: #fff;
 		border: 3px solid #d6d6d6;
@@ -1696,16 +1709,24 @@
 		display: inline-block;
 		margin-left: 10px;
 	}
-	&__table-price {
-		font-size: 28px;
+	&__table-line-price {
+		font-size: 24px;
 		color: #8a8a8a;
 		font-family: @medium;
 		margin: 0;
+		display: inline-block;
+		& + .rubl {
+			font-size: 24px;
+			color: #8a8a8a;
+		}
 	}
+	&__table-total-weight,
+	&__table-total-volume,
 	&__table-total-price {
 		display: inline-block;
 		font-size: 28px;
 		color: #ff9c0f;
+		margin: 0;
 		font-family: @boldg1;
 		& + .rubl {
 			color: #ff9c0f;
@@ -1797,7 +1818,7 @@
 		font-family: @regularg3;
 		font-size: 16px;
 		text-align: right;
-		padding-right: 63px;
+		margin: 9px 0;
 	}
 	//  блок оформления 
 	&__formalization {

@@ -82,6 +82,7 @@ $(function(){
 		}
 	});
 
+
 	// разделяем на разряды цены
 	$('.replace').each(function(){
 		$(this).html(numberWithCommas($(this).html()));
@@ -92,10 +93,12 @@ $(function(){
 		function cart() {
 
 			var totalSum = $('.order__table-total-price'),
+				weight = $('[data-weight]'),
+				totalWeight = 0,
 				sum = 0;
 
 			// просчет общей суммы
-			$('.order__table-price').each(function() {
+			$('.order__table-item-price').each(function() {
 				sum += parseFloat($(this).attr('data-total'));
 			});
 
@@ -103,6 +106,13 @@ $(function(){
 			totalSum.html(sum.toFixed(2));
 
 			$('._replace').each(function(){$(this).html(numberWithCommas($(this).html()));});
+
+			// общий вес
+			weight.each(function(){
+				totalWeight += parseFloat($(this).html());
+			});
+			$('.order__table-total-weight').html(totalWeight); // заносим общий вес в графу Итого - Вес
+
 		}
 
 		cart();
@@ -110,7 +120,8 @@ $(function(){
 		// изменяем количество товара
 		$('.order__table-quantity-changer').click(function(){
 			var input = $(this).parents('tr').find('input'),
-				totalLine = $(this).parents('tr').find('.order__table-price');
+				totalLine = $(this).parents('tr').find('.order__table-item-price'),
+				totalLineHtml = $(this).parents('tr').find('.order__table-line-price');
 
 			// изменяем значение в инпуте
 			input.val(parseFloat(input.val()) + parseFloat($(this).attr('data-val')));
@@ -120,13 +131,9 @@ $(function(){
 				input.val('1');
 			}
 
-			// проверка на макс значение
-			// if (input.val() > input.attr('data-max-val')) {
-			// 	input.val(input.attr('data-max-val'));
-			// }
-
 			// изменяем значение общее по товару
 			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-val')));
+			totalLineHtml.html(totalLine.attr('data-total')); // заносим общую сумму по товару в Столбец "стоимость"
 
 			cart();
 		});
@@ -140,7 +147,8 @@ $(function(){
 		// делаем расчет суммы по ручному вводу количества в инпут
 		$('.order__table-quantity-input').keyup(function(){
 			var input = $(this).parents('tr').find('input'),
-				totalLine = $(this).parents('tr').find('.order__table-price');
+				totalLine = $(this).parents('tr').find('.order__table-item-price');
+				totalLineHtml = $(this).parents('tr').find('.order__table-line-price');
 
 			// проверка на мин значение
 			if (input.val() < input.attr('data-min-val')) {
@@ -148,6 +156,8 @@ $(function(){
 			}
 
 			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-val')));
+			totalLineHtml.html(totalLine.attr('data-total'));  // заносим общую сумму по товару в Столбец "стоимость"
+
 
 			cart();
 		});

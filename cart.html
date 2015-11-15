@@ -115,6 +115,11 @@
                   <thead>
                     <tr class="order__table-line">
                       <th colspan="2" class="order__table-title">Товар:</th>
+                      <th class="order__table-title">Вес:</th>
+                      <th class="order__table-title">Объем:</th>
+                      <th class="order__table-title">Цена, руб.:</th>
+                      <th class="order__table-title">Категория цены:</th>
+                      <th class="order__table-title">Ед. изм.:</th>
                       <th class="order__table-title">Количество:</th>
                       <th colspan="2" class="order__table-title">Стоимость:</th>
                     </tr>
@@ -124,19 +129,32 @@
                       <td class="order__table-item">
                         <div class="order__table-img-wrap"><a href="#"><img src="img/content/product.jpg" alt="" class="order__table-img"></a></div>
                       </td>
-                      <td class="order__table-item"><a href="#" class="order__table-product-title-link">
+                      <td class="order__table-item _item"><a href="#" class="order__table-product-title-link">
                           <p class="order__table-product-title">Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом</p></a>
                         <p class="order__table-product-article">Артикул: КРН-4-FC/ST</p>
                       </td>
-                      <td class="order__table-item">
+                      <td class="order__table-item _weight">
+                        <p data-weight="6.64343" class="order__table-product-text">6.64343</p>
+                      </td>
+                      <td class="order__table-item _volume">
+                        <p data-volume="0.00123" class="order__table-product-text">0.00123</p>
+                      </td>
+                      <td class="order__table-item _base-price"><span data-total="1100.22" data-val="1100.22" class="order__table-item-price">1100.22</span><span class="rubl">a</span></td>
+                      <td class="order__table-item _category-price">
+                        <p class="order__table-product-text">Розница</p>
+                      </td>
+                      <td class="order__table-item _measure">
+                        <p class="order__table-product-text">Бухта</p>
+                      </td>
+                      <td class="order__table-item _quantity">
                         <button type="button" data-val="-1" class="order__table-quantity-changer">-</button>
                         <input type="text" value="1" data-min-val="1" class="order__table-quantity-input">
-                        <button type="button" data-val="1" class="order__table-quantity-changer _bottom">+</button><span class="order__table-quantity-val">шт.</span>
+                        <button type="button" data-val="1" class="order__table-quantity-changer _bottom">+</button>
                       </td>
-                      <td class="order__table-item">
-                        <p data-total="1100.22" data-val="1100.22" class="order__table-price _replace">1100.22<span class="rubl">a</span></p>
+                      <td class="order__table-item _price">
+                        <p class="order__table-line-price _replace">1100.22</p><span class="rubl">a</span>
                       </td>
-                      <td class="order__table-item">
+                      <td class="order__table-item _delete">
                         <p class="order__table-delete"></p>
                       </td>
                     </tr>
@@ -144,31 +162,65 @@
                       <td class="order__table-item">
                         <div class="order__table-img-wrap"><a href="#"><img src="img/content/product.jpg" alt="" class="order__table-img"></a></div>
                       </td>
-                      <td class="order__table-item"><a href="#" class="order__table-product-title-link">
+                      <td class="order__table-item _item"><a href="#" class="order__table-product-title-link">
                           <p class="order__table-product-title">Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом</p></a>
                         <p class="order__table-product-article">Артикул: КРН-4-FC/ST</p>
                       </td>
-                      <td class="order__table-item">
+                      <td class="order__table-item _weight">
+                        <p data-weight="6.64343" class="order__table-product-text">6.64343</p>
+                      </td>
+                      <td class="order__table-item _volume">
+                        <p data-volume="0.00123" class="order__table-product-text">0.00123</p>
+                      </td>
+                      <td class="order__table-item _base-price"><span data-total="1100.22" data-val="1100.22" class="order__table-item-price">1100.22</span><span class="rubl">a</span></td>
+                      <td class="order__table-item _category-price">
+                        <p class="order__table-product-text">Розница</p>
+                      </td>
+                      <td class="order__table-item _measure">
+                        <p class="order__table-product-text">Бухта</p>
+                      </td>
+                      <td class="order__table-item _quantity">
                         <button type="button" data-val="-1" class="order__table-quantity-changer">-</button>
                         <input type="text" value="1" data-min-val="1" class="order__table-quantity-input">
-                        <button type="button" data-val="1" class="order__table-quantity-changer _bottom">+</button><span class="order__table-quantity-val">шт.</span>
+                        <button type="button" data-val="1" class="order__table-quantity-changer _bottom">+</button>
                       </td>
-                      <td class="order__table-item">
-                        <p data-total="595.88" data-val="595.88" class="order__table-price _replace">595.88<span class="rubl">a</span></p>
+                      <td class="order__table-item _price">
+                        <p class="order__table-line-price _replace">1100.22</p><span class="rubl">a</span>
                       </td>
-                      <td class="order__table-item">
+                      <td class="order__table-item _delete">
                         <p class="order__table-delete"></p>
                       </td>
                     </tr>
                   </tbody>
                   <tfoot>
                     <tr>
-                      <td colspan="2" class="order__table-item"><a href="#" class="order__table-back-link">Возврат в каталог</a></td>
+                      <td colspan="7" rowspan="4" class="order__table-item"><a href="#" class="order__table-back-link">Возврат в каталог</a></td>
                       <td class="order__table-item">
-                        <p class="order__table-foot-text">Итого:</p>
+                        <p class="order__table-foot-text">Итого</p>
                       </td>
-                      <td colspan="2" class="order__table-item">
+                    </tr>
+                    <tr>
+                      <td class="order__table-item">
+                        <p class="order__table-foot-text">Сумма:</p>
+                      </td>
+                      <td colspan="2" class="order__table-item text-center">
                         <p class="order__table-total-price _replace"></p><span class="rubl">a</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="order__table-item">
+                        <p class="order__table-foot-text">Вес, кг:</p>
+                      </td>
+                      <td colspan="2" class="order__table-item text-center">
+                        <p class="order__table-total-weight">123</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="order__table-item">
+                        <p class="order__table-foot-text">Объем, м<sup>3<sup>:</p>
+                      </td>
+                      <td colspan="2" class="order__table-item text-center">
+                        <p class="order__table-total-volume">123</p>
                       </td>
                     </tr>
                   </tfoot>

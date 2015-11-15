@@ -27,6 +27,11 @@ block content
 							thead
 								tr.order__table-line
 									th.order__table-title(colspan="2") Товар:
+									th.order__table-title Вес:
+									th.order__table-title Объем:
+									th.order__table-title Цена, руб.:
+									th.order__table-title Категория цены:
+									th.order__table-title Ед. изм.:
 									th.order__table-title Количество:
 									th.order__table-title(colspan="2") Стоимость:
 							tbody
@@ -35,48 +40,83 @@ block content
 										.order__table-img-wrap
 											a(href="#")
 												img.order__table-img(src="img/content/product.jpg", alt="")
-									td.order__table-item
+									td.order__table-item._item
 										a.order__table-product-title-link(href="#")
 											p.order__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
 										p.order__table-product-article Артикул: КРН-4-FC/ST
-									td.order__table-item
+									td.order__table-item._weight
+										p.order__table-product-text(data-weight="6.64343") 6.64343
+									td.order__table-item._volume
+										p.order__table-product-text(data-volume="0.00123") 0.00123
+									td.order__table-item._base-price
+										span.order__table-item-price(data-total="1100.22" data-val="1100.22") 1100.22
+										span.rubl a
+									td.order__table-item._category-price
+										p.order__table-product-text Розница
+									td.order__table-item._measure
+										p.order__table-product-text Бухта
+									td.order__table-item._quantity
 										button.order__table-quantity-changer(type="button" data-val="-1") -
 										input.order__table-quantity-input(type="text" value="1" data-min-val="1")
 										button.order__table-quantity-changer._bottom(type="button" data-val="1") +
-										span.order__table-quantity-val шт.
-									td.order__table-item
-										p.order__table-price._replace(data-total="1100.22" data-val="1100.22") 1100.22
-											span.rubl a
-									td.order__table-item
+										//- span.order__table-quantity-val шт.
+									td.order__table-item._price
+										p.order__table-line-price._replace 1100.22
+										span.rubl a
+									td.order__table-item._delete
 										p.order__table-delete
 								tr.order__table-line
 									td.order__table-item
 										.order__table-img-wrap
 											a(href="#")
 												img.order__table-img(src="img/content/product.jpg", alt="")
-									td.order__table-item
+									td.order__table-item._item
 										a.order__table-product-title-link(href="#")
 											p.order__table-product-title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
 										p.order__table-product-article Артикул: КРН-4-FC/ST
-									td.order__table-item
+									td.order__table-item._weight
+										p.order__table-product-text(data-weight="6.64343") 6.64343
+									td.order__table-item._volume
+										p.order__table-product-text(data-volume="0.00123") 0.00123
+									td.order__table-item._base-price
+										span.order__table-item-price(data-total="1100.22" data-val="1100.22") 1100.22
+										span.rubl a
+									td.order__table-item._category-price
+										p.order__table-product-text Розница
+									td.order__table-item._measure
+										p.order__table-product-text Бухта
+									td.order__table-item._quantity
 										button.order__table-quantity-changer(type="button" data-val="-1") -
 										input.order__table-quantity-input(type="text" value="1" data-min-val="1")
 										button.order__table-quantity-changer._bottom(type="button" data-val="1") +
-										span.order__table-quantity-val шт.
-									td.order__table-item
-										p.order__table-price._replace(data-total="595.88" data-val="595.88") 595.88
-											span.rubl a
-									td.order__table-item
+										//- span.order__table-quantity-val шт.
+									td.order__table-item._price
+										p.order__table-line-price._replace 1100.22
+										span.rubl a
+									td.order__table-item._delete
 										p.order__table-delete
 							tfoot
 								tr
-									td.order__table-item(colspan="2")
+									td.order__table-item(colspan="7" rowspan="4")
 										a.order__table-back-link(href="#") Возврат в каталог
 									td.order__table-item
-										p.order__table-foot-text Итого:
-									td.order__table-item(colspan="2")
+										p.order__table-foot-text Итого
+								tr
+									td.order__table-item
+										p.order__table-foot-text Сумма:
+									td.order__table-item.text-center(colspan="2")
 										p.order__table-total-price._replace
 										span.rubl a
+								tr
+									td.order__table-item
+										p.order__table-foot-text Вес, кг:
+									td.order__table-item.text-center(colspan="2")
+										p.order__table-total-weight 123
+								tr
+									td.order__table-item
+										p.order__table-foot-text Объем, м<sup>3<sup>:
+									td.order__table-item.text-center(colspan="2")
+										p.order__table-total-volume 123
 						h2.subtitle._sizeM Оформление заказа
 						.order__formalization-section
 							.order__formalization-block
