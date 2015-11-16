@@ -110,17 +110,15 @@ $(function(){
 			$('.order__table-product-text[data-total-weight]').each(function(){
 				totalWeight += parseFloat($(this).attr('data-total-weight'));
 			});
-			$('.order__table-total-weight').html(totalWeight.toFixed(5)); //заносим общий вес по всем товарам в Итого - ВЕС
+			$('.order__table-total-weight').html(totalWeight.toFixed(3)); //заносим общий вес по всем товарам в Итого - ВЕС
 
 			// рассчитываем общий объем при загрузке страницы
 			$('.order__table-product-text[data-total-volume]').each(function(){
 				totalVolume += parseFloat($(this).attr('data-total-volume'));
 			});
-			$('.order__table-total-volume').html(totalVolume.toFixed(5)); //заносим общий объем по всем товарам в Итого - объем
+			$('.order__table-total-volume').html(totalVolume.toFixed(3)); //заносим общий объем по всем товарам в Итого - объем
 
 		}
-
-		cart();
 
 		// изменяем количество товара
 		$('.order__table-quantity-changer').click(function(){
@@ -149,14 +147,14 @@ $(function(){
 			$('.order__table-product-text[data-total-weight]').each(function(){
 				totalWeight += parseFloat($(this).attr('data-total-weight'));
 			});
-			$('.order__table-total-weight').html(totalWeight.toFixed(5)); //заносим общий вес по всем товарам в Итого - ВЕС
+			$('.order__table-total-weight').html(totalWeight.toFixed(3)); //заносим общий вес по всем товарам в Итого - ВЕС
 
 			//  рассчет объема
 			volume.attr('data-total-volume', (parseFloat(input.val())) * (parseFloat(volume.html()))); //рассчитываем объем по каждому товару
 			$('.order__table-product-text[data-total-volume]').each(function(){
 				totalVolume += parseFloat($(this).attr('data-total-volume'));
 			});
-			$('.order__table-total-volume').html(totalVolume.toFixed(5)); //заносим общий объем по всем товарам в Итого - объем
+			$('.order__table-total-volume').html(totalVolume.toFixed(3)); //заносим общий объем по всем товарам в Итого - объем
 
 			cart();
 		});
@@ -191,7 +189,7 @@ $(function(){
 			$('.order__table-product-text[data-total-weight]').each(function(){
 				totalWeight += parseFloat($(this).attr('data-total-weight'));
 			});
-			$('.order__table-total-weight').html(totalWeight.toFixed(5)); //заносим общий вес по всем товарам в Итого - ВЕС
+			$('.order__table-total-weight').html(totalWeight.toFixed(3)); //заносим общий вес по всем товарам в Итого - ВЕС
 
 
 			//  рассчет объема
@@ -199,8 +197,10 @@ $(function(){
 			$('.order__table-product-text[data-total-volume]').each(function(){
 				totalVolume += parseFloat($(this).attr('data-total-volume'));
 			});
-			$('.order__table-total-volume').html(totalVolume.toFixed(5)); //заносим общий объем по всем товарам в Итого - объем
+			$('.order__table-total-volume').html(totalVolume.toFixed(3)); //заносим общий объем по всем товарам в Итого - объем
 
 			cart();
 		});
+	cart();
+	
 });
