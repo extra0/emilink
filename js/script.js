@@ -139,7 +139,7 @@ $(function(){
 			}
 
 			// изменяем значение общее по товару
-			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-val')));
+			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-price-1')));
 			totalLineHtml.html(totalLine.attr('data-total')); // заносим общую сумму по товару в Столбец "стоимость"
 
 			//  рассчет веса
@@ -181,7 +181,7 @@ $(function(){
 				input.val('1');
 			}
 
-			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-val')));
+			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-price-1')));
 			totalLineHtml.html(totalLine.attr('data-total'));  // заносим общую сумму по товару в Столбец "стоимость"
 
 			//  рассчет веса
