@@ -94,12 +94,49 @@ $(function(){
 			var totalSum = $('.order__table-total-price'),
 				sum = 0,
 				totalWeight = 0,
-				totalVolume = 0;
+				totalVolume = 0,
+				sumRozn = 0;
+				sumPartn = 0;
+				sumDiller = 0;
+				input = $(this).parents('tr').find('input');
+				rozn = $('#rozn').val();
+				partn = $('#partner').val();
 
-			// просчет общей суммы
-			$('.order__table-item-price').each(function() {
-				sum += parseFloat($(this).attr('data-total'));
-			});
+
+			$('[data-rozn]').each(function(){sumRozn += (parseFloat($(this).attr('data-rozn')) * $(this).parents('tr').find('input').val());}); // общая розничная цена
+			$('[data-partner]').each(function(){sumPartn += (parseFloat($(this).attr('data-partner')) * $(this).parents('tr').find('input').val());}); // общая  партнерская цена
+			$('[data-diller]').each(function(){sumDiller += (parseFloat($(this).attr('data-diller')) * $(this).parents('tr').find('input').val());}); // общая  диллерская цена
+
+			// проверяем первый диапазон цены 
+			if (sumRozn < rozn) {
+				$('[data-rozn]').each(function(){
+					sum += (parseFloat($(this).attr('data-rozn')) * $(this).parents('tr').find('input').val());
+					$(this).parents('tr').find('[data-total]').html($(this).attr('data-rozn')); //меняем цену в графе "Цена"
+					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).attr('data-rozn')); // меняем attr total
+					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-rozn'))); // меняем attr total
+					$(this).parents('tr').find('.order__table-line-price').html($(this).attr('data-total')); // записываем общую цену линии
+				});
+
+			// проверяем второй диапазон цены 
+			} else if ((sumRozn >= rozn) && (sumRozn < partn)) {
+				$('[data-partner]').each(function(){
+					sum += (parseFloat($(this).attr('data-partner')) * $(this).parents('tr').find('input').val());
+					$(this).parents('tr').find('[data-total]').html($(this).attr('data-partner')); //меняем цену в графе "Цена"
+					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-partner'))); // меняем attr total
+					$(this).parents('tr').find('.order__table-line-price').html($(this).attr('data-total')); // записываем общую цену линии
+				});
+
+			// проверяем третий диапазон цены 
+			} else if (sumRozn >= partn) {
+				$('[data-diller]').each(function(){
+					sum += (parseFloat($(this).attr('data-diller')) * $(this).parents('tr').find('input').val());
+					$(this).parents('tr').find('[data-total]').html($(this).attr('data-diller')); //меняем цену в графе "Цена"
+					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).attr('data-diller')); // меняем attr total
+					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-diller'))); // меняем attr total
+					$(this).parents('tr').find('.order__table-line-price').html($(this).attr('data-total')); // записываем общую цену линии
+				});
+			}
+
 
 			// вывод суммы в "итого"
 			totalSum.html(sum.toFixed(2));
@@ -139,8 +176,8 @@ $(function(){
 			}
 
 			// изменяем значение общее по товару
-			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-price-1')));
-			totalLineHtml.html(totalLine.attr('data-total')); // заносим общую сумму по товару в Столбец "стоимость"
+			// totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-rozn')));
+			// totalLineHtml.html(totalLine.attr('data-total')); // заносим общую сумму по товару в Столбец "стоимость"
 
 			//  рассчет веса
 			weight.attr('data-total-weight', (parseFloat(input.val())) * (parseFloat(weight.html()))); //рассчитываем вес по каждому товару
@@ -181,8 +218,8 @@ $(function(){
 				input.val('1');
 			}
 
-			totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-price-1')));
-			totalLineHtml.html(totalLine.attr('data-total'));  // заносим общую сумму по товару в Столбец "стоимость"
+			// totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-rozn')));
+			// totalLineHtml.html(totalLine.attr('data-total'));  // заносим общую сумму по товару в Столбец "стоимость"
 
 			//  рассчет веса
 			weight.attr('data-total-weight', (parseFloat(input.val())) * (parseFloat(weight.html()))); //рассчитываем вес по каждому товару
