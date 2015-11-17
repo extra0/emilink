@@ -98,7 +98,6 @@ $(function(){
 				sumRozn = 0;
 				sumPartn = 0;
 				sumDiller = 0;
-				input = $(this).parents('tr').find('input');
 				rozn = $('#rozn').val();
 				partn = $('#partner').val();
 
@@ -112,8 +111,8 @@ $(function(){
 				$('[data-rozn]').each(function(){
 					sum += (parseFloat($(this).attr('data-rozn')) * $(this).parents('tr').find('input').val());
 					$(this).parents('tr').find('[data-total]').html($(this).attr('data-rozn')); //меняем цену в графе "Цена"
-					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).attr('data-rozn')); // меняем attr total
-					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-rozn'))); // меняем attr total
+					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).attr('data-rozn')); // меняем attr total в линии
+					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-rozn'))); // меняем attr total в линии
 					$(this).parents('tr').find('.order__table-line-price').html($(this).attr('data-total')); // записываем общую цену линии
 				});
 
@@ -122,7 +121,7 @@ $(function(){
 				$('[data-partner]').each(function(){
 					sum += (parseFloat($(this).attr('data-partner')) * $(this).parents('tr').find('input').val());
 					$(this).parents('tr').find('[data-total]').html($(this).attr('data-partner')); //меняем цену в графе "Цена"
-					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-partner'))); // меняем attr total
+					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-partner'))); // меняем attr total в линии
 					$(this).parents('tr').find('.order__table-line-price').html($(this).attr('data-total')); // записываем общую цену линии
 				});
 
@@ -131,7 +130,7 @@ $(function(){
 				$('[data-diller]').each(function(){
 					sum += (parseFloat($(this).attr('data-diller')) * $(this).parents('tr').find('input').val());
 					$(this).parents('tr').find('[data-total]').html($(this).attr('data-diller')); //меняем цену в графе "Цена"
-					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).attr('data-diller')); // меняем attr total
+					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).attr('data-diller')); // меняем attr total в линии
 					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-diller'))); // меняем attr total
 					$(this).parents('tr').find('.order__table-line-price').html($(this).attr('data-total')); // записываем общую цену линии
 				});
@@ -175,10 +174,6 @@ $(function(){
 				input.val('1');
 			}
 
-			// изменяем значение общее по товару
-			// totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-rozn')));
-			// totalLineHtml.html(totalLine.attr('data-total')); // заносим общую сумму по товару в Столбец "стоимость"
-
 			//  рассчет веса
 			weight.attr('data-total-weight', (parseFloat(input.val())) * (parseFloat(weight.html()))); //рассчитываем вес по каждому товару
 			$('.order__table-product-text[data-total-weight]').each(function(){
@@ -217,9 +212,6 @@ $(function(){
 			if (input.val() < input.attr('data-min-val')) {
 				input.val('1');
 			}
-
-			// totalLine.attr('data-total', input.val() * parseFloat(totalLine.attr('data-rozn')));
-			// totalLineHtml.html(totalLine.attr('data-total'));  // заносим общую сумму по товару в Столбец "стоимость"
 
 			//  рассчет веса
 			weight.attr('data-total-weight', (parseFloat(input.val())) * (parseFloat(weight.html()))); //рассчитываем вес по каждому товару
