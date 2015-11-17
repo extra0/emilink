@@ -114,6 +114,7 @@ $(function(){
 					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).attr('data-rozn')); // меняем attr total в линии
 					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-rozn'))); // меняем attr total в линии
 					$(this).parents('tr').find('.order__table-line-price').html($(this).attr('data-total')); // записываем общую цену линии
+					$(this).parents('tr').find('._category-price .order__table-product-text').html('Розница'); // пишем категорию
 				});
 
 			// проверяем второй диапазон цены 
@@ -123,6 +124,7 @@ $(function(){
 					$(this).parents('tr').find('[data-total]').html($(this).attr('data-partner')); //меняем цену в графе "Цена"
 					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-partner'))); // меняем attr total в линии
 					$(this).parents('tr').find('.order__table-line-price').html($(this).attr('data-total')); // записываем общую цену линии
+					$(this).parents('tr').find('._category-price .order__table-product-text').html('Партнер'); // пишем категорию
 				});
 
 			// проверяем третий диапазон цены 
@@ -133,6 +135,7 @@ $(function(){
 					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).attr('data-diller')); // меняем attr total в линии
 					$(this).parents('tr').find('[data-total]').attr('data-total', $(this).parents('tr').find('input').val() * parseFloat($(this).attr('data-diller'))); // меняем attr total
 					$(this).parents('tr').find('.order__table-line-price').html($(this).attr('data-total')); // записываем общую цену линии
+					$(this).parents('tr').find('._category-price .order__table-product-text').html('Дилер'); // пишем категорию
 				});
 			}
 
