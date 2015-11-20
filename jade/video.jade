@@ -1,0 +1,66 @@
+extends _layout
+block content
+	.header__under-block
+		.container-fluid
+			.phones__block
+				.phones__block-inner
+					p.phones__block-city Москва
+					a.phones__block-phone(href="tel:+78129981387") +7 (812) 998-13-87
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+				.phones__block-inner
+					p.phones__block-city Санкт-Петербург
+					a.phones__block-phone(href="tel:+78129811660") +7 (812) 981-16-60
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+			a.header__logo(href="/")
+				img(src="img/logo_sub_page.png" alt="Site Logo")
+			.search__block
+				form.search__form(action="#" method="get")
+					input.search__input(type="text" required placeholder="Поиск на сайте")
+					button.search__submit(type="submit")
+	.main__section
+		.container-fluid
+			.catalog-sidebar__block
+				.catalog-sidebar__wrap
+					ul.catalog-sidebar__list
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line О компании
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Услуги
+						li.catalog-sidebar__item.active
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Видео
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Статьи
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Сертификаты
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Проекты
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Вакансии
+			.main__content
+				.breadcrumbs__block
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Главная
+						li.breadcrumbs__item
+							span.breadcrumbs__current Видео
+				h1.subtitle._sizeM Видео
+				.video__section
+					p Компания "ЭМИЛИНК" рада, что Вы иинтересуетесь деятельностью нашей организации.
+					p Мы начинаем снимать и выкладывать серию информационно-обучающих видеороликов посвященные производству волоконно-оптических патчкордов, оптических монтажных шнуров и другого оборудования данной области. <a href="https://www.youtube.com/channel/UCfbpYoaT0Lxfy3mj9RfTsYg" rel="nofollow">Подписывайтесь</a> на наш канал.
+					.video__item
+						h2.video__title "ЭМИЛИНК" - это российская группа компаний, производитель телекоммуникационных металлических конструкций
+						<iframe src="https://www.youtube.com/embed/aDtbC1QSNwQ" frameborder="0" allowfullscreen></iframe>
+						p Мы имеем две производственные площадки. На одной из них разработка и производство 19-дюймовых конструкций, предназначенных для размещения телекоммуникационного оборудования. 
+					.video__item
+						h2.video__title 26-я международная выставка "Связь-экспоком 2014"
+						<iframe src="https://www.youtube.com/embed/8PMVbbPLEK8" frameborder="0" allowfullscreen></iframe>
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, atque eligendi quo autem molestiae, consequuntur sapiente architecto asperiores dolorum, earum fuga rem cum. Veniam, optio, cumque. Facilis alias ipsam delectus qui, enim dicta soluta recusandae, illo dolorum explicabo eius vel.
+					.video__btn-wrap
+						a.video__btn(href="#") Показать больше видео

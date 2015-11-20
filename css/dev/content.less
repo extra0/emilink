@@ -179,6 +179,57 @@
 		height: 100%;
 		z-index: 2;
 	}
+	// блоки на старнице видео
+	&__section {
+		> p {
+			font-family: @regularg3;
+			line-height: 27px;
+			font-size: 16px;
+		}
+		a {
+			color: #16a96e;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		iframe {
+			width: 100%;
+			height: 400px;
+		}
+	}
+	&__title {
+		text-transform: uppercase;
+		font-family: @boldg1;
+		font-size: 18px;
+		line-height: 25px;
+		margin: 25px 0 15px 0;
+	}
+	&__item {
+		margin-bottom: 40px;
+		p {
+			font-size: 16px;
+			line-height: 27px;
+			font-family: @regularg1;
+		}
+	}
+	&__btn-wrap {
+		background: #e6e6e6;
+		margin: 40px 0;
+		padding: 15px 0;
+		text-align: center;
+	}
+	&__btn {
+		color: #16a96e;
+		display: inline-block;
+		border: none;
+		font-size: 18px;
+		font-family: @light;
+		border-bottom: 1px dotted;
+		text-decoration: none;
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}
+	}
 }
 //  блок поиска под шапкой на главной
 .search {
