@@ -2024,6 +2024,7 @@
 		font-size: 12px;
 		font-family: @light;
 		position: relative;
+		line-height: 14px;
 		border-radius: 3px;
 		display: inline-block;
 		padding: 3px 6px 3px 17px;
@@ -2103,5 +2104,34 @@
 		font-size: 16px;
 		font-family: @regularg1;
 		margin: 0;
+	}
+	&__block {
+		font-family: @light;
+		font-size: 16px;
+		line-height: 27px;
+		img {
+			display: block;
+			margin: 30px auto;
+		}
+		ul, ol {
+			padding: 0 0 0 30px;
+			li {
+				margin-bottom: 10px;
+				position: relative;
+			}
+		}
+		ul {
+			li {
+				&:before {
+					content: '';
+				    position: absolute;
+				    top: 14px;
+				    left: -27px;
+				    width: 10px;
+				    height: 1px;
+				    background: #16a96e;
+				}
+			}
+		}
 	}
 }
