@@ -1,0 +1,91 @@
+extends _layout
+block content
+	.header__under-block
+		.container-fluid
+			.phones__block
+				.phones__block-inner
+					p.phones__block-city Москва
+					a.phones__block-phone(href="tel:+78129981387") +7 (812) 998-13-87
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+				.phones__block-inner
+					p.phones__block-city Санкт-Петербург
+					a.phones__block-phone(href="tel:+78129811660") +7 (812) 981-16-60
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+			a.header__logo(href="/")
+				img(src="img/logo_sub_page.png" alt="Site Logo")
+			.search__block
+				form.search__form(action="#" method="get")
+					input.search__input(type="text" required placeholder="Поиск на сайте")
+					button.search__submit(type="submit")
+	.main__section
+		.container-fluid
+			.catalog-sidebar__block
+				.catalog-sidebar__wrap
+					ul.catalog-sidebar__list
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line О компании
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Услуги
+						li.catalog-sidebar__item.active
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Статьи
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Сертификаты
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Проекты
+						li.catalog-sidebar__item
+							a.catalog-sidebar__link(href="#")
+								span.bottom-line Вакансии
+				.tags__block
+					h3.tags__title Теги
+					ul.tags__list
+						li.tags__item
+							a.tags__link._bg-brown(href="#") Оптические кроссы
+						li.tags__item
+							a.tags__link._bg-pirple(href="#") ВОЛС
+						li.tags__item
+							a.tags__link._bg-dark-red(href="#") Оптический сплиттер
+						li.tags__item
+							a.tags__link._bg-blue(href="#") Патчкорд оптический
+			.main__content
+				.breadcrumbs__block
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Главная
+						li.breadcrumbs__item
+							span.breadcrumbs__current Статьи
+				h1.subtitle._sizeM Статьи
+				.article__list-block
+					span.article__list-date 10.08.2015
+					a.tags__link._bg-brown(href="#") Оптические кроссы
+					h2.article__list-title 
+						a(href="#") О частичном переносе склада из Московской области
+					p.article__list-preview Компания "ЭМИЛИНК" сообщает о частичном переносе склада из города Котельники Московской области в город Кострома (Костромская область).
+				.article__list-block
+					span.article__list-date 10.08.2015
+					a.tags__link._bg-pirple(href="#") ВОЛС
+					h2.article__list-title 
+						a(href="#") О частичном переносе склада из Московской области
+					p.article__list-preview Компания "ЭМИЛИНК" сообщает о частичном переносе склада из города Котельники Московской области в город Кострома (Костромская область).
+				.article__list-block
+					span.article__list-date 10.08.2015
+					a.tags__link._bg-dark-red(href="#") Оптические сплиттеры
+					h2.article__list-title 
+						a(href="#") О частичном переносе склада из Московской области
+					p.article__list-preview Компания "ЭМИЛИНК" сообщает о частичном переносе склада из города Котельники Московской области в город Кострома (Костромская область).
+				.article__list-block
+					span.article__list-date 10.08.2015
+					a.tags__link._bg-blue(href="#") Патчкорд оптический
+					h2.article__list-title 
+						a(href="#") О частичном переносе склада из Московской области
+					p.article__list-preview Компания "ЭМИЛИНК" сообщает о частичном переносе склада из города Котельники Московской области в город Кострома (Костромская область).
+				.article__list-block
+					span.article__list-date 10.08.2015
+					a.tags__link._bg-green(href="#") Новости кампании
+					h2.article__list-title 
+						a(href="#") О частичном переносе склада из Московской области
+					p.article__list-preview Компания "ЭМИЛИНК" сообщает о частичном переносе склада из города Котельники Московской области в город Кострома (Костромская область).

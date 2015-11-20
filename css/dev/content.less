@@ -550,27 +550,6 @@
 		flex-basis: 33%;
 		max-width: 360px;
 	}
-	&__category {
-		color: #fff;
-		font-size: 12px;
-		font-family: @light;
-		position: relative;
-		border-radius: 3px;
-		display: inline-block;
-		padding: 3px 6px 3px 17px;
-		&._company {background: #267757;}
-		&._industry {background: #4262c5;}
-		&:before {
-			content: '';
-			position: absolute;
-			top: 7px;
-		    left: 6px;
-			background: #fff;
-			width: 6px;
-			height: 6px;
-			border-radius: 50%;
-		}
-	}
 	&__title {
 		font-family: @medium;
 		margin: 19px 0 5px;
@@ -738,9 +717,12 @@
 // сайтбар каталога 
 .catalog-sidebar {
 	&__block {
-		width: @sidebar-width;
-		box-sizing: border-box;
 		float: left;
+		width: @sidebar-width;
+	}
+	&__wrap {
+		width: 100%;
+		box-sizing: border-box;
 		padding: 24px 21px;
 		background: #e0e1e2;
 		/*position: relative;
@@ -2017,4 +1999,109 @@
 .ya_map {
 	width: 100%;
 	height: 100%;
+}
+// блок тегов 
+.tags {
+	&__block {
+		margin: 40px 0 0 22px;
+	}
+	&__list {
+		padding: 0;
+		margin: 0 0 0 20px;
+	}
+	&__item {
+		display: block;
+		margin-bottom: 10px;
+	}
+	&__title {
+		color: #d6d6d6;
+		font-size: 20px;
+		font-family: @boldg1;
+		margin-bottom: 30px;
+	}
+	&__link {
+		color: #fff;
+		font-size: 12px;
+		font-family: @light;
+		position: relative;
+		border-radius: 3px;
+		display: inline-block;
+		padding: 3px 6px 3px 17px;
+		text-decoration: none;
+		-webkit-transition: background 0.4s ease;
+		-moz-transition: background 0.4s ease;
+		-ms-transition: background 0.4s ease;
+		-o-transition: background 0.4s ease;
+		transition: background 0.4s ease;
+		&._bg-green {
+			background: #267757;
+			&:hover {
+				background: lighten(#267757, 5%);
+			}
+		}
+		&._bg-blue {
+			background: #4262c5;
+			&:hover {
+				background: lighten(#4262c5, 5%);
+			}
+		}
+		&._bg-brown {
+			background: #c59242;
+			&:hover {
+				background: lighten(#c59242, 5%);
+			}
+		}
+		&._bg-pirple {
+			background: #77266e;
+			&:hover {
+				background: lighten(#77266e, 5%);
+			}
+		}
+		&._bg-dark-red {
+			background: #c56742;
+			&:hover {
+				background: lighten(#c56742, 5%);
+			}
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 7px;
+		    left: 6px;
+			background: #fff;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+		}
+	}
+}
+// страницы со статьями
+.article {
+	&__list-block{
+		margin-bottom: 45px;
+	}
+	&__list-date{
+		font-size: 12px;
+		margin-right: 10px;
+		font-family: @light;
+	}
+	&__list-title{
+		font-size: 24px;
+		margin: 10px 0 5px 0;
+		font-family: @boldg1;
+		a {
+			color: #000;
+			text-decoration: none;
+			&:hover {
+				color: #16a96e;
+				text-decoration: underline;
+			}
+		}
+	}
+	&__list-preview{
+		line-height: 27px;
+		font-size: 16px;
+		font-family: @regularg1;
+		margin: 0;
+	}
 }
