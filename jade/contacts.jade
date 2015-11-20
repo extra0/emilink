@@ -1,0 +1,136 @@
+extends _layout
+block content
+	.header__under-block
+		.container-fluid
+			.phones__block
+				.phones__block-inner
+					p.phones__block-city Москва
+					a.phones__block-phone(href="tel:+78129981387") +7 (812) 998-13-87
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+				.phones__block-inner
+					p.phones__block-city Санкт-Петербург
+					a.phones__block-phone(href="tel:+78129811660") +7 (812) 981-16-60
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+			a.header__logo(href="/")
+				img(src="img/logo_sub_page.png" alt="Site Logo")
+			.search__block
+				form.search__form(action="#" method="get")
+					input.search__input(type="text" required placeholder="Поиск на сайте")
+					button.search__submit(type="submit")
+	.main__section
+		.container-fluid
+			.main__content._no-sidebar
+				.breadcrumbs__block
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Главная
+						li.breadcrumbs__item
+							span.breadcrumbs__current Контактная информация
+				h1.subtitle._sizeM Контактная информация
+				table.contact__table
+					tr
+						td
+							h3.contact__title Офис и склад<br>в москве
+						td
+							p.contact__text Московская область, 140054, Котельники, мкрн Ковровый, д. 37
+							a.contact__phone(href="tel:+74997077649") +7 (499) 707-76-49
+							br
+							a.contact__email(href="mailto:moskva@emilink.ru") 
+								span.bottom-line moskva@emilink.ru
+							p.contact__text Пн - Пт, с 9:00 до 18:00
+							span.contact__note Склад не работает в пятницу
+						td
+							.contact__map-wrap
+								script.
+									$(function(){
+										ymaps.ready(init);
+
+										function init () {
+										    var myMap = new ymaps.Map("map_1", {
+										            center: [55.790139, 37.814052],
+										            zoom: 10,
+										            controls: ['zoomControl']
+										        }, {
+										            searchControlProvider: 'yandex#search'
+										        });
+
+										    myMap.geoObjects
+										        .add(new ymaps.Placemark([55.790139, 37.814052], {
+										            balloonContent: 'Какой нибудь текст если нада'
+										        }, {
+										            preset: 'islands#circleDotIcon',
+										            iconColor: '#16a96e'
+										        }));
+										}
+									});
+								#map_1
+					tr
+						td
+							h3.contact__title Офис<br>в санкт-петербурге
+						td
+							p.contact__text 194356, Санкт-Петербург, Выборгское шоссе, дом 34
+							a.contact__phone(href="tel:+74999811660") +7 (499) 98-11-660
+							br
+							a.contact__email(href="mailto:saint-peterburg@emilink.ru") 
+								span.bottom-line saint-peterburg@emilink.ru
+							p.contact__text Пн - Пт, с 9:00 до 18:00
+						td
+							.contact__map-wrap
+								script.
+									$(function(){
+										ymaps.ready(init);
+
+										function init () {
+										    var myMap = new ymaps.Map("map_2", {
+										            center: [55.790139, 38.814052],
+										            zoom: 10,
+										            controls: ['zoomControl']
+										        }, {
+										            searchControlProvider: 'yandex#search'
+										        });
+
+										    myMap.geoObjects
+										        .add(new ymaps.Placemark([55.790139, 38.814052], {
+										            balloonContent: 'Какой нибудь текст если нада'
+										        }, {
+										            preset: 'islands#circleDotIcon',
+										            iconColor: '#16a96e'
+										        }));
+										}
+									});
+								#map_2
+					tr
+						td
+							h3.contact__title Металлообработка
+						td
+							p.contact__text 156019, Кострома, ул. Деминская, д.4, корпус ЛИТЕРА А, кв. И И1.
+							a.contact__phone(href="tel:+74942494797") +7 (4942) 49-47-97
+							br
+							a.contact__email(href="mailto:metall@emilink.ru") 
+								span.bottom-line metall@emilink.ru
+							p.contact__text Пн - Пт, с 9:00 до 18:00
+						td
+							.contact__map-wrap
+								script.
+									$(function(){
+										ymaps.ready(init);
+
+										function init () {
+										    var myMap = new ymaps.Map("map_3", {
+										            center: [52.790139, 38.814052],
+										            zoom: 10,
+										            controls: ['zoomControl']
+										        }, {
+										            searchControlProvider: 'yandex#search'
+										        });
+
+										    myMap.geoObjects
+										        .add(new ymaps.Placemark([52.790139, 38.814052], {
+										            balloonContent: 'Какой нибудь текст если нада'
+										        }, {
+										            preset: 'islands#circleDotIcon',
+										            iconColor: '#16a96e'
+										        }));
+										}
+									});
+								#map_3

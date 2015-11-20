@@ -2109,6 +2109,7 @@
 		font-family: @light;
 		font-size: 16px;
 		line-height: 27px;
+		margin-bottom: 80px;
 		img {
 			display: block;
 			margin: 30px auto;
@@ -2132,6 +2133,68 @@
 				    background: #16a96e;
 				}
 			}
+		}
+	}
+}
+// старница контактов
+.contact {
+	&__title {
+		font-size: 24px;
+		font-family: @boldg1;
+		text-transform: uppercase;
+		margin: 0;
+		line-height: 36px;
+	}
+	&__table {
+		margin-top: 70px;
+		width: 100%;
+		td {
+			width: 33%;
+			padding-bottom: 80px;
+			vertical-align: top;
+			&:nth-child(2) {
+				padding: 0 40px;
+			}
+			&:last-child{
+				padding-left: 40px;
+			}
+		}
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 27px;
+		margin: 0;
+		font-family: @regularg1;
+	}
+	&__phone {
+		text-decoration: none;
+		color: #000;
+		font-family: @regularg1;
+		font-size: 16px;
+		margin: 10px 0 0;
+		display: inline-block;
+	}
+	&__email {
+		text-decoration: none;
+		color: #000;
+		font-family: @regularg1;
+		font-size: 60%;
+		margin: 5px 0 10px;
+		display: inline-block;
+		.bottom-line {
+			border-bottom: 1px solid #b6b6b6;
+			&:hover {
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+	&__note {
+		font-size: 12px;
+	}
+	&__map-wrap {
+		div {
+			width: 100%;
+			height: 200px;
 		}
 	}
 }

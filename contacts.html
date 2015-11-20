@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <!-- окно входа в ЛК-->
+    <div id="enter" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Вход</span><span class="modal__header-text">или </span><a href="#registration" class="modal__header-link fancybox">Регистрация</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#restore" class="modal__remember-link c fancybox">Напомнить пароль</a>
+      </form>
+    </div>
+    <!-- окно регистрации-->
+    <div id="registration" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Регистрация</span><span class="modal__header-text">или</span><a href="#enter" class="modal__header-link fancybox">Вход</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Зарегистрироваться</button>
+      </form>
+    </div>
+    <!-- окно обратного звонка-->
+    <div id="callback" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Заказ звонка</span>
+        <p class="modal__header-city">Москва</p>
+      </div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон" class="modal__input mask">
+        <input type="hidden" name="city">
+        <button type="submit" class="modal__submit btn _modal-btn">Перезвонить</button>
+      </form>
+    </div>
+    <!-- окно восстановления пароль-->
+    <div id="restore" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Восстановление</span></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="email" placeholder="Электронная почта" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Восстановить</button>
+      </form>
+    </div>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__user-block"><a href="#enter" class="header__user-link _enter fancybox">войти на сайт</a><a href="#" class="header__user-link _cart">корзина</a></div>
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Продукция</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Производство</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">новости</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">доставка</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="header__under-block">
+        <div class="container-fluid">
+          <div class="phones__block">
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Москва</p><a href="tel:+78129981387" class="phones__block-phone">+7 (812) 998-13-87</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Санкт-Петербург</p><a href="tel:+78129811660" class="phones__block-phone">+7 (812) 981-16-60</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+          </div><a href="/" class="header__logo"><img src="img/logo_sub_page.png" alt="Site Logo"></a>
+          <div class="search__block">
+            <form action="#" method="get" class="search__form">
+              <input type="text" required placeholder="Поиск на сайте" class="search__input">
+              <button type="submit" class="search__submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main__section">
+        <div class="container-fluid">
+          <div class="main__content _no-sidebar">
+            <div class="breadcrumbs__block">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__current">Контактная информация</span></li>
+              </ul>
+            </div>
+            <h1 class="subtitle _sizeM">Контактная информация</h1>
+            <table class="contact__table">
+              <tr>
+                <td>
+                  <h3 class="contact__title">Офис и склад<br>в москве</h3>
+                </td>
+                <td>
+                  <p class="contact__text">Московская область, 140054, Котельники, мкрн Ковровый, д. 37</p><a href="tel:+74997077649" class="contact__phone">+7 (499) 707-76-49</a><br><a href="mailto:moskva@emilink.ru" class="contact__email"> <span class="bottom-line">moskva@emilink.ru</span></a>
+                  <p class="contact__text">Пн - Пт, с 9:00 до 18:00</p><span class="contact__note">Склад не работает в пятницу</span>
+                </td>
+                <td>
+                  <div class="contact__map-wrap">
+                    <script>
+                      $(function(){
+                      	ymaps.ready(init);
+                      
+                      	function init () {
+                      	    var myMap = new ymaps.Map("map_1", {
+                      	            center: [55.790139, 37.814052],
+                      	            zoom: 10,
+                      	            controls: ['zoomControl']
+                      	        }, {
+                      	            searchControlProvider: 'yandex#search'
+                      	        });
+                      
+                      	    myMap.geoObjects
+                      	        .add(new ymaps.Placemark([55.790139, 37.814052], {
+                      	            balloonContent: 'Какой нибудь текст если нада'
+                      	        }, {
+                      	            preset: 'islands#circleDotIcon',
+                      	            iconColor: '#16a96e'
+                      	        }));
+                      	}
+                      });
+                    </script>
+                    <div id="map_1"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="contact__title">Офис<br>в санкт-петербурге</h3>
+                </td>
+                <td>
+                  <p class="contact__text">194356, Санкт-Петербург, Выборгское шоссе, дом 34</p><a href="tel:+74999811660" class="contact__phone">+7 (499) 98-11-660</a><br><a href="mailto:saint-peterburg@emilink.ru" class="contact__email"> <span class="bottom-line">saint-peterburg@emilink.ru</span></a>
+                  <p class="contact__text">Пн - Пт, с 9:00 до 18:00</p>
+                </td>
+                <td>
+                  <div class="contact__map-wrap">
+                    <script>
+                      $(function(){
+                      	ymaps.ready(init);
+                      
+                      	function init () {
+                      	    var myMap = new ymaps.Map("map_2", {
+                      	            center: [55.790139, 38.814052],
+                      	            zoom: 10,
+                      	            controls: ['zoomControl']
+                      	        }, {
+                      	            searchControlProvider: 'yandex#search'
+                      	        });
+                      
+                      	    myMap.geoObjects
+                      	        .add(new ymaps.Placemark([55.790139, 38.814052], {
+                      	            balloonContent: 'Какой нибудь текст если нада'
+                      	        }, {
+                      	            preset: 'islands#circleDotIcon',
+                      	            iconColor: '#16a96e'
+                      	        }));
+                      	}
+                      });
+                    </script>
+                    <div id="map_2"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="contact__title">Металлообработка</h3>
+                </td>
+                <td>
+                  <p class="contact__text">156019, Кострома, ул. Деминская, д.4, корпус ЛИТЕРА А, кв. И И1.</p><a href="tel:+74942494797" class="contact__phone">+7 (4942) 49-47-97</a><br><a href="mailto:metall@emilink.ru" class="contact__email"> <span class="bottom-line">metall@emilink.ru</span></a>
+                  <p class="contact__text">Пн - Пт, с 9:00 до 18:00</p>
+                </td>
+                <td>
+                  <div class="contact__map-wrap">
+                    <script>
+                      $(function(){
+                      	ymaps.ready(init);
+                      
+                      	function init () {
+                      	    var myMap = new ymaps.Map("map_3", {
+                      	            center: [52.790139, 38.814052],
+                      	            zoom: 10,
+                      	            controls: ['zoomControl']
+                      	        }, {
+                      	            searchControlProvider: 'yandex#search'
+                      	        });
+                      
+                      	    myMap.geoObjects
+                      	        .add(new ymaps.Placemark([52.790139, 38.814052], {
+                      	            balloonContent: 'Какой нибудь текст если нада'
+                      	        }, {
+                      	            preset: 'islands#circleDotIcon',
+                      	            iconColor: '#16a96e'
+                      	        }));
+                      	}
+                      });
+                    </script>
+                    <div id="map_3"></div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="social__block"><a href="#" class="social__link"><img src="img/fb.png" alt=""></a><a href="#" class="social__link"><img src="img/vk.png" alt=""></a><a href="#" class="social__link"><img src="img/tw.png" alt=""></a></div>
+        <div class="footer__link-block">
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Главная</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Новости</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">О компании</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Доставка</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Продукция</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Контакты</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Производство</span></a></li>
+          </ul>
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">КДЗС</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Патчкорд оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кросс</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Пигтейл оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кабель</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Телекоммуникационный шкаф</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический сплиттер</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom-block">
+          <p class="footer__development"> <a href="#">Разработка - студия «Максимус»</a></p>
+          <p class="footer__copyright">© 2007-2015, ООО «Эмилинк»</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
