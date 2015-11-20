@@ -97,37 +97,36 @@
 	&__drop-menu-wrap {
 		position: absolute;
 		top: 0;
-		left: -15px;
+		left: 0px;
 		padding-top: 58px;
-		width: 200px;
+		width: 220px;
 		display: none;
-		&._index {
-			.header__drop-menu {
-				background: rgba(0, 0, 0, 0.85);
+		.header__drop-menu {
+			background: rgba(0, 0, 0, 0.85);
+		}
+		.header__drop-item {
+			position: relative;
+			&:before {
+				content: '';
+			    position: absolute;
+			    bottom: -2px;
+			    left: 24%;
+			    right: 0;
+			    width: 50%;
+			    height: 1px;
+			    background: rgba(255,255,255,0.5);
 			}
-			.header__drop-item {
-				position: relative;
+			&:last-child {
 				&:before {
-					content: '';
-				    position: absolute;
-				    bottom: -2px;
-				    left: 24%;
-				    right: 0;
-				    width: 50%;
-				    height: 1px;
-				    background: rgba(255,255,255,0.5);
-				}
-				&:last-child {
-					&:before {
-						display: none;
-					}
+					display: none;
 				}
 			}
-			.header__drop-link {
-				color: #fff;
-				&:hover {
-					color: darken(#fff, 10%);
-				}
+		}
+		.header__drop-link {
+			color: #fff;
+			&:hover {
+				color: darken(#fff, 10%);
+				background: #000;
 			}
 		}
 	}
@@ -135,14 +134,13 @@
 		left: 0;
 		width: 100%;
 		background: rgba(255, 255, 255, 0.85);
-		padding: 10px;
-		margin: 0;
+		padding: 10px 0 0 0;
 		border-left: 1px solid #000;
 		border-right: 1px solid #000;
 		border-bottom: 1px solid #000;
 	}
 	&__drop-item {
-		padding: 16px 6px ;
+		margin-bottom: 2px;
 		position: relative;
 		&:before {
 			content: '';
@@ -155,6 +153,7 @@
 		    background: rgba(0,0,0,0.5);
 		}
 		&:last-child {
+			margin: 0;
 			&:before {
 				display: none;
 			}
@@ -163,6 +162,8 @@
 	&__drop-link {
 		text-transform: uppercase;
 	    color: #000;
+	    display: block;
+	    padding: 16px;
 	    font-size: 15px;
 	    text-decoration: none;
 	    -webkit-transition: all .4s ease;
@@ -170,7 +171,6 @@
 	    -ms-transition: all .4s ease;
 	    -o-transition: all .4s ease;
 	    transition: all .4s ease;
-	    display: inline-block;
 	    font-family: @boldg3;
 	    &.active,
 	    &:hover {
