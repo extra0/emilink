@@ -50,26 +50,23 @@
     }
     // кнопка в каталоге товаров
     &._catalog-btn {
-    	padding: 16px 14px 17px 44px;
-    	margin: 30px 0 0 0;
+    	padding: 6px 9px 7px 28px;
+    	font-size: 14px;
+    	float: right;
+    	margin: 7px 0 0 0;
     	&:after {
     		content: '';
     		position: absolute;
     		background: url(../img/cart.png) 0 0 no-repeat;
     		width: 16px;
     		height: 16px;
-    		top: 18px;
-    		left: 16px;
+    		top: 5px;
+    		left: 7px;
     		-webkit-transition: left .4s ease;
     		-moz-transition: left .4s ease;
     		-ms-transition: left .4s ease;
     		-o-transition: left .4s ease;
     		transition: left .4s ease;
-    	}
-    	&:hover {
-    		&:after {
-			    left: 13px;
-    		}
     	}
     }
     // кнопка в товаре
@@ -126,7 +123,9 @@
     // кнопка при занесенном товаре в корзине
     &._in-cart {
     	background: rgba(255, 156, 15, 0.72);
-    	padding: 16px 18px 17px 18px;
+    	padding: 6px 8px 7px 8px;
+    	margin: 7px 0 0 0;
+    	font-size: 14px;
     	&:before {
     		content: '';
 		    position: absolute;
@@ -205,7 +204,7 @@
 		margin: 25px 0 15px 0;
 	}
 	&__item {
-		margin-bottom: 40px;
+		margin-bottom: 90px;
 		p {
 			font-size: 16px;
 			line-height: 27px;
@@ -369,6 +368,12 @@
 		&._no-sidebar {
 			margin-left: 0;
 		}
+		> p {
+			line-height: 27px;
+			font-size: 16px;
+			font-family: @regularg1;
+			margin-bottom: 30px;
+		}
 	}
 	&__section {
 		overflow: hidden;
@@ -455,7 +460,8 @@
 	&__cell {
 		position: relative;
 		text-align: center;
-		height: 200px;
+		// height: 200px;
+		height: 190px;
 		flex-basis: 33%;
 		margin: 0 0px 30px 0;
 		max-width: 360px;
@@ -579,12 +585,10 @@
 		padding: 42px 0 64px 0;
 	}
 	&__main-title {
-		display: inline-block;
-		border-bottom: 2px solid;
 		margin: 0 0 40px 0;
-		&:hover {
-			border-bottom: 2px solid transparent;
-		}
+		font-size: 40px;
+		text-transform: uppercase;
+		font-family: @boldg1;
 	}
 	&__title-link {
 		color: #000;
@@ -617,6 +621,14 @@
 		margin: 19px 0 5px;
 		font-size: 20px;
 		line-height: 26px;
+		a {
+			color: #000;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+				color: #16a96e;
+			}
+		}
 	}
 	&__date {
 		font-family: @light;
@@ -721,10 +733,15 @@
 		padding: 53px 0;
 		.subtitle {
 			margin-bottom: 38px;
+			line-height: 40px;
 		}
 	}
 	&__block {
 		padding-left: @sidebar-width+80px;
+		font-size: 16px;
+	    font-family: 'San Francisco Light';
+	    line-height: 30px;
+	    margin-bottom: 29px;
 	}
 	&__text {
 		font-size: 16px;
@@ -781,6 +798,7 @@
 	&__block {
 		float: left;
 		width: @sidebar-width;
+		margin-bottom: 50px;
 	}
 	&__wrap {
 		width: 100%;
@@ -840,7 +858,7 @@
 		font-family: @boldg1;
 		font-size: 18px;
 		display: block;
-		margin-bottom: 24px;
+		margin-bottom: 14px;
 	}
 	&__sub-list {
 		padding: 0 0 0 19px;
@@ -904,8 +922,6 @@
 		display: -ms-flexbox; 
 		display: -webkit-flex;
 		display: flex;
-		justify-content: space-between;
-		-webkit-justify-content: space-between;
 		flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		align-items: flex-start; // если нужно что бы блоки были одной высоты поставить stretch
@@ -916,9 +932,10 @@
 		padding: 17px 5px;
 		box-sizing: border-box;
 		display: inline-block;
-		width: 48%;
+		width: 32%;
+		flex-basis: 32%;
 		vertical-align: top;
-		margin: 0 0px 30px 0;
+		margin: 0 2% 30px 0;
 		-webkit-transition: all 0.4s ease;
 		-moz-transition: all 0.4s ease;
 		-ms-transition: all 0.4s ease;
@@ -930,6 +947,9 @@
 		}
 		&._widthS {
 			width: 31%;
+		}
+		&:nth-child(3n) {
+			margin-right: 0;
 		}
 	}
 	&__article {
@@ -944,16 +964,16 @@
 	}
 	&__block-footer,
 	&__block-body {
-		padding: 0 10px 0 16px;
+		padding: 0 5px;
 	}
 	&__block-body {
 		margin-bottom: 10px;
 	}
 	&__link {
 		color: #000;
-		line-height: 29px;
+		line-height: 24px;
 		font-family: @boldg1;
-		font-size: 60%;
+		font-size: 50%;
 		text-decoration: none;
 		.bottom-line {
 			border-bottom: 1px solid #a3a3a3;
@@ -1016,10 +1036,9 @@
 	&__price-block {
 		color: #ff9c0f;
 		font-family: @bold;
-		font-size: 28px;
+		font-size: 19px;
 		position: relative;
 		top: 10px;
-		text-align: center;
 	}
 	&__price {
 		display: inline-block;
@@ -1078,7 +1097,7 @@
 		text-decoration: none;
 		.product__category-item-title {
 			font-size: 110%;
-			margin: 1.6em 0 1.6em 213px;
+			margin: 1.6em 0 1.6em 180px;
 			font-family: @boldg1;
 			.bottom-line {
 				border-bottom: 2px solid #a3a3a3;
@@ -1391,6 +1410,7 @@
 			border-bottom: 1px solid transparent;
 		}
 	}
+	&__textarea,
 	&__input {
 		border: 3px solid #d7d7d7;
 		width: 100%;
@@ -1424,6 +1444,18 @@
 			&:-moz-placeholder           {color:#bdbdbd;}
 			&:-ms-input-placeholder      {color:#bdbdbd;}
 		}
+		&._captcha {
+			width: 50%;
+			display: block;
+		}
+	}
+	&__captcha {
+		display: block;
+		margin: 0 0 10px 0;
+	}
+	&__textarea {
+		height: auto;
+		resize: none;
 	}
 	&__remember-link {
 		color: #16a96e;
@@ -2279,8 +2311,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
-	    justify-content: space-between;
-	    -webkit-justify-content: space-between;
+	    justify-content: flex-start;
+	    -webkit-justify-content: flex-start;
 	    flex-direction: row;
 	    -webkit-flex-direction: row;
 	    align-items: stretch;
@@ -2295,7 +2327,11 @@
 	    -o-transition: all 0.4s ease;
 	    transition: all 0.4s ease;
 	    width: 28%;
+	    margin-right: 8%;
 	    margin-bottom: 40px;
+	    &:nth-child(3n) {
+	    	margin-right: 0;
+	    }
 	}
 	&__img {
     	border: 3px solid #d6d6d6;
@@ -2310,4 +2346,11 @@
     		box-shadow: 0 0 5px #16a96e;
     	}
     }
+}
+// страница прайса 
+.price {
+	&__block {
+		max-width: 500px;
+		margin-bottom: 90px;
+	}
 }
