@@ -3087,7 +3087,47 @@ textarea {
 }
 .price__block {
   max-width: 500px;
-  margin-bottom: 90px;
+  margin-bottom: 40px;
+}
+.univ__block:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.univ__img-wrap {
+  float: left;
+  margin: 0 20px 10px 0;
+  max-width: 150px;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 3px solid #d6d6d6;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.univ__img-wrap:hover {
+  border: 3px solid #16a96e;
+  box-shadow: 0 0 5px #16a96e;
+}
+.univ__title {
+  font-family: 'San Francisco Bold G1';
+  font-size: 24px;
+}
+.univ__title a {
+  color: #000;
+  text-decoration: none;
+}
+.univ__title a:hover {
+  color: #16a96e;
+  text-decoration: underline;
+}
+.univ__text {
+  font-family: 'San Francisco Regular G1';
+  line-height: 24px;
+  font-size: 16px;
+  margin: 0 0 10px 0;
 }
 .footer {
   padding: 55px 0 35px 0;

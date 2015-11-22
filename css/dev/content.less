@@ -2351,6 +2351,51 @@
 .price {
 	&__block {
 		max-width: 500px;
-		margin-bottom: 90px;
+		margin-bottom: 40px;
+	}
+}
+// универстальный блок для проектов и производителей
+.univ {
+	&__block {
+		&:after {
+			content: '';
+			display: block;
+			clear: both;	
+		}
+	}
+	&__img-wrap {
+		float: left;
+		margin: 0 20px 10px 0;
+		max-width: 150px;
+		box-sizing: border-box;
+		padding: 15px;
+		border: 3px solid #d6d6d6;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		&:hover {
+			border: 3px solid #16a96e;
+			box-shadow: 0 0 5px #16a96e;
+		}
+	}
+	&__title {
+		font-family: @boldg1;
+		font-size: 24px;
+		a {
+			color: #000;
+			text-decoration: none;
+			&:hover {
+				color: #16a96e;
+				text-decoration: underline;
+			}
+		}
+	}
+	&__text {
+		font-family: @regularg1;
+		line-height: 24px;
+		font-size: 16px;
+		margin: 0 0 10px 0;
 	}
 }
