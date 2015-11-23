@@ -840,8 +840,8 @@ textarea {
 .subtitle {
   font-family: 'San Francisco Bold G1';
   font-size: 36px;
+  font-size: 32px;
   margin: 0;
-  text-transform: uppercase;
 }
 .subtitle._sizeM {
   font-size: 30px;
@@ -1738,7 +1738,13 @@ textarea {
   box-shadow: 0px 0px 5px #16a96e;
 }
 .product__block._widthS {
-  width: 31%;
+  flex-basis: 25%;
+}
+.product__block._widthS:nth-child(3n) {
+  margin-right: 2%;
+}
+.product__block._widthS:nth-child(0) {
+  margin-right: 0;
 }
 .product__block:nth-child(3n) {
   margin-right: 0;
@@ -1829,9 +1835,12 @@ textarea {
   position: relative;
   top: 10px;
 }
+.product__price-text {
+  font-size: 12px;
+}
 .product__price {
   display: inline-block;
-  margin: 0 7px;
+  margin: 0 0px 0 7px;
 }
 .product__category-item {
   border: 3px solid #d6d6d6;
@@ -1991,6 +2000,15 @@ textarea {
   display: block;
   clear: both;
 }
+.product__form-block a.btn._in-cart {
+  padding: 6px 12px 7px 12px;
+  font-size: 19px;
+  margin: 0 auto;
+  display: block;
+  float: none;
+  max-width: 130xp;
+  text-align: center;
+}
 .product__quantity-block {
   width: 44%;
   float: left;
@@ -2061,6 +2079,7 @@ textarea {
 }
 .product__tab-block {
   display: none;
+  overflow-x: auto;
 }
 .product__tab-block.active {
   display: block;
@@ -2071,6 +2090,28 @@ textarea {
 .product__tab-block table td {
   padding: 8px;
   border: 1px solid #16a96e;
+}
+.product__tab-block table td p {
+  line-height: normal;
+  margin: 0;
+}
+.product__tab-block p,
+.product__tab-block ul li,
+.product__tab-block ol li {
+  font-size: 16px;
+  font-family: 'San Francisco Light';
+  line-height: 30px;
+  position: relative;
+}
+.product__tab-block ul li:before {
+  content: '';
+  position: absolute;
+  background: #16a96e;
+  top: 12px;
+  left: -20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
 }
 .product__manual-block {
   margin: 70px 0 0 50px;
@@ -2089,7 +2130,7 @@ textarea {
   width: 55px;
   height: 55px;
   top: -16px;
-  left: -60px;
+  left: -48px;
 }
 .product__manual-link._rar:before {
   content: '';
@@ -2133,8 +2174,6 @@ textarea {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
   align-items: flex-start;
   -webkit-align-items: flex-start;
 }
@@ -3217,6 +3256,9 @@ textarea {
   .header__menu-item {
     margin-right: 1.7%;
   }
+  .header__drop-menu-wrap {
+    padding-top: 56px;
+  }
   .subtitle._sizeM {
     font-size: 24px;
   }
@@ -3249,6 +3291,9 @@ textarea {
     margin-right: 0;
   }
   .product__block:nth-child(3n) {
+    margin-right: 2%;
+  }
+  .product__block._widthS:nth-child(2n) {
     margin-right: 2%;
   }
   .product__block-body {

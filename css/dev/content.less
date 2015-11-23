@@ -9,8 +9,8 @@
 .subtitle {
 	font-family: @boldg1;
 	font-size: 36px;
+	font-size: 32px;
 	margin: 0;
-	text-transform: uppercase;
 	&._sizeM {
 		font-size: 30px;
 	}
@@ -946,7 +946,13 @@
 			box-shadow: 0px 0px 5px #16a96e;
 		}
 		&._widthS {
-			width: 31%;
+			flex-basis: 25%;
+			&:nth-child(3n) {
+				margin-right: 2%;
+			}
+			&:nth-child(0) {
+				margin-right: 0;
+			}
 		}
 		&:nth-child(3n) {
 			margin-right: 0;
@@ -1040,9 +1046,12 @@
 		position: relative;
 		top: 10px;
 	}
+	&__price-text {
+		font-size: 12px;
+	}
 	&__price {
 		display: inline-block;
-		margin: 0 7px;
+		margin: 0 0px 0 7px;
 	}
 	// блок категории
 	&__category-item {
@@ -1209,6 +1218,15 @@
 			display: block;
 			clear: both;
 		}
+		a.btn._in-cart {
+			padding: 6px 12px 7px 12px;
+			font-size: 19px;
+			margin: 0 auto;
+			display: block;
+			float: none;
+			max-width: 130px;
+			text-align: center;
+		}
 	}
 	&__quantity-block {
 		width: 44%;
@@ -1281,6 +1299,7 @@
 	}
 	&__tab-block {
 		display: none;
+		overflow-x: auto;
 		&.active {
 			display: block;
 		}
@@ -1289,6 +1308,28 @@
 			td {
 				padding: 8px;
 				border: 1px solid #16a96e;
+				p {
+					line-height: normal;
+					margin: 0;
+				}
+			}
+		}
+		p, ul li, ol li {
+			font-size: 16px;
+			font-family: 'San Francisco Light';
+			line-height: 30px;
+			position: relative;
+		}
+		ul li {
+			&:before {
+				content: '';
+			    position: absolute;
+			    background: #16a96e;
+			    top: 12px;
+			    left: -20px;
+			    width: 6px;
+			    height: 6px;
+			    border-radius: 50%;
 			}
 		}
 	}
@@ -1309,7 +1350,7 @@
 				width: 55px;
 				height: 55px;
 				top: -16px;
-				left: -60px;
+				left: -48px;
 			}
 		}
 		&._rar {
@@ -1362,8 +1403,8 @@
 		display: -ms-flexbox; 
 		display: -webkit-flex;
 		display: flex;
-		justify-content: space-between;
-		-webkit-justify-content: space-between;
+		// justify-content: space-between;
+		// -webkit-justify-content: space-between;
 		align-items: flex-start;
 		-webkit-align-items: flex-start;
 	}
