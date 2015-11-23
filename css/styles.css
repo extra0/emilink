@@ -1210,6 +1210,15 @@ textarea {
   -webkit-align-items: flex-start;
   align-items: flex-start;
 }
+.banners__block._direction-column {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.banners__block._direction-column img {
+  margin-bottom: 20px;
+}
 .banners__link {
   display: inline-block;
   max-width: 264px;
@@ -1599,6 +1608,7 @@ textarea {
   box-sizing: border-box;
   padding: 24px 21px;
   background: #e0e1e2;
+  margin-bottom: 30px;
   /*position: relative;
 		z-index: 2;*/
 }
@@ -2006,7 +2016,7 @@ textarea {
   margin: 0 auto;
   display: block;
   float: none;
-  max-width: 130xp;
+  max-width: 130px;
   text-align: center;
 }
 .product__quantity-block {

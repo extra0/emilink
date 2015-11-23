@@ -394,6 +394,15 @@
 		-webkit-flex-direction: row;
 		-webkit-align-items: flex-start;
 		align-items: flex-start;
+		&._direction-column {
+			flex-direction: column;
+			-webkit-flex-direction: column;
+			-webkit-align-items: center;
+			align-items: center;
+			img {
+				margin-bottom: 20px;
+			}
+		}
 	}
 	&__link {
 		display: inline-block;
@@ -805,6 +814,7 @@
 		box-sizing: border-box;
 		padding: 24px 21px;
 		background: #e0e1e2;
+		margin-bottom: 30px;
 		/*position: relative;
 		z-index: 2;*/
 	}
