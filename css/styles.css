@@ -1479,11 +1479,13 @@ textarea {
 }
 .diller__certificate {
   display: inline-block;
-  box-shadow: 0 0 7px #111;
   margin: 0 0 50px 10px;
   width: 22%;
   max-width: 129px;
   max-height: 177px;
+}
+.diller__certificate img {
+  box-shadow: 0 0 7px #111;
 }
 .diller__button {
   border-radius: 6px;
@@ -2340,15 +2342,18 @@ textarea {
   width: 100%;
   margin-bottom: 20px;
 }
+.cart__table thead .cart__table-item:first-child {
+  width: 50%;
+}
 .cart__table thead .cart__table-item:last-child {
-  width: 40%;
+  width: 32%;
 }
 .cart__table tbody .cart__table-item:first-child {
-  width: 11%;
+  width: 1%;
   padding-right: 14px;
 }
 .cart__table tbody .cart__table-item:nth-child(2) {
-  width: 50%;
+  width: 22%;
 }
 .cart__table tbody .cart__table-item:last-child {
   text-align: right;
@@ -2361,12 +2366,16 @@ textarea {
 .cart__table-item {
   vertical-align: top;
   padding: 10px 0;
+  position: relative;
 }
 .cart__table-line {
   border-top: 3px solid #f2f3f3;
 }
-.cart__table-line:last-child {
-  border-bottom: 3px solid #f2f3f3;
+.cart__table-line:last-child td.cart__table-item {
+  text-align: left;
+}
+.cart__table-line:last-child td.cart__table-item:last-child p:last-child {
+  border-right: none;
 }
 .cart__table-img-wrap {
   width: 55px;
@@ -2421,8 +2430,8 @@ textarea {
   font-family: 'San Francisco Light';
   font-size: 16px;
   color: #8a8a8a;
-  padding-right: 10px;
-  margin-right: 10px;
+  padding-right: 6px;
+  margin-right: 6px;
   border-right: 2px solid #cecece;
 }
 .cart__table-total-text {
@@ -2431,15 +2440,21 @@ textarea {
   font-size: 16px;
   margin: 0 0 11px;
 }
+.cart__order-status,
 .cart__table-total-price {
   color: #ff9c0f;
   font-size: 28px;
   margin: 0;
   font-family: 'San Francisco Bold G1';
 }
+.cart__order-status {
+  font-size: 16px;
+  font-family: 'San Francisco Regular G1';
+  margin: 19px 0 0 0;
+}
 .cart__table-wrap {
   border: 3px solid #d6d6d6;
-  padding: 10px 7%;
+  padding: 10px 3%;
   margin-bottom: 25px;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -2453,6 +2468,12 @@ textarea {
 }
 .cart__table-wrap tbody {
   display: none;
+}
+.cart__table-status-block {
+  position: absolute;
+  top: 10px;
+  left: 340px;
+  width: 100%;
 }
 .cart__table-order-number {
   color: #000;
@@ -3325,9 +3346,25 @@ textarea {
     float: none;
   }
   .footer__link-block {
-    width: 81%;
+    width: 80%;
   }
   .footer__link {
     font-size: 55%;
+  }
+}
+@media (max-width: 1200px) {
+  .cart__table-order-number {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .cart__table-order-date {
+    font-size: 14px;
+  }
+  .cart__table-status-block {
+    left: 220px;
+  }
+  .cart__table-total-price {
+    font-size: 18px;
+    margin: 19px 0 0 0;
   }
 }
