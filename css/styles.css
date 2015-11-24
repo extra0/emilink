@@ -2338,6 +2338,7 @@ textarea {
 }
 .product__accompanying-block {
   padding: 35px 0;
+  clear: both;
 }
 .product__extra-section {
   margin: 34px 0 0 0;
@@ -3131,7 +3132,7 @@ textarea {
   height: 100%;
 }
 .tags__block {
-  margin: 40px 0 0 22px;
+  margin: 40px 0 60px 22px;
 }
 .tags__list {
   padding: 0;
@@ -3394,7 +3395,6 @@ textarea {
 .univ__block:after {
   content: '';
   display: block;
-  clear: both;
 }
 .univ__img-wrap {
   float: left;
