@@ -285,6 +285,76 @@
 	    	background: url(../img/magnifier_main.png) 0 0 no-repeat;
 	    }
 	}
+	&__block-inner {
+		position: relative;
+	}
+}
+// смарт поиск 
+.smart-search {
+	&__block {
+		display: none;
+		width: 462px;
+	    box-sizing: border-box;
+	    padding: 0;
+	    position: absolute;
+	    top: 32px;
+        left: 0;
+	    z-index: 400;
+	    background: rgba(0, 0, 0, 0.85);
+	    border-radius: 5px;
+	}
+	&__link {
+		text-decoration: none;
+		&:hover {
+			.smart-search__title {
+				opacity: 0.7;
+			}
+			.smart-search__image {
+				opacity: 0.7;
+			}
+		}
+	}
+	&__item {
+		border-bottom: 1px solid #fff;
+	    padding: 17px 25px;
+	    &:last-child {
+	    	border-bottom: none;
+	    }
+	}
+	&__image-wrap {
+		float: left;
+		// background: #fff;
+	}
+	&__image {
+		max-width: 65px;
+		max-height: 65px;
+		display: block;
+		margin: auto;
+		-webkit-transition: all .4s ease;
+		-o-transition: all .4s ease;
+		-moz-transition: all .4s ease;
+		transition: all .4s ease;
+	}
+	&__info-wrap {
+		margin-left: 85px;
+	}
+	&__title {
+		color: #fff;
+		text-transform: uppercase;
+		-webkit-transition: all .4s ease;
+		-o-transition: all .4s ease;
+		-moz-transition: all .4s ease;
+		transition: all .4s ease;
+		display: block;
+		margin: 4px 0;
+		font-family: @boldg1;
+	}
+	&__price {
+		font-family: @boldg1;
+		color: #ff9c0f;
+		font-size: 18px;
+		margin: 0;
+	}
 }
 // блок с телефонами
 .phones {

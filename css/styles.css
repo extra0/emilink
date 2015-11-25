@@ -1109,6 +1109,70 @@ textarea {
 .search__submit._main {
   background: url(../img/magnifier_main.png) 0 0 no-repeat;
 }
+.search__block-inner {
+  position: relative;
+}
+.smart-search__block {
+  display: none;
+  width: 462px;
+  box-sizing: border-box;
+  padding: 0;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  z-index: 400;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 5px;
+}
+.smart-search__link {
+  text-decoration: none;
+}
+.smart-search__link:hover .smart-search__title {
+  opacity: 0.7;
+}
+.smart-search__link:hover .smart-search__image {
+  opacity: 0.7;
+}
+.smart-search__item {
+  border-bottom: 1px solid #fff;
+  padding: 17px 25px;
+}
+.smart-search__item:last-child {
+  border-bottom: none;
+}
+.smart-search__image-wrap {
+  float: left;
+}
+.smart-search__image {
+  max-width: 65px;
+  max-height: 65px;
+  display: block;
+  margin: auto;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transition: all .4s ease;
+}
+.smart-search__info-wrap {
+  margin-left: 85px;
+}
+.smart-search__title {
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transition: all .4s ease;
+  display: block;
+  margin: 4px 0;
+  font-family: 'San Francisco Bold G1';
+}
+.smart-search__price {
+  font-family: 'San Francisco Bold G1';
+  color: #ff9c0f;
+  font-size: 18px;
+  margin: 0;
+}
 .phones__block {
   float: right;
   margin: 11px 0 0 0;

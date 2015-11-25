@@ -20,9 +20,27 @@ block content
 			a.header__logo(href="/")
 				img(src="img/logo.png" alt="Site Logo")
 			.search__block
-				form.search__form(action="#" method="get")
-					input.search__input._main(type="text" required placeholder="Поиск на сайте")
-					button.search__submit._main(type="submit")
+				.search__block-inner
+					form.search__form(action="#" method="get")
+						input.search__input._main(type="text" required placeholder="Поиск на сайте")
+						button.search__submit._main(type="submit")
+				.smart-search__block
+					.smart-search__item
+						a.smart-search__link(href="#")
+							.smart-search__image-wrap
+								img.smart-search__image(src="img/content/product.jpg", alt="")
+							.smart-search__info-wrap
+								p.smart-search__title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+								p.smart-search__price.replace 1 700
+									span.rubl a
+					.smart-search__item
+						a.smart-search__link(href="#")
+							.smart-search__image-wrap
+								img.smart-search__image(src="img/content/product.jpg", alt="")
+							.smart-search__info-wrap
+								p.smart-search__title Кросс оптический настенный 4 порта FC/ST, мини-корпус, стальной, с ложементом
+								p.smart-search__price.replace 1 700
+									span.rubl a
 			p.main__text Мы производим 
 				a.main__link(href="#") 
 					span.bottom-line волоконно-оптическую<br>
