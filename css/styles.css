@@ -701,6 +701,9 @@ textarea {
 .header__user-link._enter:before {
   background-position: 4px 0px;
 }
+.header__user-link._cabinet:before {
+  background-position: -60px 0px;
+}
 .header__menu-list {
   padding: 0;
   margin: 0 0 0 -12px;
@@ -839,12 +842,11 @@ textarea {
 }
 .subtitle {
   font-family: 'San Francisco Bold G1';
-  font-size: 36px;
-  font-size: 32px;
+  font-size: 28px;
   margin: 0;
 }
 .subtitle._sizeM {
-  font-size: 30px;
+  font-size: 26px;
 }
 .btn {
   color: #fff;
@@ -1414,7 +1416,7 @@ textarea {
   position: relative;
   text-align: center;
   height: 190px;
-  flex-basis: 33%;
+  width: 32.33%;
   margin: 0 0px 30px 0;
   max-width: 360px;
   background-repeat: no-repeat;
@@ -1432,7 +1434,7 @@ textarea {
 .catalog__cell:nth-child(27),
 .catalog__cell:nth-child(31) {
   max-width: 750px;
-  flex-basis: 66.33%;
+  width: 66.33%;
 }
 .catalog__cell:hover {
   -moz-transform: scale(1.15);
@@ -1523,12 +1525,19 @@ textarea {
 .catalog__cell-inner-link {
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 60%;
   font-family: 'San Francisco Regular G3';
   margin-bottom: 16px;
+  text-decoration: none;
 }
 .catalog__cell-inner-link:hover {
   text-decoration: none;
+}
+.catalog__cell-inner-link:hover .bottom-line {
+  border-bottom: 1px solid transparent;
+}
+.catalog__cell-inner-link .bottom-line {
+  border-color: #88878a;
 }
 .preview-news__section {
   padding: 42px 0 64px 0;
@@ -1591,7 +1600,7 @@ textarea {
   flex-wrap: wrap;
 }
 .preview-news__block-inner {
-  flex-basis: 33%;
+  width: 33%;
   max-width: 360px;
 }
 .preview-news__title {
@@ -1772,8 +1781,8 @@ textarea {
   padding: 24px 21px;
   background: #e0e1e2;
   margin-bottom: 30px;
-  /*position: relative;
-		z-index: 2;*/
+  position: relative;
+  z-index: 1;
 }
 .catalog-sidebar__list {
   padding: 0;
@@ -1911,7 +1920,6 @@ textarea {
   box-sizing: border-box;
   display: inline-block;
   width: 32%;
-  flex-basis: 32%;
   vertical-align: top;
   margin: 0 2% 30px 0;
   -webkit-transition: all 0.4s ease;
@@ -1925,7 +1933,7 @@ textarea {
   box-shadow: 0px 0px 5px #16a96e;
 }
 .product__block._widthS {
-  flex-basis: 25%;
+  width: 25%;
 }
 .product__block._widthS:nth-child(3n) {
   margin-right: 2%;
@@ -2102,15 +2110,15 @@ textarea {
   text-decoration: none;
 }
 .product__category-item-link .product__category-item-title {
-  font-size: 110%;
+  font-size: 100%;
   margin: 1.6em 0 1.6em 180px;
   font-family: 'San Francisco Bold G1';
 }
 .product__category-item-link .product__category-item-title .bottom-line {
-  border-bottom: 2px solid #a3a3a3;
+  border-bottom: 1px solid #a3a3a3;
 }
 .product__category-item-link:hover .product__category-item-title .bottom-line {
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 .product__image-thumb-link {
   display: -webkit-box;
@@ -2132,7 +2140,6 @@ textarea {
   border: 1px solid #dadada;
   vertical-align: top;
   width: 21.9%;
-  flex-basis: 22%;
   height: 67px;
   margin: 0 0 8px 8px;
   -webkit-transition: opacity 0.4s ease;
@@ -2384,6 +2391,19 @@ textarea {
   width: 55px;
   height: 55px;
   top: -16px;
+  left: -66px;
+}
+.product__manual-link._jpeg:before,
+.product__manual-link._gif:before,
+.product__manual-link._png:before,
+.product__manual-link._tiff:before,
+.product__manual-link._jpg:before {
+  content: '';
+  position: absolute;
+  background: url(../img/img_icon.png) 0 0 no-repeat;
+  width: 55px;
+  height: 55px;
+  top: -12px;
   left: -66px;
 }
 .product__manual-link:hover .bottom-line {
@@ -3047,7 +3067,6 @@ textarea {
   margin: 41px 0;
 }
 .order__formalization-block {
-  flex-basis: 32%;
   width: 32%;
   vertical-align: top;
 }
@@ -3277,9 +3296,9 @@ textarea {
   font-family: 'San Francisco Light';
 }
 .article__list-title {
-  font-size: 24px;
+  font-size: 18px;
   margin: 10px 0 5px 0;
-  font-family: 'San Francisco Bold G1';
+  font-family: 'San Francisco Light';
 }
 .article__list-title a {
   color: #000;
@@ -3324,9 +3343,8 @@ textarea {
   background: #16a96e;
 }
 .contact__title {
-  font-size: 24px;
+  font-size: 22px;
   font-family: 'San Francisco Bold G1';
-  text-transform: uppercase;
   margin: 0;
   line-height: 36px;
 }
@@ -3425,7 +3443,6 @@ textarea {
   flex-wrap: wrap;
 }
 .certificate__block {
-  flex-basis: 28%;
   text-align: center;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -3494,6 +3511,67 @@ textarea {
   line-height: 24px;
   font-size: 16px;
   margin: 0 0 10px 0;
+}
+.filter__section {
+  background: #e0e1e2;
+  padding: 15px 35px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.filter__block {
+  margin-bottom: 15px;
+}
+.filter__title {
+  font-size: 16px;
+  font-family: 'San Francisco Bold G1';
+}
+.filter__label-wrap {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px 25px 0;
+  position: relative;
+}
+.filter__label-wrap:hover .filter__tooltip {
+  display: block;
+}
+.filter__label {
+  font-family: 'San Francisco Regular G1';
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 0 0 40px;
+}
+.filter__checkbox {
+  display: none;
+}
+.filter__checkbox + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  background: url(../img/checkbox.png) 0 0 no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.filter__checkbox:checked + label:before {
+  background-position: 0px -34px;
+}
+.filter__tooltip {
+  box-sizing: border-box;
+  padding: 11px 11px 35px 11px;
+  position: absolute;
+  top: -135px;
+  left: 0;
+  display: none;
+  width: 110px;
+  height: 134px;
+  background: url(../img/tooltip_bg.png) 0 0 no-repeat;
+}
+.filter__tooltip img {
+  border-radius: 5px;
+  display: block;
+  margin: auto;
 }
 .footer {
   padding: 55px 0 35px 0;
@@ -3611,7 +3689,6 @@ textarea {
 }
 @media (max-width: 1170px) {
   .product__block {
-    flex-basis: 48%;
     width: 48%;
   }
   .product__block:nth-child(2n) {
