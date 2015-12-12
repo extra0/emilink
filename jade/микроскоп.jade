@@ -1,0 +1,46 @@
+extends _layout
+block content
+	.header__under-block
+		.container-fluid
+			.phones__block
+				.phones__block-inner
+					p.phones__block-city Москва
+					a.phones__block-phone(href="tel:+78129981387") +7 (812) 998-13-87
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+				.phones__block-inner
+					p.phones__block-city Санкт-Петербург
+					a.phones__block-phone(href="tel:+78129811660") +7 (812) 981-16-60
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+			a.header__logo(href="/")
+				img(src="img/logo_sub_page.png" alt="Site Logo")
+			.search__block
+				form.search__form(action="#" method="get")
+					input.search__input(type="text" required placeholder="Поиск на сайте")
+					button.search__submit(type="submit")
+	.main__section
+		.container-fluid
+			.main__content._no-sidebar
+				.breadcrumbs__block
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Главная
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Производство
+						li.breadcrumbs__item
+							span.breadcrumbs__current Микроскоп
+				h1.subtitle._sizeM Микроскоп
+				.static-content
+					p
+						strong Первый уровень контроля качества:
+					div.static-image-wrapper
+						a.fancybox(href="img/content/microskop1-big.jpg" rel="rel")
+							img(src="img/content/thumb-microskop1-big.jpg", alt="")
+						a.fancybox(href="img/content/microskop2-big.jpg" rel="rel")
+							img(src="img/content/thumb-microskop2-big.jpg", alt="")
+					p Перед полировкой коннектора необходимо произвести удаление излишка волокна. Ручкой скалывателем производится надрез волокна, излишек обламывается.
+					p Компания «ЭМИЛИНК» для визуального контроля качества полировки использует 400-кратные микроскопы Westover(США).
+					p Мы проверяем абсолютно каждый склеенный и отполированный коннектор!
+					p Установленный компанией контроль качества не пропускает изделия с дефектами, отбракованные коннекторы проходят повторную процедуру полировки. Высокое качество нашего полировального оборудования на выходе дает очень маленький процент «не дошлифовок»
+					p При наблюдении в микроскоп качественно отполированный коннектор выглядит правильной окружностью, без следов грязи и остатков абразива, волокно не имеет сколов и микротрещин, граница между феррулом и волокном чётко просматривается.
+					p Следующая производственная стадия: «<a href="#">Контроль качества второй уровень – тестовая станция</a>».
+					

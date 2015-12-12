@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <title></title>
+  </head>
+  <body class="bg-dark-grey">
+    <!-- окно входа в ЛК-->
+    <div id="enter" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Вход</span><span class="modal__header-text">или </span><a href="#registration" class="modal__header-link fancybox">Регистрация</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#restore" class="modal__remember-link c fancybox">Напомнить пароль</a>
+      </form>
+    </div>
+    <!-- окно регистрации-->
+    <div id="registration" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Регистрация</span><span class="modal__header-text">или</span><a href="#enter" class="modal__header-link fancybox">Вход</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Зарегистрироваться</button>
+      </form>
+    </div>
+    <!-- окно обратного звонка-->
+    <div id="callback" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Заказ звонка</span>
+        <p class="modal__header-city">Москва</p>
+      </div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон" class="modal__input mask">
+        <input type="hidden" name="city">
+        <button type="submit" class="modal__submit btn _modal-btn">Перезвонить</button>
+      </form>
+    </div>
+    <!-- окно восстановления пароль-->
+    <div id="restore" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Восстановление</span></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="email" placeholder="Электронная почта" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Восстановить</button>
+      </form>
+    </div>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__user-block"><a href="#enter" class="header__user-link _enter fancybox">войти на сайт</a><a href="#" class="header__user-link _cart">корзина</a></div>
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Продукция</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Производство</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">новости</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">доставка</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="header__under-block">
+        <div class="container-fluid">
+          <div class="phones__block">
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Москва</p><a href="tel:+78129981387" class="phones__block-phone">+7 (812) 998-13-87</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Санкт-Петербург</p><a href="tel:+78129811660" class="phones__block-phone">+7 (812) 981-16-60</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+          </div><a href="/" class="header__logo"><img src="img/logo_sub_page.png" alt="Site Logo"></a>
+          <div class="search__block">
+            <form action="#" method="get" class="search__form">
+              <input type="text" required placeholder="Поиск на сайте" class="search__input">
+              <button type="submit" class="search__submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main__section">
+        <div class="container-fluid">
+          <div class="main__content _no-sidebar">
+            <div class="breadcrumbs__block">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Производство</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__current">Склейка</span></li>
+              </ul>
+            </div>
+            <h1 class="subtitle _sizeM">Склейка</h1>
+            <div class="static-content">
+              <div class="static-image-wrapper"><a href="img/content/skleyka3-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-skleyka3-big.jpg" alt=""></a><a href="img/content/skleyka4-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-skleyka4-big.jpg" alt=""></a><a href="img/content/skleyka5-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-skleyka5-big.jpg" alt=""></a><a href="img/content/skleyka2-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-skleyka2-big.jpg" alt=""></a></div>
+              <p>После очистки волокна от всех оболочек по технологии Компании «Эмилинк» производится склейка волокна с оптическим коннектором. Волокно вставляется в оптический коннектор и при помощи высокотемпературного эпоксидного клея который вводиться в коннектор посредству шприца с иглой. Таким образом происходит склейка <a href="#">волоконно-оптического патчкорда</a>.</p>
+              <p>Процедура приготовления клея проста: отмеряем компоненты клея в требуемой пропорции и перемешиваем их до получения однородной массы, после чего помещаем готовый клей в шприц и навинчиваем на шприц иглу.</p>
+              <p><strong>Установка оптического коннектора</strong> - для исключения попадания загрязнений в зону вклейки зачищенное волокно необходимо очистить безворсовыми салфетками, смоченными в спирте. Аккуратно вставляем в хвостовик коннектора иглу, начинаем вводить клей в отверстие феррула до появления маленькой капельки на конце. Вставляем зачищенное волокно и медленно проталкиваем его в феррул. После этого фиксируем коннектор на оболочке кабеля обжимным инструментом, надеваем хвостовик и устанавливаем корпус коннектора.</p>
+              <p>Основная сборка оптического шнура закончена.</p>
+              <p>Приступаем к сушке клея. Разогреваем высокотемпературную печь для сушки до нужной температуры 100-120 градусов Цельсия и надев защитный колпачок на феррул коннектора, помещаем его в зону нагрева. Затем после пяти минутной сушки происходит скалывание волокна. Эта процедура призвана обеспечить перпендикулярность торца волокна сердцевине (угол в 90°). Оптический скалыватель обеспечивает качество скола с углом отклонения 0,5°. Коннекторы LC для 2 мм кабеля требуют дополнительной работы по усадке термотрубки на хвостовике с помощью Высокотемпературного строительного фена.</p>
+              <p>Наше изделие готово к дальнейшей обработке. Следующий производственный этап <a href="#">полировка</a> коннектора на шлифовальном станке.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="social__block"><a href="#" class="social__link"><img src="img/fb.png" alt=""></a><a href="#" class="social__link"><img src="img/vk.png" alt=""></a><a href="#" class="social__link"><img src="img/tw.png" alt=""></a></div>
+        <div class="footer__link-block">
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Главная</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Новости</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">О компании</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Доставка</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Продукция</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Контакты</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Производство</span></a></li>
+          </ul>
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">КДЗС</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Патчкорд оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кросс</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Пигтейл оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кабель</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Телекоммуникационный шкаф</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический сплиттер</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom-block">
+          <p class="footer__development"> <a href="#">Разработка - студия «Максимус»</a></p>
+          <p class="footer__copyright">© 2007-2015, ООО «Эмилинк»</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

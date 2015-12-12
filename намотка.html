@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <title></title>
+  </head>
+  <body class="bg-dark-grey">
+    <!-- окно входа в ЛК-->
+    <div id="enter" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Вход</span><span class="modal__header-text">или </span><a href="#registration" class="modal__header-link fancybox">Регистрация</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#restore" class="modal__remember-link c fancybox">Напомнить пароль</a>
+      </form>
+    </div>
+    <!-- окно регистрации-->
+    <div id="registration" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Регистрация</span><span class="modal__header-text">или</span><a href="#enter" class="modal__header-link fancybox">Вход</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Зарегистрироваться</button>
+      </form>
+    </div>
+    <!-- окно обратного звонка-->
+    <div id="callback" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Заказ звонка</span>
+        <p class="modal__header-city">Москва</p>
+      </div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон" class="modal__input mask">
+        <input type="hidden" name="city">
+        <button type="submit" class="modal__submit btn _modal-btn">Перезвонить</button>
+      </form>
+    </div>
+    <!-- окно восстановления пароль-->
+    <div id="restore" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Восстановление</span></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="email" placeholder="Электронная почта" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Восстановить</button>
+      </form>
+    </div>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__user-block"><a href="#enter" class="header__user-link _enter fancybox">войти на сайт</a><a href="#" class="header__user-link _cart">корзина</a></div>
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Продукция</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Производство</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">новости</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">доставка</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="header__under-block">
+        <div class="container-fluid">
+          <div class="phones__block">
+            <div class="phones__block-inner">
+              <p class="phones__block-city _main">Москва</p><a href="tel:+78129981387" class="phones__block-phone _main">+7 (812) 998-13-87</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+            <div class="phones__block-inner">
+              <p class="phones__block-city _main">Санкт-Петербург</p><a href="tel:+78129811660" class="phones__block-phone _main">+7 (812) 981-16-60</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+          </div><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
+          <div class="search__block">
+            <form action="#" method="get" class="search__form">
+              <input type="text" required placeholder="Поиск на сайте" class="search__input _main">
+              <button type="submit" class="search__submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main__section">
+        <div class="container-fluid">
+          <div class="main__content _no-sidebar">
+            <div class="breadcrumbs__block">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Производство</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__current">Намотка</span></li>
+              </ul>
+            </div>
+            <h1 class="subtitle _sizeM">Намотка</h1>
+            <div class="static-content">
+              <p> <strong>Процесс намотки оптических патчкордов производиться с помощью отмоточной машины.</strong></p>
+              <p>Отмоточная машина предназначена для отмотки и нарезки кабеля для оптических патчкордов разной длины. Максимально быстро отматывает кабель в нужный радиус намотки для дальнейшей работы со шнуром. Дополнительно необходимо используется с компрессором (нагнетание давления) для резки кабеля. Намотка происходит за счет вращения барабана посредству электрического тока.</p>
+              <p>Намотанные отрезки оптического зипкордового кабеля подвязываются в группы и получают порядковые регистрационные номера заказов производства по технологии Компании «Эмилинк». Далее передаются для дальнейшей конвейерной работы в последующие производственные этапы. Следующий этап – «<a href="#">Зачистка</a>» перед склейкой оптического коннектора.</p>
+              <div class="static-image-wrapper"><a href="img/content/namotka2-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-namotka2-big.jpg" alt=""></a><a href="img/content/namotka3-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-namotka3-big.jpg" alt=""></a></div>
+              <p><strong>Основные технические данные отмоточной машины:</strong></p>
+              <div class="static-image-wrapper"><a href="img/content/otmotochnaya_mashina.jpg" class="fancybox"><img src="img/content/otmotochnaya_mashina.jpg" alt=""></a></div>
+              <ol>
+                <li>Для кабеля: φ0.9 ~ φ6.0mm.</li>
+                <li>Длина отмотки кабеля от 1 до 450 метров.</li>
+                <li>Вес на катушке кабеля меньше чем 35 кг</li>
+                <li>Точность в намотки кабеля: 100M * 3%</li>
+                <li>Скорость намотки 0.1 ~ 1.6M /сек</li>
+                <li>Диапазон регулирования шатания: φ90 ~ φ120mm</li>
+                <li>Электропитание: 220 В переменного тока / 50 Гц</li>
+                <li>Подача воздуха: 0.4 ~ 0.6 MP/CM</li>
+                <li>Напряжение: 450 Вт</li>
+                <li>Температура использования: 0°C ~ 60°C</li>
+              </ol>
+              <p><strong>Условия хранения</strong></p>
+              <ol>
+                <li>Экологический диапазон температуры: -10°C ~ 50°C</li>
+                <li>Относительная влажность: 15% ~ 85%</li>
+                <li>Вибрация: 1.0 г 5 ~ 100 Гц 45 минут</li>
+              </ol>
+              <h3>Немного теории. Характеристики и типы оптического волокна.</h3><a href="#" class="toggle-link">G.652 - Стандартное одномодовое волокно</a>
+              <div>
+                <p>Является наиболее широко используемым одномодовым оптическим волокном в телекоммуникациях.</p>
+                <p>Производители:</p><strong>CORNING ® SMF-28e+® </strong><br><strong>DRAKA ® SMF</strong><br><br>
+                <p>Одномодовое ступенчатое волокно с несмещенной дисперсией служит основополагающим компонентом оптической телекоммуникационной системы и классифицируется стандартом G.652. Наиболее распространенный вид волокна, оптимизированный для передачи сигнала на длине волны 1310 нм. Верхний предел длины волны L-диапазона составляет 1625 нм. Требования на макроизгиб - радиус оправки 30 мм.</p>
+                <p>Стандарт разделяет волокна на четыре подкатегории A, B, C, D.</p>
+                <p>Волокно G.652. А отвечает требованиям, необходимым для передачи информационных потоков уровня STM 16, - 10 Гбит/с (Ethernet) до 40 км, в соответствии с Рекомендациями G.691 и G.957, а также уровня STM 256, согласно G.691.</p>
+                <p>Волокно G.652.B соответствует требованиям, необходимым для передачи информационных потоков уровня до STM 64 в соответствии с Рекомендациями G.691 и G.692, и уровня STM 256, согласно G.691 и G.959.1.</p>
+                <p>Волокна G.652.C и G.652.D позволяют осуществлять передачу в расширенном диапазоне длин волн 1360-1530 нм и обладают пониженным затуханием на "пике воды" ("пик воды" разделяет окна прозрачности в полосе пропускания одномодовых световодов в диапазонах 1300 нм и 1550 нм). В остальном аналогичны G.652.A и G.652.B.</p>
+                <p>G.652.A/B - эквивалент OS1 (классификация ISO/IEC 11801), G.652.C/D – эквивалент OS2.</p>
+                <p>Использование волокна — G.652 при более высоких скоростях передачи на расстояния более 40 км приводит к несоответствию эксплуатационных качеств со стандартами для одномодового волокна, требует усложнения оконечной аппаратуры.</p>
+              </div><a href="#" class="toggle-link">G.655 - Одномодовое волокно с ненулевой смещенной дисперсией(NZDSF)</a>
+              <div>
+                <p>Одномодовое волокно с ненулевой смещенной дисперсией NZDSF оптимизировано для передачи не одной длины волны, а сразу нескольких длин волн (мультиплексного волнового сигнала WDM и высокоплотного волнового сигнала DWDM). Волокно Corning защищено двойным акрилатным покрытием СРС, обеспечивающим высокую надежность и работоспособность. Наружный диаметр покрытия равен 245 мкм.</p>
+                <p>Производители:</p><strong>CORNING ® LEAF ®</strong><br><br>
+                <p>Волокно с ненулевой смещенной дисперсией (NZDSF) предназначено для применения в магистральных волоконно-оптических линиях и глобальных сетях связи, использующих DWDM-технологии. В этом волокне поддерживается ограниченный коэффициент хроматической дисперсии во всем оптическом диапазоне, используемом в волновом мультиплексировании (WDM). Волокна NZDSF оптимизированы для использования в диапазоне волн от 1530 нм до 1565 нм.</p>
+                <p>Рекомендации разделяют волокна на три подкатегории - А, В, С, которые различаются по значениям коэффициента поляризационной модовой дисперсии, хроматической дисперсии и рабочему диапазону.</p>
+                <p>Оптические волокна категории G.655.А обладают параметрами, обеспечивающими их применение в одноканальных и многоканальных системах с оптическими усилителями (Рекомендации G.691, G.692, G.693) и в оптических транспортных сетях (Рекомендация G.959.1). Рабочие длины волн и дисперсия в волокне данной подкатегории ограничивают мощность входного сигнала и их применение в многоканальных системах.</p>
+                <p>Оптические волокна категории G.655.B аналогичны G.655.А. Но в зависимости от рабочей длины волны и дисперсионных характеристик мощность входного сигнала может быть выше, чем для G.655.А. Требования в части поляризационной модовой дисперсии обеспечивают функционирование систем уровня STM-64 на расстоянии до 400 км.</p>
+                <p>Категория волокон G.655.C подобна G.655.B, однако более строгие требования в части поляризационной модовой дисперсии позволяют использовать на данных оптических волокнах системы уровня STM-256 (Рекомендация G.959.1) или же увеличивать дальность передачи систем STM-64.</p>
+              </div><a href="#" class="toggle-link">G.657 - Одномодовое волокно с уменьшенными потерями на изгибах с малыми радиусами</a>
+              <div>
+                <p>Оптическое волокно повышенной гибкости версии G.657 находит широкое применение в оптических кабелях для прокладки в сетях многоэтажных домов, офисов и т.д. Волокно G.657.A по своим оптическим характеристикам полностью идентично стандартному волокну G.652.D и в то же время имеет вдвое меньший допустимый радиус при укладке – 15 мм. Волокно G.657.В применяется на ограниченных расстояниях и обладает особо малыми потерями на изгибах.</p>
+                <p>Производители:</p><strong>CORNING ® ClearCurve ®</strong><br><strong>DRAKA ® BendBright</strong><br><br>
+                <p>Одномодовые оптические волокна характеризуются малым уровнем потерь на изгибах, предназначены в первую очередь для сетей FTTH многоквартирных зданий, а их преимущества особенно очевидны на ограниченном пространстве. Работать с волокном стандарта G.657, можно практически как с медножильным кабелем.</p>
+                <p>Две подкатегории: A и B, которые различаются диаметром сердцевины и работоспособностью при изгибах.</p>
+                <p>Для волокон типа G.657.A он составляет от 8,6 до 9,5 мкм, а для волокон типа G.657.B - от 6,3 до 9,5 мкм.</p>
+                <p>Нормы потерь на макроизгибах существенно ужесточены, поскольку этот параметр для G.657 является определяющим:</p>
+                <ul>
+                  <li>Десять витков волокна подкатегории G.657.A, намотанного на оправку радиусом 15 мм, не должны увеличивать затухание более чем на 0,25 дБ при длине волны 1550 нм. Один виток того же волокна, намотанного на оправку диаметром 10 мм, при условии, что остальные параметры не изменены, не должен увеличивать затухание более чем на 0,75 дБ.</li>
+                  <li>Десять витков подкатегории G.657.B на оправке диаметром 15 мм, не должны увеличивать затухание более чем на 0,03 дБ при длине волны 1550 нм. Один виток на оправке диаметром 10 мм - более чем на 0,1 дБ, один виток на оправке диаметром 7,5 мм - более чем на 0,5 дБ.</li>
+                </ul>
+                <p><i>Рекомендация</i>: ITU G.657.А определяет приоритет совместимости со стандартными волокнами по отношению к функциональности (с ITU-T G.652D).</p>
+                <p><i>Рекомендация</i>: ITU-T G.657.В делает упор на нечувствительность к изгибам, а не на соответствие требованиям стандартов G.652.</p>
+              </div>
+              <p><strong>Международной организацией по стандартизации (ISO) и Международной электротехнической комиссией (IEC) был опубликован стандарт ISO/IEC 11801 – «Информационные технологии — структурированные кабельные системы для помещений заказчика»</strong></p>
+              <p>Стандарт задает структуру и требования к реализации универсальной кабельной сети, а также требования к производительности отдельных кабельных линий.</p>
+              <p>В стандарте для линий Gigabit Ethernet оптические каналы различаются по классам (аналогично категориям медных линий). OF300, OF500 и OF2000 поддерживают приложения оптического класса на расстояниях до 300, 500 и 2000 м.</p>
+              <table>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">Класс канала</th>
+                    <th colspan="2">Затухание ММ-канала (дБ/Км)</th>
+                    <th colspan="2">Затухание SM-канала (дБ/Км)</th>
+                  </tr>
+                  <tr>
+                    <th>850 нм</th>
+                    <th>1300 нм</th>
+                    <th>1310 нм</th>
+                    <th>1.550 нм</th>
+                  </tr>
+                  <tr>
+                    <td>OF300</td>
+                    <td>2.55</td>
+                    <td>1.95</td>
+                    <td>1.80</td>
+                    <td>1.80</td>
+                  </tr>
+                  <tr>
+                    <td>OF500</td>
+                    <td>3.25</td>
+                    <td>2.25</td>
+                    <td>2.00</td>
+                    <td>2.00</td>
+                  </tr>
+                  <tr>
+                    <td>OF2000</td>
+                    <td>8.50</td>
+                    <td>4.50</td>
+                    <td>3.50</td>
+                    <td>3.50</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Кроме классов каналов, во втором издании этого стандарта определены три класса ММ-волокна — OM1, OM2 и OM3 — и один класс SM-волокна — OS1. Эти классы дифференцируются по затуханию и коэффициенту широкополосности.</p>
+              <table>
+                <tbody></tbody>
+                <tr>
+                  <th colspan="2" rowspan="2" width="295">Класс волокна</th>
+                  <th>Диаметр сердцевины, мкм</th>
+                  <th>Коэффициент широкополосности при насыщающем возбуждении, МГц х км</th>
+                  <th>Коэффициент широкополосности при лазерном возбуждении, МГц х км</th>
+                </tr>
+                <tr>
+                  <th>850 нм</th>
+                  <th>1.300 нм</th>
+                  <th>850 нм</th>
+                </tr>
+                <tr>
+                  <td>OM 1</td>
+                  <td>50 или 62.5</td>
+                  <td>200</td>
+                  <td>500</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>OM 2</td>
+                  <td>50</td>
+                  <td>500</td>
+                  <td>500</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>OM 3</td>
+                  <td>50</td>
+                  <td>1.500</td>
+                  <td>500</td>
+                  <td>2.000</td>
+                </tr>
+              </table><br>
+              <p><strong>Рекомендации по выбору типа волокна</strong></p>
+              <p>Все линии короче 275 м могут работать по протоколу 1000Base-Sx. Длину до 550 м, можно обеспечить, используя протокол 1000Base-Lx совместно со смещенным вводом светового луча (Mode Conditioning).</p>
+              <table>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">Класс канала</th>
+                    <th>Fast Ethernet</th>
+                    <th colspan="2">GigaBit Ethernet</th>
+                    <th>10 GigaBit Ethernet</th>
+                  </tr>
+                  <tr>
+                    <th>100 Base T</th>
+                    <th>1000 Base SX</th>
+                    <th>1000 Base LX</th>
+                    <th>10GBase-SR/SW</th>
+                  </tr>
+                  <tr>
+                    <td>OF300</td>
+                    <td>OM1</td>
+                    <td>OM2</td>
+                    <td>OM1* , OM2*</td>
+                    <td>OM3</td>
+                  </tr>
+                  <tr>
+                    <td>OF500</td>
+                    <td>OM1</td>
+                    <td>OM2</td>
+                    <td>OM1* , OM2*</td>
+                    <td>OS1 (OS2)</td>
+                  </tr>
+                  <tr>
+                    <td>OF2000</td>
+                    <td>OM1</td>
+                    <td>—</td>
+                    <td>OM2 Plus, ОМЗ</td>
+                    <td>OS1 (OS2)</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p><i>* - Mode Conditioning</i></p>
+              <p>Многомодовое волокно класса OM4 характеризуется минимальным коэффициентом широкополосности 4700 МГц x км при длине волны 850 нм (по сравнению с 2000 МГц х км волокна типа OM3) и является результатом оптимизации характеристик волокна ОМ3, обеспечивающих возможность достижения скорости передачи данных 10 Гб/с на расстоянии 550 метров. Новый сетевой стандарт IEEE 802.3ab 40 и 100 Гигабит Ethernet отметил, что новый тип многомодового волокна ОМ4 позволяет передать 40 и 100 Гигабит Ethernet на расстоянии до 150 метров. Волокна класса OM4 планируется использовать в будущем с оборудованием 40Gbps и наиболее широко при оборудовании ЦОД.</p><a href="#" class="toggle-link">OM 1 и OM2 – Стандартные многомодовые волокна с сердцевиной 62,5 и 50 микрон соответсвенно.</a>
+              <div>
+                <p>Кабели, <a href="#">патчкорды</a> и <a href="#">пигтейлы</a> с многомодовыми волокнами типов ОМ1 62,5/125мкм и ОМ2 50/125мкм уже давно применяются в СКС для обеспечения передачи данных с высокой скоростью и на относительно большие расстояния, которые требуется в магистралях. Наиболее важными функциональными параметрами ММ-волокна является затухание (attenuation) и коэффициент широкополосности (bandwidth). Оба параметра определяются для длин волн 850 нм и 1300 нм, на которых работает большая часть активного сетевого оборудования.</p>
+                <p>Производители:</p><strong>CORNING Infinicor ® 300 / Infinicor ® 300 </strong><br><strong>CORNING ® ClearCurve ® </strong><br><strong>DRAKA ® Стандартный многомодовый</strong><br><br>
+              </div><a href="#" class="toggle-link">OM3 – Оптическое многомодовое волокно с сердцевиной 50 микрон "лазер-оптимизированное"</a>
+              <div>
+                <p>Является специально разработанным многомодовым оптическим волокном применяемое для сетей Gigabit и 10 Gigabit Ethernet, существует только с размером сердцевины 50 микрон.</p>
+                <p>Производители:</p><strong>CORNING ® ClearCurve ®</strong><br><strong>DRAKA ® BendBright / MaxCap </strong><br><strong>OFS ® LaserWave 300 / LaserWave Flex 300</strong><br><br>
+              </div><a href="#" class="toggle-link">OM4 – Оптическое многомодовое волокно с сердцевиной 50 микрон "лазер-оптимизированное" нового поколения.</a>
+              <div>
+                <p>Многомодовое волокно типа ОМ4 – в настоящее время полностью соответствует современным стандартам волокон, предусмотренных для центров обработки данных и групп серверов следующего поколения. Оптическое волокно ОМ4 может быть использовано для более протяжённых линий в сетях передачи данных нового поколения с высочайшей производительностью передачи данных. Это волокно представляет собой результат дальнейшей оптимизации характеристик волокна ОМ3, позволяющего придать волокну характеристики, обеспечивающие возможность достижения скорости передачи данных 10 Гб/с на расстоянии 550 метров. Волокна типа OM4 характеризуются повышенной эффективной минимальной модальной полосой пропускания 4700 МГц км при длине волны 850 нм (по сравнению с 2000 МГц км волокна типа OM3).</p>
+                <p>Производители:</p><strong>CORNING ® ClearCurve ® </strong><br><strong>DRAKA ® BendBright / MaxCap550</strong><br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="social__block"><a href="#" class="social__link"><img src="img/fb.png" alt=""></a><a href="#" class="social__link"><img src="img/vk.png" alt=""></a><a href="#" class="social__link"><img src="img/tw.png" alt=""></a></div>
+        <div class="footer__link-block">
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Главная</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Новости</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">О компании</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Доставка</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Продукция</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Контакты</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Производство</span></a></li>
+          </ul>
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">КДЗС</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Патчкорд оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кросс</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Пигтейл оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кабель</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Телекоммуникационный шкаф</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический сплиттер</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom-block">
+          <p class="footer__development"> <a href="#">Разработка - студия «Максимус»</a></p>
+          <p class="footer__copyright">© 2007-2015, ООО «Эмилинк»</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

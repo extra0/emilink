@@ -231,6 +231,13 @@ body {
   height: 100%;
   color: #000000;
 }
+body.bg-dark-grey {
+  color: #fff;
+  background: #232325;
+}
+body.bg-dark-grey .footer__link {
+  color: #fff;
+}
 .main-wrapper {
   min-height: 100%;
 }
@@ -3572,6 +3579,102 @@ textarea {
   border-radius: 5px;
   display: block;
   margin: auto;
+}
+.develop__section {
+  text-align: center;
+}
+.develop__block {
+  position: relative;
+  max-width: 730px;
+  margin: 0 auto 40px auto;
+  height: 355px;
+  overflow: hidden;
+}
+.develop__bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin: 0 auto;
+  right: 0;
+}
+.develop__title {
+  color: #fff;
+  margin: 85px 0 60px 0;
+  font-weight: normal;
+  font-family: 'San Francisco Bold G1';
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 36px;
+}
+.develop__link {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  padding: 9px 21px;
+  opacity: 0.85;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transition: all .4s ease;
+}
+.develop__link:hover {
+  border: 1px solid #16a96e;
+  background: #16a96e;
+  opacity: 1;
+}
+.static-content p,
+.static-content li {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  font-family: 'San Francisco Light';
+}
+.static-content strong {
+  font-size: 16px;
+}
+.static-content li {
+  margin-bottom: 5px;
+}
+.static-content ul {
+  list-style-type: disc;
+}
+.static-content a {
+  color: #fff;
+}
+.static-content a:hover {
+  text-decoration: none;
+}
+.static-content table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+.static-content table td,
+.static-content table th {
+  padding: 5px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.static-image-wrapper {
+  text-align: center;
+}
+.static-image-wrapper img {
+  max-width: 20%;
+  margin: 20px 20px;
+}
+a.toggle-link {
+  color: #16a96e;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+}
+a.toggle-link + div {
+  display: none;
+  margin-bottom: 35px;
 }
 .footer {
   padding: 55px 0 35px 0;

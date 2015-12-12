@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <title></title>
+  </head>
+  <body class="bg-dark-grey">
+    <!-- окно входа в ЛК-->
+    <div id="enter" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Вход</span><span class="modal__header-text">или </span><a href="#registration" class="modal__header-link fancybox">Регистрация</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#restore" class="modal__remember-link c fancybox">Напомнить пароль</a>
+      </form>
+    </div>
+    <!-- окно регистрации-->
+    <div id="registration" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Регистрация</span><span class="modal__header-text">или</span><a href="#enter" class="modal__header-link fancybox">Вход</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Зарегистрироваться</button>
+      </form>
+    </div>
+    <!-- окно обратного звонка-->
+    <div id="callback" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Заказ звонка</span>
+        <p class="modal__header-city">Москва</p>
+      </div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон" class="modal__input mask">
+        <input type="hidden" name="city">
+        <button type="submit" class="modal__submit btn _modal-btn">Перезвонить</button>
+      </form>
+    </div>
+    <!-- окно восстановления пароль-->
+    <div id="restore" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Восстановление</span></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="email" placeholder="Электронная почта" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Восстановить</button>
+      </form>
+    </div>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__user-block"><a href="#enter" class="header__user-link _enter fancybox">войти на сайт</a><a href="#" class="header__user-link _cart">корзина</a></div>
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Продукция</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Производство</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">новости</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">доставка</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="header__under-block">
+        <div class="container-fluid">
+          <div class="phones__block">
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Москва</p><a href="tel:+78129981387" class="phones__block-phone">+7 (812) 998-13-87</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Санкт-Петербург</p><a href="tel:+78129811660" class="phones__block-phone">+7 (812) 981-16-60</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+          </div><a href="/" class="header__logo"><img src="img/logo_sub_page.png" alt="Site Logo"></a>
+          <div class="search__block">
+            <form action="#" method="get" class="search__form">
+              <input type="text" required placeholder="Поиск на сайте" class="search__input">
+              <button type="submit" class="search__submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main__section">
+        <div class="container-fluid">
+          <div class="main__content _no-sidebar">
+            <div class="breadcrumbs__block">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Производство</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__current">Микроскоп</span></li>
+              </ul>
+            </div>
+            <h1 class="subtitle _sizeM">Микроскоп</h1>
+            <div class="static-content">
+              <p><strong>Первый уровень контроля качества:</strong></p>
+              <div class="static-image-wrapper"><a href="img/content/microskop1-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-microskop1-big.jpg" alt=""></a><a href="img/content/microskop2-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-microskop2-big.jpg" alt=""></a></div>
+              <p>Перед полировкой коннектора необходимо произвести удаление излишка волокна. Ручкой скалывателем производится надрез волокна, излишек обламывается.</p>
+              <p>Компания «ЭМИЛИНК» для визуального контроля качества полировки использует 400-кратные микроскопы Westover(США).</p>
+              <p>Мы проверяем абсолютно каждый склеенный и отполированный коннектор!</p>
+              <p>Установленный компанией контроль качества не пропускает изделия с дефектами, отбракованные коннекторы проходят повторную процедуру полировки. Высокое качество нашего полировального оборудования на выходе дает очень маленький процент «не дошлифовок»</p>
+              <p>При наблюдении в микроскоп качественно отполированный коннектор выглядит правильной окружностью, без следов грязи и остатков абразива, волокно не имеет сколов и микротрещин, граница между феррулом и волокном чётко просматривается.</p>
+              <p>Следующая производственная стадия: «<a href="#">Контроль качества второй уровень – тестовая станция</a>».</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="social__block"><a href="#" class="social__link"><img src="img/fb.png" alt=""></a><a href="#" class="social__link"><img src="img/vk.png" alt=""></a><a href="#" class="social__link"><img src="img/tw.png" alt=""></a></div>
+        <div class="footer__link-block">
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Главная</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Новости</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">О компании</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Доставка</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Продукция</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Контакты</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Производство</span></a></li>
+          </ul>
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">КДЗС</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Патчкорд оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кросс</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Пигтейл оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кабель</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Телекоммуникационный шкаф</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический сплиттер</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom-block">
+          <p class="footer__development"> <a href="#">Разработка - студия «Максимус»</a></p>
+          <p class="footer__copyright">© 2007-2015, ООО «Эмилинк»</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

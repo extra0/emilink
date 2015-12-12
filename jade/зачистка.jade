@@ -1,0 +1,42 @@
+extends _layout
+block content
+	.header__under-block
+		.container-fluid
+			.phones__block
+				.phones__block-inner
+					p.phones__block-city Москва
+					a.phones__block-phone(href="tel:+78129981387") +7 (812) 998-13-87
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+				.phones__block-inner
+					p.phones__block-city Санкт-Петербург
+					a.phones__block-phone(href="tel:+78129811660") +7 (812) 981-16-60
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+			a.header__logo(href="/")
+				img(src="img/logo_sub_page.png" alt="Site Logo")
+			.search__block
+				form.search__form(action="#" method="get")
+					input.search__input(type="text" required placeholder="Поиск на сайте")
+					button.search__submit(type="submit")
+	.main__section
+		.container-fluid
+			.main__content._no-sidebar
+				.breadcrumbs__block
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Главная
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Производство
+						li.breadcrumbs__item
+							span.breadcrumbs__current Зачистка
+				h1.subtitle._sizeM Зачистка
+				.static-content
+					div.static-image-wrapper
+						a.fancybox(href="img/content/zachistka1-big.jpg" rel="rel")
+							img(src="img/content/thumb-zachistka1-big.jpg", alt="")
+						a.fancybox(href="img/content/zachistka2-big.jpg" rel="rel")
+							img(src="img/content/thumb-zachistka2-big.jpg", alt="")
+					p Перед началом склейки необходимо выполнить подготовительные работы с намотанным <a href="#">оптическим кабелем</a> и провести зачистку волокна.
+					p Наиболее простым способом является <strong>механическая зачистка</strong>, которая не требует сложного оборудования и обеспечивает надежное качество зачистки. При механической зачистке волокна проводится цикл операций по удалению брони кабеля, кевларовых нитей, оболочки модуля и буферного покрытия. Для этого используется специальным инструментом стриппером, имеющим калиброванные отверстия, который обрабатывает волокна диаметром до 900 мкм.
+					p Немаловажный этап механической зачистки волокна - финальная очистка поверхности волокна. Любые остатки покрытия после зачистки оболочки должны быть удалены с поверхности зачищенного участка волокна (для этого используются безворсовые салфетки смоченные спиртом).
+					p После зачистки необходимо избегать любых действий, которые могут загрязнить волокно пылью или жирными пятнами с рук; эти загрязнения могут вызвать дополнительные потери в месте склейки и уменьшение его прочности.
+					p Следующий производственный этап – «<a href="#">Склейка</a>»

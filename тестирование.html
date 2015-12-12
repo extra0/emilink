@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <title></title>
+  </head>
+  <body class="bg-dark-grey">
+    <!-- окно входа в ЛК-->
+    <div id="enter" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Вход</span><span class="modal__header-text">или </span><a href="#registration" class="modal__header-link fancybox">Регистрация</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#restore" class="modal__remember-link c fancybox">Напомнить пароль</a>
+      </form>
+    </div>
+    <!-- окно регистрации-->
+    <div id="registration" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Регистрация</span><span class="modal__header-text">или</span><a href="#enter" class="modal__header-link fancybox">Вход</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Зарегистрироваться</button>
+      </form>
+    </div>
+    <!-- окно обратного звонка-->
+    <div id="callback" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Заказ звонка</span>
+        <p class="modal__header-city">Москва</p>
+      </div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон" class="modal__input mask">
+        <input type="hidden" name="city">
+        <button type="submit" class="modal__submit btn _modal-btn">Перезвонить</button>
+      </form>
+    </div>
+    <!-- окно восстановления пароль-->
+    <div id="restore" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Восстановление</span></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="email" placeholder="Электронная почта" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Восстановить</button>
+      </form>
+    </div>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__user-block"><a href="#enter" class="header__user-link _enter fancybox">войти на сайт</a><a href="#" class="header__user-link _cart">корзина</a></div>
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Продукция</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Производство</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">новости</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">доставка</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="header__under-block">
+        <div class="container-fluid">
+          <div class="phones__block">
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Москва</p><a href="tel:+78129981387" class="phones__block-phone">+7 (812) 998-13-87</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Санкт-Петербург</p><a href="tel:+78129811660" class="phones__block-phone">+7 (812) 981-16-60</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+          </div><a href="/" class="header__logo"><img src="img/logo_sub_page.png" alt="Site Logo"></a>
+          <div class="search__block">
+            <form action="#" method="get" class="search__form">
+              <input type="text" required placeholder="Поиск на сайте" class="search__input">
+              <button type="submit" class="search__submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main__section">
+        <div class="container-fluid">
+          <div class="main__content _no-sidebar">
+            <div class="breadcrumbs__block">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Производство</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__current">Тестирование</span></li>
+              </ul>
+            </div>
+            <h1 class="subtitle _sizeM">Тестирование</h1>
+            <div class="static-content">
+              <p><strong>Основные этапы контроля технологического процесса изготовления патчкордов.</strong></p>
+              <p>Оптический соединитель должен выполнял основную функцию – гарантия многократного соединение-разъединение без существенных изменений своих оптических параметров, он должен иметь точную юстировку и фиксацию сердцевин соединяемых оптических волокон для передачи оптического сигнала из одного волокна в другое с минимальными потерями и обратными отражениями.</p>
+              <p>Оптические соединители полируется после клеевой оконцовки на полировальных станках, чтобы удалить поверхностные дефекты и улучшить оптическое качество вставки. Полировка UPC соединителей производится перпендикулярно к длине прямого волокна, тогда как APC соединители полируются под углом 8° к продольной оси. Во всех этих случаях, вершина феррулы принимает выпуклую геометрию, которая приводит к хорошему физическому контакту соединяемых волокон.</p>
+              <p><strong>Второй уровень контроля качества</strong> Компания «Эмилинк» проводит на тестовой станции прямых и возвратных потерь. Ниже приведен коридор допустимых значений для выхода готовой продукции в продажу.</p>
+              <table>
+                <tbody>
+                  <tr>
+                    <th rowspan="3">Параметры</th>
+                    <th rowspan="3">Изм.</th>
+                    <th colspan="3">FC, SC, LC</th>
+                    <th colspan="3">ST, MU</th>
+                    <th colspan="3">MTRJ, MPO</th>
+                    <th colspan="2">E2000</th>
+                  </tr>
+                  <tr>
+                    <th colspan="2">SM</th>
+                    <th>MM</th>
+                    <th colspan="2">SM</th>
+                    <th>MM</th>
+                    <th colspan="2">SM</th>
+                    <th>MM</th>
+                    <th colspan="2">SM</th>
+                  </tr>
+                  <tr>
+                    <th>UPC</th>
+                    <th>APC</th>
+                    <th>PC</th>
+                    <th>PC</th>
+                    <th>UPC</th>
+                    <th>PC</th>
+                    <th>PC</th>
+                    <th>UPC</th>
+                    <th>PC</th>
+                    <th>PC</th>
+                    <th>UPC</th>
+                  </tr>
+                  <tr>
+                    <td>Вносимые потери</td>
+                    <td>dB</td>
+                    <td>≤0.2</td>
+                    <td>≤0.3</td>
+                    <td>≤0.2</td>
+                    <td>≤0.3</td>
+                    <td>≤0.2</td>
+                    <td>≤0.2</td>
+                    <td>≤0.3</td>
+                    <td>≤0.2</td>
+                    <td>≤0.2</td>
+                    <td>≤0.3</td>
+                    <td>≤0.3</td>
+                  </tr>
+                  <tr>
+                    <td>Обратные потери</td>
+                    <td>dB</td>
+                    <td>≥50</td>
+                    <td>≥60</td>
+                    <td>≥30</td>
+                    <td>≥45</td>
+                    <td>≥50</td>
+                    <td>≥30</td>
+                    <td>≥45</td>
+                    <td>≥50</td>
+                    <td>≥35</td>
+                    <td>≥55</td>
+                    <td>≥75</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="static-image-wrapper"><a href="img/content/testirovaniye1-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-testirovaniye1-big.jpg" alt=""></a><a href="img/content/testirovaniye2-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-testirovaniye2-big.jpg" alt=""></a><a href="img/content/I1-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-I1-big.jpg" alt=""></a></div>
+              <p><strong>Третий уровень контроля качества</strong> Компания «Эмилинк» проводит выборочно тестирование из каждой произведенной партии оптических патчкордов и монтажных шнуров на Интерферометре.</p>
+              <p><strong>Измерительный Автоматический интерферометр DAISI.</strong></p>
+              <p>Интерферометры используются, чтобы измерить геометрию вершины соединителя после полировки. Аппаратные средства включают кинематическое крепление (для измерения феррулы) или держателя рукава (для измерения <a href="#">патчкорда</a>). Оптическая часть аппаратного обеспечения создает изображение торца феррулы видеокамерой с зарядовой связью, коэффициент фактического увеличения торца изделия на экране монитора составляет примерно в х300.</p>
+              <p><strong>Точность вершины ферулы.</strong></p>
+              <p>Вершина полированного купола не всегда совпадает с сердцевиной волокна. Положение вершины оконцованного волокна показывает боковое смещение между фактическим размещением вершины и идеального размещения непосредственно на ядре волокна. Согласование вершины должно быть меньше чем 50мm; иначе, физический контакт между ядрами волокна соединителей может быть нарушен.</p>
+              <p><strong>Радиус полировки.</strong></p>
+              <p>Номинально, отполированный торец феррулы будет иметь выпуклую поверхность, обеспечивающий хороший контакт поверхностной области в районе сердцевины волокна. Маленький радиус искривления обеспечивает меньшую область контакта между соединяемыми феррулами. Радиус искривления для UPC соединителя должен быть между 7 и 25mm, тогда как для APC соединителя, диапазон приемлемых радиусов - от 5 до 12mm.</p>
+              <p><strong>Расчет высоты волокна (Высота-Height или Углубление-Undercut).</strong></p>
+              <p>Эта характеристика показывает величину выступа или углубления волокна от поверхности феррулы и в конечном результате определяет качество оптического контакта соединяемых волокон. На это значение влияют условия полировки и свойства эпоксидного клея.</p>
+              <p><strong>Коэффициент отражения.</strong></p>
+              <p>Уровень обратных потерь (суммы отражений Френеля и обратного рассеяния Рэлея) на разъемных соединениях начинает играть все большую роль с повышением дальности и скорости передачи в магистральных линиях связи и развитием сетей кабельного телевидения.</p>
+              <p>Для измерения прямых и обратных потерь в Компания «ЭМИЛИНК» применяется стационарное оборудование. Обратные отражения попадают на источник (передатчик) сигнала, накапливаются при многократных стыковках и выступают как помеха по отношению к полезному сигналу. Прямые потери должны быть не более 0,3 дБ. Обратные потери должны быть не более – 50 дБ для UPC и не более -65 дБ для APC.</p>
+              <p>Автоматический интерферометр предназначен для тестирования геометрических параметров торцов оптических разъёмов с ферулами круглого сечения, разъёмов <strong>MTRJ</strong>. Для измерения параметров ферулов многоволоконных разъёмов типов МРО, МТ-Х и др.</p>
+              <div class="static-image-wrapper"><a href="img/content/daisi-4-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-daisi-4-big.jpg" alt=""></a><a href="img/content/daisi-5-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-daisi-5-big.jpg" alt=""></a><a href="img/content/daisi-2-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-daisi-2-big.jpg" alt=""></a><a href="img/content/daisi-3-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-daisi-3-big.jpg" alt=""></a></div>
+              <p><strong>Основные характеристики:</strong></p>
+              <ul>
+                <li>Один блок для измерения волокна и MTRJ, PC и APC ферулов, коннекторов и голого волокна.</li>
+                <li>Измерение смещение вершины торца ферула относительно центра волокна (apex);</li>
+                <li>Измерение заглубление торца волокна относительно поверхности торца ферула (protrusion);</li>
+                <li>Измерение радиуса кривизны поверхности торца ферула; Бесконтактное измерение.</li>
+                <li>Быстрый автофокус.</li>
+                <li>Измерение при помощи 1 кнопки.</li>
+                <li>Контролируемое приводом зеркало для автоматической калибровки вершины.</li>
+                <li>Прочный держатель ферулов с функцией автоматического открытия/закрытия.</li>
+                <li>Никаких лишних движущихся частей или юстировочных винтов. </li>
+                <li>Не чувствителен к вибрациям. Измерения можно проводить, держа устройство в руке.</li>
+                <li>Быстрое и легкое переключение между PC и APC, не требует замены держателя ферулов.</li>
+                <li>Адаптеры под большинство типов коннекторов. Специальный дизайн облегчает установку.</li>
+                <li>Быстрое автоматическое измерение радиуса, смещения вершины, высоты волокна и др. характеристик.</li>
+                <li>Точность и повторяемость результатов.</li>
+                <li>Можно подключить к ПК или ноутбуку, требуется лишь USB2.0 порт.</li>
+                <li>Соответствует международным стандартам по рефлектометрии.</li>
+                <li>Измерение угла скола голого волокна с высокой точностью.</li>
+                <li>Высокое разрешение 2D и 3D поверхности.</li>
+                <li>Отчет об измерении, а также ведение истории отчетов в формате Excel.</li>
+                <li>Измерение неоднородности поверхности волокна и ферула</li>
+                <li>Автоматически проверяют параметры на соответсвие нормативным значениям (Pass / Fail - функция).</li>
+              </ul>
+              <p>Имеют функцию автоматической фокусировки оптической системы. Визуализируют увеличенное трёхмерное изображение торца коннектора.</p>
+              <p><strong>Технические характеристики:</strong></p>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Параметры </th>
+                    <th>Точность </th>
+                    <th>Диапазон</th>
+                  </tr>
+                  <tr>
+                    <td>Радиус полировки волокна и ферула, мкм</td>
+                    <td>+/-0,2</td>
+                    <td> 3- бесконечность </td>
+                  </tr>
+                  <tr>
+                    <td>
+                       
+                      Смещение вершины<span>*</span>, мкм
+                    </td>
+                    <td> +/-1</td>
+                    <td>0-500</td>
+                  </tr>
+                  <tr>
+                    <td>Заглубление<span>**</span>, мкм</td>
+                    <td>+/-1,5</td>
+                    <td> +/-160</td>
+                  </tr>
+                  <tr>
+                    <td>Угол скола, град</td>
+                    <td>0,03</td>
+                    <td>0-12</td>
+                  </tr>
+                  <tr>
+                    <td>Время измерения, с</td>
+                    <td></td>
+                    <td> 0-2</td>
+                  </tr>
+                  <tr>
+                    <td>Увеличение</td>
+                    <td></td>
+                    <td>х300</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Длина волны (nm)</strong></td>
+                    <td></td>
+                    <td>633</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Напряжение</strong></td>
+                    <td></td>
+                    <td>12V 25VA</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>* - Смещение вершины поверхности полировки относительно центра волокна.</p>
+              <p>** - Заглубление/возвышение торца волокна относительно поверхности торца ферулы.</p>
+              <p>Повторяемость значений рассчитывалась из 50 последовательных измерений без взаимодействия с коннектором между измерениями.</p>
+              <p>Воспроизводимость значений рассчитывалась из 50 последовательных измерений путем вращения коннектора в держателе ферулов между измерениями.</p>
+              <p>Итак, после прохождения <strong>Трех уровней контроля качества</strong> Компания «Эмилинк» гарантирует 100% качество каждого произведенного волоконно-оптического коннектора на оптических шнурах, патчкордах и оптических кабельных сборках.</p>
+              <p>Заключительный производственный процесс «<a href="#">Упаковка</a>» готового изделия и нанесения маркировки.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="social__block"><a href="#" class="social__link"><img src="img/fb.png" alt=""></a><a href="#" class="social__link"><img src="img/vk.png" alt=""></a><a href="#" class="social__link"><img src="img/tw.png" alt=""></a></div>
+        <div class="footer__link-block">
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Главная</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Новости</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">О компании</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Доставка</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Продукция</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Контакты</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Производство</span></a></li>
+          </ul>
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">КДЗС</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Патчкорд оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кросс</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Пигтейл оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кабель</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Телекоммуникационный шкаф</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический сплиттер</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom-block">
+          <p class="footer__development"> <a href="#">Разработка - студия «Максимус»</a></p>
+          <p class="footer__copyright">© 2007-2015, ООО «Эмилинк»</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+extends _layout
+block content
+	.header__under-block
+		.container-fluid
+			.phones__block
+				.phones__block-inner
+					p.phones__block-city Москва
+					a.phones__block-phone(href="tel:+78129981387") +7 (812) 998-13-87
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+				.phones__block-inner
+					p.phones__block-city Санкт-Петербург
+					a.phones__block-phone(href="tel:+78129811660") +7 (812) 981-16-60
+					a.phones__block-callback.fancybox(href="#callback") Запрос обратного звонка
+			a.header__logo(href="/")
+				img(src="img/logo_sub_page.png" alt="Site Logo")
+			.search__block
+				form.search__form(action="#" method="get")
+					input.search__input(type="text" required placeholder="Поиск на сайте")
+					button.search__submit(type="submit")
+	.main__section
+		.container-fluid
+			.main__content._no-sidebar
+				.breadcrumbs__block
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Главная
+						li.breadcrumbs__item
+							span.breadcrumbs__current Производство
+				h1.subtitle._sizeM Производство
+				p Мы имеем большой складской запас всех ходовых позиций, это оптимизирует работу по небольшим штучным заказам. Запас всех ходовых позиций, это оптимизирует работу по небольшим штучным заказам.
+				.develop__section
+					.develop__block
+						img.develop__bg-img(src="img/content/develop_1.jpg", alt="")
+						br
+						br
+						p.develop__title Производство пассивных<br>компонентов Волс
+						a.develop__link(href="#") Подробнее о производстве
+					.develop__block
+						img.develop__bg-img(src="img/content/develop_2.jpg", alt="")
+						p.develop__title Производство<br>телекоммуникационных<br>конструкций 
+						a.develop__link(href="#") Подробнее о производстве

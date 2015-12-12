@@ -235,4 +235,12 @@ $(function(){
 		});
 	cart();
 	
+
+	//  новые скрипты 
+
+	$('.toggle-link').on('click', function(){
+		$(this).next().slideToggle(500);
+		return	false;
+	});
+
 });

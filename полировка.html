@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <title></title>
+  </head>
+  <body class="bg-dark-grey">
+    <!-- окно входа в ЛК-->
+    <div id="enter" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Вход</span><span class="modal__header-text">или </span><a href="#registration" class="modal__header-link fancybox">Регистрация</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#restore" class="modal__remember-link c fancybox">Напомнить пароль</a>
+      </form>
+    </div>
+    <!-- окно регистрации-->
+    <div id="registration" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Регистрация</span><span class="modal__header-text">или</span><a href="#enter" class="modal__header-link fancybox">Вход</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Зарегистрироваться</button>
+      </form>
+    </div>
+    <!-- окно обратного звонка-->
+    <div id="callback" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Заказ звонка</span>
+        <p class="modal__header-city">Москва</p>
+      </div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон" class="modal__input mask">
+        <input type="hidden" name="city">
+        <button type="submit" class="modal__submit btn _modal-btn">Перезвонить</button>
+      </form>
+    </div>
+    <!-- окно восстановления пароль-->
+    <div id="restore" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Восстановление</span></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="email" placeholder="Электронная почта" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Восстановить</button>
+      </form>
+    </div>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__user-block"><a href="#enter" class="header__user-link _enter fancybox">войти на сайт</a><a href="#" class="header__user-link _cart">корзина</a></div>
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Продукция</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Производство</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">новости</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">доставка</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="header__under-block">
+        <div class="container-fluid">
+          <div class="phones__block">
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Москва</p><a href="tel:+78129981387" class="phones__block-phone">+7 (812) 998-13-87</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Санкт-Петербург</p><a href="tel:+78129811660" class="phones__block-phone">+7 (812) 981-16-60</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+          </div><a href="/" class="header__logo"><img src="img/logo_sub_page.png" alt="Site Logo"></a>
+          <div class="search__block">
+            <form action="#" method="get" class="search__form">
+              <input type="text" required placeholder="Поиск на сайте" class="search__input">
+              <button type="submit" class="search__submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main__section">
+        <div class="container-fluid">
+          <div class="main__content _no-sidebar">
+            <div class="breadcrumbs__block">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Производство</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__current">Полировка</span></li>
+              </ul>
+            </div>
+            <h1 class="subtitle _sizeM">Полировка</h1>
+            <div class="static-content">
+              <p><strong>Полировка волоконно-оптического коннектора.</strong></p>
+              <p>Перед полировкой коннектора необходимо произвести удаление излишка волокна. Ручкой скалывателем производится надрез волокна, излишек обламывается.</p>
+              <p>Для полировки устанавливаем коннектор в специальную многоконекторную оправку так называемую «Джигу» 12-24 коннектора, фиксируем Джигу на станке. помещаем на специальную подложку полировальную плёнку. Далее идет цикл производственных этапов смен полировальных пленок на уменьшение микрон с алмазным покрытием до финишной стадии. В процессе полировки наноситься на пленку несколько капель дистилированной воды. Для прочистки коннекторов и самой пленки Компания «Эмилинк» использует пароочиститель, он дает максимально качественный результат готового изделия.</p>
+              <h3>Немного теории. Виды полировки волоконно-оптических коннекторов.</h3>
+              <p>Задача полировки - обеспечить при установке коннекторов в проходник отсутствие воздушного зазора между торцами волокон, то есть, по сути, обеспечить физическое соприкосновение волокон, чтобы уменьшить обратное отражение сигнала (отражательную способность).</p>
+              <p>В настоящее время различают 4 класса полировки: PC, SPC, UPC и APC.</p>
+              <p>Полировка PC - название действительно расшифровывается как Physical Contact, физическое соприкосновение - возникла первой и поначалу предусматривала плоский вариант наконечника. Опыт эксплуатации показал, что абсолютно плоский торец коннектора не может исключить образование воздушных зазоров между торцами световодов, а это, в свою очередь, приводит к довольно большим обратным отражениям, что нежелательно. Поэтому торцы наконечников приобрели закругление. Такими закруглениями сейчас обладают и коннекторы ST, и SC, и FC, и некоторые другие, менее распространенные. Например, современные коннекторы ST имеют керамический наконечник (ferrule) диаметром 2.5 мм, при этом радиус торцевого закругления составляет примерно 20 мм. Коннекторы FC в этом очень похожи на коннекторы ST, только вместо байонетного разъема они используют резьбовое соединение. В этот класс попадут все заделанные и заполированные вручную современные коннекторы, изготовленные по клеевой технологии. Они пригодны для большинства систем передачи данных, в которых речь идет о небольших расстояниях и не слишком требовательных приложениях. В первую очередь это структурированные кабельные системы и небольшие компьютерные сети.</p>
+              <div class="static-image-wrapper"><a href="img/content/polirovka2-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-polirovka2-big.jpg" alt=""></a><a href="img/content/polirovka3-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-polirovka3-big.jpg" alt=""></a><a href="img/content/polirovka4-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-polirovka4-big.jpg" alt=""></a><a href="img/content/polirovka5-big.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-polirovka5-big.jpg" alt=""></a></div>
+              <p>Поскольку полировка PC в целом давала не идеальные результаты (типичное значение вносимых потерь для одномодового волокна - 0.2 дБ, отражательная способность в пределах -35 дБ), производители продолжали поиск новых методов полировки, и так появились виды APC (Angled Physical Contact) и SPC(Super Physical Contact). Основное отличие коннекторов APC состоит в том, что торец световода заполирован под углом (как правило, 8 градусов), и это позволяет добиться существенного улучшения результатов. За счет этого угла практически весь отраженный (нежелательный) сигнал покидает пределы световода. Коннекторы APC с другими типами коннекторов несовместимы, поэтому для их цветовой кодировки используется зеленый цвет. Лучше, чем коннекторы APC, пока ничего не придумали; отражательная способность может составить и -60 дБ, и -65 дБ - то есть назад отражается меньше одной десятитысячной доли сигнала - поэтому их используют для реализации самых требовательных приложений, например, при передаче аналогового видео, в магистральных провайдерских линиях связи и т.п. Заделывать в полевых условиях такие коннекторы чрезвычайно сложно, практически невозможно, поэтому их удел - заводская сборка.</p>
+              <p>Полировка SPC (Super Physical Contact), напротив, никаких углов не использует и отличается от обычной полировки PC только более высоким качеством. Торец волокна полируется обычным способом, просто вместо ручной полировки используется машинная. Так, если вы покупаете односторонние волоконно-оптические перемычки (пигтэйлы), которыми будете оконцовывать проложенный сегмент с помощью сварки, то, скорее всего, эти пигтэйлы имеют коннекторы с полировкой SPC. Они лучше, чем заделанные вручную коннекторы, и имеют отражательную способность в пределах -40 дБ. В принципе, если вы обладаете нужным оборудованием, вы можете добиться таких характеристик и сами, но это уже нельзя назвать "обычными полевыми условиями": фактически вы у себя воссоздаете заводские условия, просто в меньших масштабах.</p>
+              <p>Последним появился вариант полировки UPC (Ultra Physical Contact), и тоже как развитие идеи обычного коннектора, без использования полировки под углом, но с применением определенных машинных технологий, в том числе с учетом радиуса закругления наконечника. Этот вариант полировки позволяет добиться отражательной способности на уровне -55 дБ, что несколько хуже, чем APC, но лучше, чем остальные варианты полировки. В первую очередь это важно для одномодовых коннекторов. Также такой вариант полировки используется производителями измерительного оптического оборудования. Типы полировки PC,SPC и UPC совместимы между собой, поскольку во всех них речь не идет о полировке под углом. Из этой группы UPC дает самые хорошие характеристики, поэтому именно этот вид используется в лучших оптических приборах - например, в рефлектометрах, в высокоскоростном активном оптическом оборудовании и т.д. Естественно, в полевых условиях добиться таких характеристик нельзя, поэтому, если эти коннекторы вам и встретятся, то только в составе покупных оптических шнуров или пигтэйлов.</p>
+              <p>Компания «Эмилинк» по умолчанию производит <a href="#">оптические патчкорды</a> и монтажные шнуры с полировкой UPC на высококачественных полировальных станках.</p>
+              <p>Следующий производственный процесс «<a href="#">Визуальный контроль</a>» на 400 кратном микроскопе.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="social__block"><a href="#" class="social__link"><img src="img/fb.png" alt=""></a><a href="#" class="social__link"><img src="img/vk.png" alt=""></a><a href="#" class="social__link"><img src="img/tw.png" alt=""></a></div>
+        <div class="footer__link-block">
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Главная</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Новости</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">О компании</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Доставка</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Продукция</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Контакты</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Производство</span></a></li>
+          </ul>
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">КДЗС</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Патчкорд оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кросс</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Пигтейл оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кабель</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Телекоммуникационный шкаф</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический сплиттер</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom-block">
+          <p class="footer__development"> <a href="#">Разработка - студия «Максимус»</a></p>
+          <p class="footer__copyright">© 2007-2015, ООО «Эмилинк»</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

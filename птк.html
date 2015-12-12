@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <title></title>
+  </head>
+  <body class="bg-dark-grey">
+    <!-- окно входа в ЛК-->
+    <div id="enter" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Вход</span><span class="modal__header-text">или </span><a href="#registration" class="modal__header-link fancybox">Регистрация</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Войти</button><a href="#restore" class="modal__remember-link c fancybox">Напомнить пароль</a>
+      </form>
+    </div>
+    <!-- окно регистрации-->
+    <div id="registration" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Регистрация</span><span class="modal__header-text">или</span><a href="#enter" class="modal__header-link fancybox">Вход</a></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон /или Электронная почта" required class="modal__input">
+        <input type="text" placeholder="Пароль" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Зарегистрироваться</button>
+      </form>
+    </div>
+    <!-- окно обратного звонка-->
+    <div id="callback" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Заказ звонка</span>
+        <p class="modal__header-city">Москва</p>
+      </div>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" placeholder="Ваше имя" required class="modal__input">
+        <input type="text" placeholder="Телефон" class="modal__input mask">
+        <input type="hidden" name="city">
+        <button type="submit" class="modal__submit btn _modal-btn">Перезвонить</button>
+      </form>
+    </div>
+    <!-- окно восстановления пароль-->
+    <div id="restore" class="modal__window">
+      <div class="modal__header-block"><span class="modal__header-title">Восстановление</span></div>
+      <form action="#" method="post" class="modal__form">
+        <input type="email" placeholder="Электронная почта" required class="modal__input">
+        <button type="submit" class="modal__submit btn _modal-btn">Восстановить</button>
+      </form>
+    </div>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__user-block"><a href="#enter" class="header__user-link _enter fancybox">войти на сайт</a><a href="#" class="header__user-link _cart">корзина</a></div>
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Продукция</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Производство</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">новости</a>
+                <div class="header__drop-menu-wrap _index">
+                  <ul class="header__drop-menu">
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Каталог продукции</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Услуги</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Производство</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Сертификаты</a></li>
+                    <li class="header__drop-item"><a href="#" class="header__drop-link">Прайсы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">доставка</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="header__under-block">
+        <div class="container-fluid">
+          <div class="phones__block">
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Москва</p><a href="tel:+78129981387" class="phones__block-phone">+7 (812) 998-13-87</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+            <div class="phones__block-inner">
+              <p class="phones__block-city">Санкт-Петербург</p><a href="tel:+78129811660" class="phones__block-phone">+7 (812) 981-16-60</a><a href="#callback" class="phones__block-callback fancybox">Запрос обратного звонка</a>
+            </div>
+          </div><a href="/" class="header__logo"><img src="img/logo_sub_page.png" alt="Site Logo"></a>
+          <div class="search__block">
+            <form action="#" method="get" class="search__form">
+              <input type="text" required placeholder="Поиск на сайте" class="search__input">
+              <button type="submit" class="search__submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="main__section">
+        <div class="container-fluid">
+          <div class="main__content _no-sidebar">
+            <div class="breadcrumbs__block">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Производство</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__current">ПРОИЗВОДСТВО ТЕЛЕКОММУНИКАЦИОННЫХ КОНСТРУКЦИЙ</span></li>
+              </ul>
+            </div>
+            <h1 class="subtitle _sizeM">ПРОИЗВОДСТВО ТЕЛЕКОММУНИКАЦИОННЫХ КОНСТРУКЦИЙ</h1>
+            <div class="static-content"><iframe width="100%" height="360" src="https://www.youtube.com/embed/OORe11C8-eE" frameborder="0" allowfullscreen></iframe><br><br>
+              <p><strong>«ЭМИЛИНК»</strong> – это российская группа компаний производитель волоконно-оптических компонентов и телекоммуникационных металлических конструкций. Мы имеет две производственные площадки. На одной из них разработка и производство 19-дюймовых конструкций, предназначенных для размещения телекоммуникационного оборудования.</p>
+              <div class="static-image-wrapper"><a href="img/content/1_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-1_logo_proizvodstvo.jpg" alt=""></a></div>
+              <p>В компании «ЭМИЛИНК» внедрена система разработки и производства нестандартной продукции по заказу клиента. До минимума сокращен срок от проектирования до выпуска готовой партии.</p>
+              <p>Для наших клиентов мы выполняем следующие виды работ: </p>
+              <ul>
+                <li>разработка конструкторской документации на изделие; </li>
+                <li>доработка, усовершенствование, оптимизация существующих изделий; </li>
+                <li>чертежные работы: доработка существующих и изготовление новых чертежей по эскизам или готовым деталям и изделиям; </li>
+                <li>векторизация чертежей и трехмерное моделирование.</li>
+              </ul>
+              <div class="static-image-wrapper"><a href="img/content/2_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-2_logo_proizvodstvo.jpg" alt=""></a></div>
+              <p>Производственные мощности компании ЭМИЛИНК – это комплекс, объединяющий весь технологический цикл от входа металла и до выхода готовых изделий. Основа станочного парка – Координатные и гибочные прессы.</p>
+              <p>Координатно-пробивочные прессы. Прессы данной серии предназначены для операций вырубки, пробивки и формовки с высокой производительностью и точностью на деталях из металлического листа. Пресса оснащены современными системами ЧПУ.</p>
+              <div class="static-image-wrapper"><a href="img/content/3_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-3_logo_proizvodstvo.jpg" alt=""></a></div>
+              <p>Гибкий подход к каждому клиенту позволяет нашей компании найти общий язык практически с любым клиентом, независимо от того, какая продукция требуется, будь то телекоммуникационный шкаф либо не стандартная телекоммуникационная стойка 50U по индивидуальному заказу.</p>
+              <p>Листогибочные прессы. Эти станки, обеспечивающие гибку металлических листов различного размера и толщины без предварительного нагрева металла. Данные листогибы с ЧПУ, оснащены современными гидравлическими и электронными устройствами, что обеспечивает эффективное выполнение поставленных задач, а именно скоростную и высокоточную гибку листового металла. Листогибы с ЧПУ позволяют контролировать ход гиба на каждом этапе, что, в свою очередь, обеспечивает максимально точный изгиб и значительно снижает возможность брака.</p>
+              <div class="static-image-wrapper"><a href="img/content/4_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-4_logo_proizvodstvo.jpg" alt=""></a></div>
+              <p>Гильотина используется для нарезания листов металла. Привод с системой гидравлики и закаленные ножи обеспечивают стабильность и качество среза. Жесткая цельносварная рама позволяет достичь высокой точности и надежности при работе. Верхняя балка в конструкции гильотины во время резки движется по дуге, что обеспечивает хорошую точность резки.</p>
+              <div class="static-image-wrapper"><a href="img/content/5_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-5_logo_proizvodstvo.jpg" alt=""></a></div>
+              <p>Кривошипные прессы. Пресс механический кривошипный предназначен для выполнения операций холодной штамповки листового металла. Может использоваться на одиночном или непрерывном ходу. Подача материала осуществляется как в ручную, так и автоматически.</p>
+              <div class="static-image-wrapper"><a href="img/content/6_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-6_logo_proizvodstvo.jpg" alt=""></a></div>
+              <p>Технологические линии производства дают возможность выпускать тысячи единиц телекоммуникационных шкафов в месяц.</p>
+              <div class="static-image-wrapper"><a href="img/content/7_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-7_logo_proizvodstvo.jpg" alt=""></a></div>
+              <p>Если Вы имеете собственный бренд или планируете создать его, то ОЕМ производство на заводах компании «ЭМИЛИНК» станет оптимальным путем развития, так как не потребует от Вас значительных капитальных вложений в оснащение и развитие собственного производства.</p>
+              <p>Детали окрашиваются на современной порошково-полимерной линии. Возможность замены цвета порошковой краски от одного изделия по требованию заказчика.</p>
+              <div class="static-image-wrapper"><a href="img/content/8_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-8_logo_proizvodstvo.jpg" alt=""></a></div>
+              <p>Порошковая окраска – метод напыления на окрашиваемую поверхность полимерного слоя с защитными и декоративными функциями.</p>
+              <p>Метод порошковой окраски заключается в том, что гранулы полимера в ходе процесса получают электрический заряд и плотно прилегают к противоположно заряженной окрашиваемой поверхности.</p>
+              <p>После нанесения покрытия деталь подвергается полимеризации («запеканию») в специальных камерах.</p>
+              <p>Готовые изделия упаковываются в гофрированные картонные коробки и готовятся к отгрузке Заказчику.</p>
+              <div class="static-image-wrapper"><a href="img/content/9_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-9_logo_proizvodstvo.jpg" alt=""></a></div>
+              <p>Мы имеем большой складской запас всех ходовых позиций, это оптимизирует работу по небольшим штучным заказам. А так же позволяет не привязываться к кратности минимального заказа и быстро осуществлять отправку, что наиболее важно для торгующих организаций!</p>
+              <div class="static-image-wrapper"><a href="img/content/10_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-10_logo_proizvodstvo.jpg" alt=""></a><a href="img/content/11_logo_proizvodstvo.jpg" rel="rel" class="fancybox"><img src="img/content/thumb-11_logo_proizvodstvo.jpg" alt=""></a></div>
+              <p>Сотрудничая с нами, Вы всегда будете в курсе того, на каком этапе производства находится Ваша продукция, а значит – сможете планировать и ее сбыт.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="social__block"><a href="#" class="social__link"><img src="img/fb.png" alt=""></a><a href="#" class="social__link"><img src="img/vk.png" alt=""></a><a href="#" class="social__link"><img src="img/tw.png" alt=""></a></div>
+        <div class="footer__link-block">
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Главная</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Новости</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">О компании</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Доставка</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Продукция</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Контакты</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Производство</span></a></li>
+          </ul>
+          <ul class="footer__link-list">
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">КДЗС</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Патчкорд оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кросс</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Пигтейл оптический</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический кабель</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Телекоммуникационный шкаф</span></a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link"> <span class="bottom-line">Оптический сплиттер</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom-block">
+          <p class="footer__development"> <a href="#">Разработка - студия «Максимус»</a></p>
+          <p class="footer__copyright">© 2007-2015, ООО «Эмилинк»</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

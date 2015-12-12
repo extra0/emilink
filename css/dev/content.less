@@ -2863,3 +2863,103 @@
 		}
 	}
 }
+
+// новые страницы
+.develop {
+	&__section {
+		text-align: center;
+	}
+	&__block {
+		position: relative;
+		max-width: 730px;
+		margin: 0 auto 40px auto;
+		height: 355px;
+		overflow: hidden;
+	}
+	&__bg-img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		margin: 0 auto;
+		right: 0;
+	}
+	&__title {
+		color: #fff;
+		margin: 85px 0 60px 0;
+		font-weight: normal;
+		font-family: @boldg1;
+		font-size: 24px;
+		text-transform: uppercase;
+		line-height: 36px;
+	}
+	&__link {
+		color: #fff;
+		text-decoration: none;
+		display: inline-block;
+		border-radius: @radius;
+		border: 1px solid #fff;
+		padding: 9px 21px;
+		opacity: 0.85;
+		-webkit-transition: all .4s ease;
+		-o-transition: all .4s ease;
+		-moz-transition: all .4s ease;
+		transition: all .4s ease;
+		&:hover {
+			border: 1px solid #16a96e;
+			background: #16a96e;
+			opacity: 1;
+		}
+	}
+}
+.static-content {
+	p, li {
+		font-size: 16px;
+		margin: 0 0 10px 0;
+		font-family: @light;
+	}
+	strong {
+		font-size: 16px;
+	}
+	li {
+		margin-bottom: 5px;
+	}
+	ul {
+		list-style-type: disc;
+	}
+	a {
+		color: #fff;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	table {
+		width: 100%;
+		text-align: center;
+		border-collapse: collapse;
+		margin: 15px 0;
+		td, th {
+			padding: 5px;
+			color: #fff;
+			border: 1px solid #fff;
+		}
+	}
+}
+.static-image-wrapper {
+	text-align: center;
+	img {
+		max-width: 20%;
+		margin: 20px 20px;
+	}
+}
+a.toggle-link {
+	color: #16a96e;
+	font-weight: bold;
+	font-size: 16px;
+	display: block;
+	margin-bottom: 10px;
+}
+a.toggle-link + div {
+	display: none;
+	margin-bottom: 35px;
+}
